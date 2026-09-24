@@ -10,9 +10,9 @@
 #   2. 确认 url 与你仓库地址**逐字符一致**（registry 会校验）
 # ---------------------------------------------------------------------------
 
-url: https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin
+url: https://github.com/AvalonskyAfar/MahoutsukaiNoYoru-DSH-Skin
 
-name: AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin
+name: AvalonskyAfar/MahoutsukaiNoYoru-DSH-Skin
 
 # 有效分类共 23 个，皮肤/主题必须用 theme（不要填 ui）。
 # 填 theme 的条目会自动流入 dsh-market 的 Themes 标签页。

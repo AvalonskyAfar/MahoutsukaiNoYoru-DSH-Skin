@@ -54,11 +54,11 @@
   "author": "AvalonskyAfar",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin.git"
+    "url": "git+https://github.com/AvalonskyAfar/MahoutsukaiNoYoru-DSH-Skin.git"
   },
-  "homepage": "https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin#readme",
+  "homepage": "https://github.com/AvalonskyAfar/MahoutsukaiNoYoru-DSH-Skin#readme",
   "bugs": {
-    "url": "https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin/issues"
+    "url": "https://github.com/AvalonskyAfar/MahoutsukaiNoYoru-DSH-Skin/issues"
   },
   "keywords": [
     "deepseek-harness",
