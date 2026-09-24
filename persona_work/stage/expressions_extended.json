@@ -1,0 +1,1304 @@
+{
+ "A1": {
+  "character": "ari",
+  "outfit_i3": "01",
+  "note": "同一服装行里、该景未引用过、但同通道相邻帧被判为同一槽位的候选。⚠️ 同通道相邻 ≠ 同表情（实测），启用前必须逐张视觉复核。",
+  "slots_missing_in_main": [
+   "laugh",
+   "sad",
+   "serious",
+   "think",
+   "tired",
+   "shy"
+  ],
+  "extended": {
+   "glare": [
+    {
+     "file": "data02110/ari_a_01_03_00",
+     "channel": "03",
+     "v": "00",
+     "anchor": "同通道 i4=03 的 v00（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_01",
+     "channel": "03",
+     "v": "01",
+     "anchor": "同通道 i4=03 的 v01（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_03",
+     "channel": "03",
+     "v": "03",
+     "anchor": "同通道 i4=03 的 v03（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_04",
+     "channel": "03",
+     "v": "04",
+     "anchor": "同通道 i4=03 的 v04（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_06",
+     "channel": "03",
+     "v": "06",
+     "anchor": "同通道 i4=03 的 v06（判定为 glare）",
+     "status": "unverified"
+    }
+   ],
+   "neutral": [
+    {
+     "file": "data02110/ari_a_01_02_00",
+     "channel": "02",
+     "v": "00",
+     "anchor": "同通道 i4=02 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_02_01",
+     "channel": "02",
+     "v": "01",
+     "anchor": "同通道 i4=02 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_14_00",
+     "channel": "14",
+     "v": "00",
+     "anchor": "同通道 i4=14 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_14_01",
+     "channel": "14",
+     "v": "01",
+     "anchor": "同通道 i4=14 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_16_00",
+     "channel": "16",
+     "v": "00",
+     "anchor": "同通道 i4=16 的 v00（判定为 neutral）",
+     "status": "unverified"
+    }
+   ],
+   "surprised": [
+    {
+     "file": "data02110/ari_a_01_10_00",
+     "channel": "10",
+     "v": "00",
+     "anchor": "同通道 i4=10 的 v00（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_01",
+     "channel": "10",
+     "v": "01",
+     "anchor": "同通道 i4=10 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_02",
+     "channel": "10",
+     "v": "02",
+     "anchor": "同通道 i4=10 的 v02（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_03",
+     "channel": "10",
+     "v": "03",
+     "anchor": "同通道 i4=10 的 v03（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_04",
+     "channel": "10",
+     "v": "04",
+     "anchor": "同通道 i4=10 的 v04（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_05",
+     "channel": "10",
+     "v": "05",
+     "anchor": "同通道 i4=10 的 v05（判定为 surprised）",
+     "status": "unverified"
+    }
+   ],
+   "troubled": [
+    {
+     "file": "data02110/ari_a_01_08_00",
+     "channel": "08",
+     "v": "00",
+     "anchor": "同通道 i4=08 的 v00（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_01",
+     "channel": "08",
+     "v": "01",
+     "anchor": "同通道 i4=08 的 v01（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_02",
+     "channel": "08",
+     "v": "02",
+     "anchor": "同通道 i4=08 的 v02（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_03",
+     "channel": "08",
+     "v": "03",
+     "anchor": "同通道 i4=08 的 v03（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_04",
+     "channel": "08",
+     "v": "04",
+     "anchor": "同通道 i4=08 的 v04（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_06",
+     "channel": "08",
+     "v": "06",
+     "anchor": "同通道 i4=08 的 v06（判定为 troubled）",
+     "status": "unverified"
+    }
+   ]
+  }
+ },
+ "A2": {
+  "character": "ari",
+  "outfit_i3": "01",
+  "note": "同一服装行里、该景未引用过、但同通道相邻帧被判为同一槽位的候选。⚠️ 同通道相邻 ≠ 同表情（实测），启用前必须逐张视觉复核。",
+  "slots_missing_in_main": [
+   "laugh",
+   "sad",
+   "serious",
+   "think",
+   "tired",
+   "shy"
+  ],
+  "extended": {
+   "glare": [
+    {
+     "file": "data02110/ari_a_01_03_00",
+     "channel": "03",
+     "v": "00",
+     "anchor": "同通道 i4=03 的 v00（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_01",
+     "channel": "03",
+     "v": "01",
+     "anchor": "同通道 i4=03 的 v01（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_03",
+     "channel": "03",
+     "v": "03",
+     "anchor": "同通道 i4=03 的 v03（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_04",
+     "channel": "03",
+     "v": "04",
+     "anchor": "同通道 i4=03 的 v04（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_03_06",
+     "channel": "03",
+     "v": "06",
+     "anchor": "同通道 i4=03 的 v06（判定为 glare）",
+     "status": "unverified"
+    }
+   ],
+   "neutral": [
+    {
+     "file": "data02110/ari_a_01_02_00",
+     "channel": "02",
+     "v": "00",
+     "anchor": "同通道 i4=02 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_02_01",
+     "channel": "02",
+     "v": "01",
+     "anchor": "同通道 i4=02 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_14_00",
+     "channel": "14",
+     "v": "00",
+     "anchor": "同通道 i4=14 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_14_01",
+     "channel": "14",
+     "v": "01",
+     "anchor": "同通道 i4=14 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_16_00",
+     "channel": "16",
+     "v": "00",
+     "anchor": "同通道 i4=16 的 v00（判定为 neutral）",
+     "status": "unverified"
+    }
+   ],
+   "surprised": [
+    {
+     "file": "data02110/ari_a_01_10_00",
+     "channel": "10",
+     "v": "00",
+     "anchor": "同通道 i4=10 的 v00（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_01",
+     "channel": "10",
+     "v": "01",
+     "anchor": "同通道 i4=10 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_02",
+     "channel": "10",
+     "v": "02",
+     "anchor": "同通道 i4=10 的 v02（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_03",
+     "channel": "10",
+     "v": "03",
+     "anchor": "同通道 i4=10 的 v03（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_04",
+     "channel": "10",
+     "v": "04",
+     "anchor": "同通道 i4=10 的 v04（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_10_05",
+     "channel": "10",
+     "v": "05",
+     "anchor": "同通道 i4=10 的 v05（判定为 surprised）",
+     "status": "unverified"
+    }
+   ],
+   "troubled": [
+    {
+     "file": "data02110/ari_a_01_08_00",
+     "channel": "08",
+     "v": "00",
+     "anchor": "同通道 i4=08 的 v00（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_01",
+     "channel": "08",
+     "v": "01",
+     "anchor": "同通道 i4=08 的 v01（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_02",
+     "channel": "08",
+     "v": "02",
+     "anchor": "同通道 i4=08 的 v02（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_03",
+     "channel": "08",
+     "v": "03",
+     "anchor": "同通道 i4=08 的 v03（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_04",
+     "channel": "08",
+     "v": "04",
+     "anchor": "同通道 i4=08 的 v04（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02110/ari_a_01_08_06",
+     "channel": "08",
+     "v": "06",
+     "anchor": "同通道 i4=08 的 v06（判定为 troubled）",
+     "status": "unverified"
+    }
+   ]
+  }
+ },
+ "A3": {
+  "character": "aok",
+  "outfit_i3": "12",
+  "note": "同一服装行里、该景未引用过、但同通道相邻帧被判为同一槽位的候选。⚠️ 同通道相邻 ≠ 同表情（实测），启用前必须逐张视觉复核。",
+  "slots_missing_in_main": [
+   "shy"
+  ],
+  "extended": {
+   "angry": [
+    {
+     "file": "data02100/aok_a_12_08_02",
+     "channel": "08",
+     "v": "02",
+     "anchor": "同通道 i4=08 的 v02（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_08_03",
+     "channel": "08",
+     "v": "03",
+     "anchor": "同通道 i4=08 的 v02（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_09_02",
+     "channel": "09",
+     "v": "02",
+     "anchor": "同通道 i4=09 的 v02（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_09_03",
+     "channel": "09",
+     "v": "03",
+     "anchor": "同通道 i4=09 的 v03（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_09_05",
+     "channel": "09",
+     "v": "05",
+     "anchor": "同通道 i4=09 的 v05（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_09_10",
+     "channel": "09",
+     "v": "10",
+     "anchor": "同通道 i4=09 的 v10（判定为 angry）",
+     "status": "unverified"
+    }
+   ],
+   "glare": [
+    {
+     "file": "data02100/aok_a_12_02_04",
+     "channel": "02",
+     "v": "04",
+     "anchor": "同通道 i4=02 的 v04（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_02_05",
+     "channel": "02",
+     "v": "05",
+     "anchor": "同通道 i4=02 的 v04（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_14_00",
+     "channel": "14",
+     "v": "00",
+     "anchor": "同通道 i4=14 的 v00（判定为 glare）",
+     "status": "unverified"
+    }
+   ],
+   "laugh": [
+    {
+     "file": "data02100/aok_a_12_14_04",
+     "channel": "14",
+     "v": "04",
+     "anchor": "同通道 i4=14 的 v04（判定为 laugh）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_14_05",
+     "channel": "14",
+     "v": "05",
+     "anchor": "同通道 i4=14 的 v04（判定为 laugh）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_14_06",
+     "channel": "14",
+     "v": "06",
+     "anchor": "同通道 i4=14 的 v04（判定为 laugh）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_14_07",
+     "channel": "14",
+     "v": "07",
+     "anchor": "同通道 i4=14 的 v04（判定为 laugh）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_14_08",
+     "channel": "14",
+     "v": "08",
+     "anchor": "同通道 i4=14 的 v04（判定为 laugh）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_14_09",
+     "channel": "14",
+     "v": "09",
+     "anchor": "同通道 i4=14 的 v04（判定为 laugh）",
+     "status": "unverified"
+    }
+   ],
+   "neutral": [
+    {
+     "file": "data02100/aok_a_12_02_01",
+     "channel": "02",
+     "v": "01",
+     "anchor": "同通道 i4=02 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_03_01",
+     "channel": "03",
+     "v": "01",
+     "anchor": "同通道 i4=03 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_08_00",
+     "channel": "08",
+     "v": "00",
+     "anchor": "同通道 i4=08 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_09_00",
+     "channel": "09",
+     "v": "00",
+     "anchor": "同通道 i4=09 的 v00（判定为 neutral）",
+     "status": "unverified"
+    }
+   ],
+   "sad": [
+    {
+     "file": "data02100/aok_a_12_08_05",
+     "channel": "08",
+     "v": "05",
+     "anchor": "同通道 i4=08 的 v05（判定为 sad）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_08_06",
+     "channel": "08",
+     "v": "06",
+     "anchor": "同通道 i4=08 的 v05（判定为 sad）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_08_07",
+     "channel": "08",
+     "v": "07",
+     "anchor": "同通道 i4=08 的 v05（判定为 sad）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_08_08",
+     "channel": "08",
+     "v": "08",
+     "anchor": "同通道 i4=08 的 v05（判定为 sad）",
+     "status": "unverified"
+    }
+   ],
+   "serious": [
+    {
+     "file": "data02100/aok_a_12_08_01",
+     "channel": "08",
+     "v": "01",
+     "anchor": "同通道 i4=08 的 v01（判定为 serious）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_09_01",
+     "channel": "09",
+     "v": "01",
+     "anchor": "同通道 i4=09 的 v01（判定为 serious）",
+     "status": "unverified"
+    }
+   ],
+   "smile": [
+    {
+     "file": "data02100/aok_a_12_02_07",
+     "channel": "02",
+     "v": "07",
+     "anchor": "同通道 i4=02 的 v07（判定为 smile）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_09_08",
+     "channel": "09",
+     "v": "08",
+     "anchor": "同通道 i4=09 的 v08（判定为 smile）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_09_09",
+     "channel": "09",
+     "v": "09",
+     "anchor": "同通道 i4=09 的 v08（判定为 smile）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_14_03",
+     "channel": "14",
+     "v": "03",
+     "anchor": "同通道 i4=14 的 v03（判定为 smile）",
+     "status": "unverified"
+    }
+   ],
+   "surprised": [
+    {
+     "file": "data02100/aok_a_12_21_00",
+     "channel": "21",
+     "v": "00",
+     "anchor": "同通道 i4=21 的 v00（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_21_01",
+     "channel": "21",
+     "v": "01",
+     "anchor": "同通道 i4=21 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_21_02",
+     "channel": "21",
+     "v": "02",
+     "anchor": "同通道 i4=21 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_21_03",
+     "channel": "21",
+     "v": "03",
+     "anchor": "同通道 i4=21 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_21_04",
+     "channel": "21",
+     "v": "04",
+     "anchor": "同通道 i4=21 的 v05（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_12_21_05",
+     "channel": "21",
+     "v": "05",
+     "anchor": "同通道 i4=21 的 v05（判定为 surprised）",
+     "status": "unverified"
+    }
+   ],
+   "think": [
+    {
+     "file": "data02100/aok_a_12_02_00",
+     "channel": "02",
+     "v": "00",
+     "anchor": "同通道 i4=02 的 v00（判定为 think）",
+     "status": "unverified"
+    }
+   ],
+   "tired": [
+    {
+     "file": "data02100/aok_a_12_03_02",
+     "channel": "03",
+     "v": "02",
+     "anchor": "同通道 i4=03 的 v02（判定为 tired）",
+     "status": "unverified"
+    }
+   ],
+   "troubled": [
+    {
+     "file": "data02100/aok_a_12_02_08",
+     "channel": "02",
+     "v": "08",
+     "anchor": "同通道 i4=02 的 v08（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_02_09",
+     "channel": "02",
+     "v": "09",
+     "anchor": "同通道 i4=02 的 v09（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_02_10",
+     "channel": "02",
+     "v": "10",
+     "anchor": "同通道 i4=02 的 v10（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_02_11",
+     "channel": "02",
+     "v": "11",
+     "anchor": "同通道 i4=02 的 v10（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_02_12",
+     "channel": "02",
+     "v": "12",
+     "anchor": "同通道 i4=02 的 v10（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_12_02_13",
+     "channel": "02",
+     "v": "13",
+     "anchor": "同通道 i4=02 的 v10（判定为 troubled）",
+     "status": "unverified"
+    }
+   ]
+  }
+ },
+ "A4": {
+  "character": "aok",
+  "outfit_i3": "03",
+  "note": "同一服装行里、该景未引用过、但同通道相邻帧被判为同一槽位的候选。⚠️ 同通道相邻 ≠ 同表情（实测），启用前必须逐张视觉复核。",
+  "slots_missing_in_main": [
+   "laugh",
+   "sad",
+   "serious",
+   "think",
+   "tired",
+   "shy"
+  ],
+  "extended": {
+   "angry": [
+    {
+     "file": "data02100/aok_a_03_02_03",
+     "channel": "02",
+     "v": "03",
+     "anchor": "同通道 i4=02 的 v04（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_02_04",
+     "channel": "02",
+     "v": "04",
+     "anchor": "同通道 i4=02 的 v04（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_02_05",
+     "channel": "02",
+     "v": "05",
+     "anchor": "同通道 i4=02 的 v04（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_02_06",
+     "channel": "02",
+     "v": "06",
+     "anchor": "同通道 i4=02 的 v04（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_l_03_03_03",
+     "channel": "03",
+     "v": "03",
+     "anchor": "同通道 i4=03 的 v04（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_l_03_03_04",
+     "channel": "03",
+     "v": "04",
+     "anchor": "同通道 i4=03 的 v04（判定为 angry）",
+     "status": "unverified"
+    }
+   ],
+   "glare": [
+    {
+     "file": "data02100/aok_a_03_08_00",
+     "channel": "08",
+     "v": "00",
+     "anchor": "同通道 i4=08 的 v01（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_08_01",
+     "channel": "08",
+     "v": "01",
+     "anchor": "同通道 i4=08 的 v01（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_08_02",
+     "channel": "08",
+     "v": "02",
+     "anchor": "同通道 i4=08 的 v01（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_08_03",
+     "channel": "08",
+     "v": "03",
+     "anchor": "同通道 i4=08 的 v01（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_09_02",
+     "channel": "09",
+     "v": "02",
+     "anchor": "同通道 i4=09 的 v02（判定为 glare）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_14_00",
+     "channel": "14",
+     "v": "00",
+     "anchor": "同通道 i4=14 的 v01（判定为 glare）",
+     "status": "unverified"
+    }
+   ],
+   "neutral": [
+    {
+     "file": "data02100/aok_a_03_02_00",
+     "channel": "02",
+     "v": "00",
+     "anchor": "同通道 i4=02 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_02_01",
+     "channel": "02",
+     "v": "01",
+     "anchor": "同通道 i4=02 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_02_02",
+     "channel": "02",
+     "v": "02",
+     "anchor": "同通道 i4=02 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_02_07",
+     "channel": "02",
+     "v": "07",
+     "anchor": "同通道 i4=02 的 v08（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_02_08",
+     "channel": "02",
+     "v": "08",
+     "anchor": "同通道 i4=02 的 v08（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_02_09",
+     "channel": "02",
+     "v": "09",
+     "anchor": "同通道 i4=02 的 v08（判定为 neutral）",
+     "status": "unverified"
+    }
+   ],
+   "smile": [
+    {
+     "file": "data02100/aok_l_03_08_04",
+     "channel": "08",
+     "v": "04",
+     "anchor": "同通道 i4=08 的 v06（判定为 smile）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_l_03_08_05",
+     "channel": "08",
+     "v": "05",
+     "anchor": "同通道 i4=08 的 v06（判定为 smile）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_l_03_08_06",
+     "channel": "08",
+     "v": "06",
+     "anchor": "同通道 i4=08 的 v06（判定为 smile）",
+     "status": "unverified"
+    }
+   ],
+   "surprised": [
+    {
+     "file": "data02100/aok_a_03_21_00",
+     "channel": "21",
+     "v": "00",
+     "anchor": "同通道 i4=21 的 v00（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_21_01",
+     "channel": "21",
+     "v": "01",
+     "anchor": "同通道 i4=21 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_21_02",
+     "channel": "21",
+     "v": "02",
+     "anchor": "同通道 i4=21 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_21_03",
+     "channel": "21",
+     "v": "03",
+     "anchor": "同通道 i4=21 的 v04（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_21_04",
+     "channel": "21",
+     "v": "04",
+     "anchor": "同通道 i4=21 的 v04（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_21_05",
+     "channel": "21",
+     "v": "05",
+     "anchor": "同通道 i4=21 的 v04（判定为 surprised）",
+     "status": "unverified"
+    }
+   ],
+   "troubled": [
+    {
+     "file": "data02100/aok_a_03_18_00",
+     "channel": "18",
+     "v": "00",
+     "anchor": "同通道 i4=18 的 v01（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_a_03_18_01",
+     "channel": "18",
+     "v": "01",
+     "anchor": "同通道 i4=18 的 v01（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_18_02",
+     "channel": "18",
+     "v": "02",
+     "anchor": "同通道 i4=18 的 v01（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_21_07",
+     "channel": "21",
+     "v": "07",
+     "anchor": "同通道 i4=21 的 v08（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02100/aok_n_03_21_08",
+     "channel": "21",
+     "v": "08",
+     "anchor": "同通道 i4=21 的 v08（判定为 troubled）",
+     "status": "unverified"
+    }
+   ]
+  }
+ },
+ "A5": {
+  "character": "koj",
+  "outfit_i3": "00",
+  "note": "同一服装行里、该景未引用过、但同通道相邻帧被判为同一槽位的候选。⚠️ 同通道相邻 ≠ 同表情（实测），启用前必须逐张视觉复核。",
+  "slots_missing_in_main": [
+   "smile",
+   "laugh",
+   "angry",
+   "glare",
+   "sad",
+   "think",
+   "tired",
+   "shy"
+  ],
+  "extended": {
+   "neutral": [
+    {
+     "file": "data02150/koj_a_00_01_00",
+     "channel": "01",
+     "v": "00",
+     "anchor": "同通道 i4=01 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_01_01",
+     "channel": "01",
+     "v": "01",
+     "anchor": "同通道 i4=01 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_01_02",
+     "channel": "01",
+     "v": "02",
+     "anchor": "同通道 i4=01 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_01_03",
+     "channel": "01",
+     "v": "03",
+     "anchor": "同通道 i4=01 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_01_04",
+     "channel": "01",
+     "v": "04",
+     "anchor": "同通道 i4=01 的 v07（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_01_05",
+     "channel": "01",
+     "v": "05",
+     "anchor": "同通道 i4=01 的 v07（判定为 neutral）",
+     "status": "unverified"
+    }
+   ],
+   "surprised": [
+    {
+     "file": "data02150/koj_a_00_07_00",
+     "channel": "07",
+     "v": "00",
+     "anchor": "同通道 i4=07 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_07_01",
+     "channel": "07",
+     "v": "01",
+     "anchor": "同通道 i4=07 的 v01（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_07_02",
+     "channel": "07",
+     "v": "02",
+     "anchor": "同通道 i4=07 的 v02（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_07_03",
+     "channel": "07",
+     "v": "03",
+     "anchor": "同通道 i4=07 的 v03（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_00_07_04",
+     "channel": "07",
+     "v": "04",
+     "anchor": "同通道 i4=07 的 v03（判定为 surprised）",
+     "status": "unverified"
+    }
+   ],
+   "troubled": [
+    {
+     "file": "data02150/koj_l_00_07_05",
+     "channel": "07",
+     "v": "05",
+     "anchor": "同通道 i4=07 的 v06（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_l_00_07_06",
+     "channel": "07",
+     "v": "06",
+     "anchor": "同通道 i4=07 的 v06（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_l_00_07_07",
+     "channel": "07",
+     "v": "07",
+     "anchor": "同通道 i4=07 的 v07（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_n_00_07_08",
+     "channel": "07",
+     "v": "08",
+     "anchor": "同通道 i4=07 的 v07（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_n_00_07_09",
+     "channel": "07",
+     "v": "09",
+     "anchor": "同通道 i4=07 的 v07（判定为 troubled）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_n_00_07_10",
+     "channel": "07",
+     "v": "10",
+     "anchor": "同通道 i4=07 的 v07（判定为 troubled）",
+     "status": "unverified"
+    }
+   ]
+  }
+ },
+ "A6": {
+  "character": "koj",
+  "outfit_i3": "01",
+  "note": "同一服装行里、该景未引用过、但同通道相邻帧被判为同一槽位的候选。⚠️ 同通道相邻 ≠ 同表情（实测），启用前必须逐张视觉复核。",
+  "slots_missing_in_main": [
+   "smile",
+   "laugh",
+   "glare",
+   "troubled",
+   "sad",
+   "think",
+   "shy"
+  ],
+  "extended": {
+   "angry": [
+    {
+     "file": "data02150/koj_a_01_07_15",
+     "channel": "07",
+     "v": "15",
+     "anchor": "同通道 i4=07 的 v17（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_16",
+     "channel": "07",
+     "v": "16",
+     "anchor": "同通道 i4=07 的 v17（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_17",
+     "channel": "07",
+     "v": "17",
+     "anchor": "同通道 i4=07 的 v17（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_18",
+     "channel": "07",
+     "v": "18",
+     "anchor": "同通道 i4=07 的 v17（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_19",
+     "channel": "07",
+     "v": "19",
+     "anchor": "同通道 i4=07 的 v17（判定为 angry）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_20",
+     "channel": "07",
+     "v": "20",
+     "anchor": "同通道 i4=07 的 v17（判定为 angry）",
+     "status": "unverified"
+    }
+   ],
+   "neutral": [
+    {
+     "file": "data02150/koj_a_01_01_00",
+     "channel": "01",
+     "v": "00",
+     "anchor": "同通道 i4=01 的 v00（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_01",
+     "channel": "01",
+     "v": "01",
+     "anchor": "同通道 i4=01 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_02",
+     "channel": "01",
+     "v": "02",
+     "anchor": "同通道 i4=01 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_03",
+     "channel": "01",
+     "v": "03",
+     "anchor": "同通道 i4=01 的 v01（判定为 neutral）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_04",
+     "channel": "01",
+     "v": "04",
+     "anchor": "同通道 i4=01 的 v01（判定为 neutral）",
+     "status": "unverified"
+    }
+   ],
+   "serious": [
+    {
+     "file": "data02150/koj_a_01_01_05",
+     "channel": "01",
+     "v": "05",
+     "anchor": "同通道 i4=01 的 v07（判定为 serious）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_06",
+     "channel": "01",
+     "v": "06",
+     "anchor": "同通道 i4=01 的 v07（判定为 serious）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_07",
+     "channel": "01",
+     "v": "07",
+     "anchor": "同通道 i4=01 的 v07（判定为 serious）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_08",
+     "channel": "01",
+     "v": "08",
+     "anchor": "同通道 i4=01 的 v07（判定为 serious）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_09",
+     "channel": "01",
+     "v": "09",
+     "anchor": "同通道 i4=01 的 v07（判定为 serious）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_01_10",
+     "channel": "01",
+     "v": "10",
+     "anchor": "同通道 i4=01 的 v07（判定为 serious）",
+     "status": "unverified"
+    }
+   ],
+   "surprised": [
+    {
+     "file": "data02150/koj_a_01_07_04",
+     "channel": "07",
+     "v": "04",
+     "anchor": "同通道 i4=07 的 v07（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_05",
+     "channel": "07",
+     "v": "05",
+     "anchor": "同通道 i4=07 的 v07（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_06",
+     "channel": "07",
+     "v": "06",
+     "anchor": "同通道 i4=07 的 v07（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_07",
+     "channel": "07",
+     "v": "07",
+     "anchor": "同通道 i4=07 的 v07（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_08",
+     "channel": "07",
+     "v": "08",
+     "anchor": "同通道 i4=07 的 v07（判定为 surprised）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_09",
+     "channel": "07",
+     "v": "09",
+     "anchor": "同通道 i4=07 的 v07（判定为 surprised）",
+     "status": "unverified"
+    }
+   ],
+   "tired": [
+    {
+     "file": "data02150/koj_a_01_07_10",
+     "channel": "07",
+     "v": "10",
+     "anchor": "同通道 i4=07 的 v11（判定为 tired）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_11",
+     "channel": "07",
+     "v": "11",
+     "anchor": "同通道 i4=07 的 v11（判定为 tired）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_12",
+     "channel": "07",
+     "v": "12",
+     "anchor": "同通道 i4=07 的 v12（判定为 tired）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_13",
+     "channel": "07",
+     "v": "13",
+     "anchor": "同通道 i4=07 的 v12（判定为 tired）",
+     "status": "unverified"
+    },
+    {
+     "file": "data02150/koj_a_01_07_14",
+     "channel": "07",
+     "v": "14",
+     "anchor": "同通道 i4=07 的 v12（判定为 tired）",
+     "status": "unverified"
+    }
+   ]
+  }
+ }
+}

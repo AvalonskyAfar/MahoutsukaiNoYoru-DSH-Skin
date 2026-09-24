@@ -1,0 +1,1670 @@
+{
+ "_note": "主 agent 亲自看图判定的槽位（人眼/multimodal 直接读印相表 exprfiles_*.jpg）。以具体文件名为键。",
+ "_legend": {
+  "slot": "12 槽位之一 或 blink(闭眼/眨眼) / talk(纯说话口型) / unknown",
+  "conf": "high/mid/low",
+  "src": "判定来源：sheet=主agent读印相表；sub=视觉子代理；note=既有笔记(仅参考)"
+ },
+ "A6": {
+  "koj_l_01_01_00": {
+   "slot": "neutral",
+   "desc": "正面全身、睁眼平静闭口",
+   "conf": "high",
+   "src": "sheet"
+  },
+  "koj_l_01_01_01": {
+   "slot": "neutral",
+   "desc": "睁眼平静、嘴微开",
+   "conf": "high",
+   "src": "sheet"
+  },
+  "koj_l_01_01_07": {
+   "slot": "serious",
+   "desc": "睁眼平视、眉略沉",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_01_07_00": {
+   "slot": "serious",
+   "desc": "睁眼闭口、神情平",
+   "conf": "high",
+   "src": "sheet"
+  },
+  "koj_a_01_07_07": {
+   "slot": "surprised",
+   "desc": "睁大眼、微张口",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_01_07_11": {
+   "slot": "tired",
+   "desc": "半闭眼、张口（疲惫）",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_01_07_12": {
+   "slot": "tired",
+   "desc": "半闭眼、张口带汗",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_01_07_17": {
+   "slot": "angry",
+   "desc": "压眉、嘴角下压（不悦）",
+   "conf": "mid",
+   "src": "sheet"
+  }
+ },
+ "A5": {
+  "koj_n_00_01_07": {
+   "slot": "neutral",
+   "desc": "睁眼平视、嘴闭合",
+   "conf": "high",
+   "src": "sheet"
+  },
+  "koj_l_00_07_01": {
+   "slot": "surprised",
+   "desc": "睁眼、张口（惊讶）",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_s_00_07_01": {
+   "slot": "surprised",
+   "desc": "半身、睁眼张口",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_00_07_02": {
+   "slot": "serious",
+   "desc": "半眼平视、嘴闭合",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_l_00_07_02": {
+   "slot": "surprised",
+   "desc": "睁眼、张口",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_00_07_03": {
+   "slot": "troubled",
+   "desc": "睁眼张口带汗（困扰）",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_l_00_07_03": {
+   "slot": "surprised",
+   "desc": "睁眼张口",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_00_07_06": {
+   "slot": "troubled",
+   "desc": "睁眼张口带汗",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_a_00_07_07": {
+   "slot": "troubled",
+   "desc": "睁眼、口微张、困扰",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_n_01_01_01": {
+   "slot": "surprised",
+   "desc": "睁大眼、张口",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_n_01_01_02": {
+   "slot": "surprised",
+   "desc": "睁眼张口、眉上扬",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_n_01_01_03": {
+   "slot": "tired",
+   "desc": "半闭眼、张口（疲惫）",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_n_01_01_04": {
+   "slot": "serious",
+   "desc": "睁眼平视、嘴闭合",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_n_01_07_01": {
+   "slot": "troubled",
+   "desc": "垂眼、口微张（困惑）",
+   "conf": "low",
+   "src": "sheet"
+  },
+  "koj_n_01_07_02": {
+   "slot": "troubled",
+   "desc": "垂眼、口微张带汗",
+   "conf": "low",
+   "src": "sheet"
+  },
+  "koj_n_00_07_06": {
+   "slot": "troubled",
+   "desc": "睁大眼、口微张（担忧）",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_n_00_07_07": {
+   "slot": "troubled",
+   "desc": "睁大眼、口微张（担忧）",
+   "conf": "mid",
+   "src": "sheet"
+  },
+  "koj_s_00_01_00": {
+   "slot": "neutral",
+   "desc": "全身、睁眼平静",
+   "conf": "low",
+   "src": "sheet"
+  }
+ },
+ "A3": {
+  "aok_l_12_02_00": {
+   "slot": "think",
+   "desc": "侧目下视、嘴闭合",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_02_01": {
+   "slot": "neutral",
+   "desc": "正视、眉平、嘴闭合",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_02_01": {
+   "slot": "think",
+   "desc": "视线侧移、神情平静",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_02_01": {
+   "slot": "unknown",
+   "desc": "全身立绘、脸部过小",
+   "conf": "low",
+   "src": "sub"
+  },
+  "aok_n_12_02_01": {
+   "slot": "neutral",
+   "desc": "正视、眉平、嘴闭合",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_12_02_02": {
+   "slot": "talk",
+   "desc": "闭眼、口微张说话状",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_02_02": {
+   "slot": "blink",
+   "desc": "单眼闭合、眨眼中间帧",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_02_03": {
+   "slot": "surprised",
+   "desc": "睁大眼、眉上扬、口微张",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_m_12_02_03": {
+   "slot": "talk",
+   "desc": "闭眼、口张圆说话状",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_02_04": {
+   "slot": "think",
+   "desc": "脸小、侧视、眉微动",
+   "conf": "low",
+   "src": "sub"
+  },
+  "aok_m_12_02_04": {
+   "slot": "glare",
+   "desc": "眼睑压低、凌厉直视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_12_02_06": {
+   "slot": "talk",
+   "desc": "闭眼、口张开说话状",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_02_07": {
+   "slot": "smile",
+   "desc": "半眯眼、嘴角上扬浅笑",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_02_08": {
+   "slot": "angry",
+   "desc": "眉压低、嘴角下压",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_02_08": {
+   "slot": "troubled",
+   "desc": "睁大眼、眉蹙、嘴抿",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_02_09": {
+   "slot": "troubled",
+   "desc": "眼睑下垂、侧视、口微张",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_02_10": {
+   "slot": "troubled",
+   "desc": "眉眼下垂、口微张、脸红",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_02_19": {
+   "slot": "troubled",
+   "desc": "视线游移、眉蹙、脸红",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_03_00": {
+   "slot": "troubled",
+   "desc": "睁大眼、眉蹙、嘴下压",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_03_00": {
+   "slot": "troubled",
+   "desc": "睁大眼、眉上扬、脸红",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_03_00": {
+   "slot": "troubled",
+   "desc": "睁大眼、眉蹙、嘴抿",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_03_01": {
+   "slot": "talk",
+   "desc": "闭眼、口微张说话状",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_03_01": {
+   "slot": "talk",
+   "desc": "闭眼垂头、口微张",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_03_01": {
+   "slot": "neutral",
+   "desc": "正视、眉平、嘴闭合",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_03_02": {
+   "slot": "tired",
+   "desc": "半闭眼、口微张叹气状",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_03_03": {
+   "slot": "talk",
+   "desc": "闭眼、口张开说话状",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_03_05": {
+   "slot": "talk",
+   "desc": "闭眼垂头、口张开",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_08_00": {
+   "slot": "neutral",
+   "desc": "直视、表情平静",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_08_01": {
+   "slot": "serious",
+   "desc": "眼神坚定、唇紧",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_08_01": {
+   "slot": "angry",
+   "desc": "眉压低皱起、嘴角下压",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_12_08_01": {
+   "slot": "serious",
+   "desc": "眉微压、直视、唇紧",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_08_02": {
+   "slot": "angry",
+   "desc": "眉压低成V、瞪视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_12_08_04": {
+   "slot": "unknown",
+   "desc": "全身立绘、脸部过小",
+   "conf": "low",
+   "src": "sub"
+  },
+  "aok_a_12_08_05": {
+   "slot": "angry",
+   "desc": "眉压低、锐利瞪视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_12_08_05": {
+   "slot": "sad",
+   "desc": "闭眼、眉垂、嘴角下压",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_09_00": {
+   "slot": "neutral",
+   "desc": "平静直视、嘴闭合",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_09_01": {
+   "slot": "serious",
+   "desc": "眉微压、唇紧、直视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_09_02": {
+   "slot": "angry",
+   "desc": "眉压低、半眼瞪视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_09_03": {
+   "slot": "angry",
+   "desc": "闭眼张口喊叫",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_09_03": {
+   "slot": "angry",
+   "desc": "半眼瞪视、咧嘴",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_09_03": {
+   "slot": "sad",
+   "desc": "闭眼、眉垂、嘴角下压",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_09_03": {
+   "slot": "angry",
+   "desc": "眉压低、瞪视、唇紧",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_09_04": {
+   "slot": "blink",
+   "desc": "闭眼、表情平静、脸红",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_09_05": {
+   "slot": "angry",
+   "desc": "咬牙切齿怒视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_12_09_05": {
+   "slot": "angry",
+   "desc": "闭眼张口喊叫",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_09_06": {
+   "slot": "angry",
+   "desc": "张口怒吼露齿",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_12_09_06": {
+   "slot": "blink",
+   "desc": "闭眼、唇平、神情平静",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_09_08": {
+   "slot": "smile",
+   "desc": "闭眼笑、头有怒气符",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_09_10": {
+   "slot": "angry",
+   "desc": "眉压低、瞪视、唇紧",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_09_11": {
+   "slot": "angry",
+   "desc": "半眼瞪视、脸红",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_09_15": {
+   "slot": "angry",
+   "desc": "张口怒吼、锯齿牙",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_12_10_02": {
+   "slot": "angry",
+   "desc": "眉压低、锐利瞪视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_14_00": {
+   "slot": "glare",
+   "desc": "半眼凌厉、视线侧移",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_14_01": {
+   "slot": "glare",
+   "desc": "脸小、眼睑压低、侧视",
+   "conf": "low",
+   "src": "sub"
+  },
+  "aok_m_12_14_01": {
+   "slot": "angry",
+   "desc": "眉压低、嘴角下压",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_14_02": {
+   "slot": "angry",
+   "desc": "眉压低、嘴角下压",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_l_12_14_03": {
+   "slot": "smile",
+   "desc": "闭眼微笑、嘴角上扬",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_m_12_14_04": {
+   "slot": "laugh",
+   "desc": "闭眼张口笑",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_16_00": {
+   "slot": "unknown",
+   "desc": "全身立绘、脸部过小",
+   "conf": "low",
+   "src": "sub"
+  },
+  "aok_a_12_16_02": {
+   "slot": "angry",
+   "desc": "眉压低、瞪视、唇紧",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_16_04": {
+   "slot": "talk",
+   "desc": "闭眼、口张开说话状",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_20_00": {
+   "slot": "troubled",
+   "desc": "眼睑下垂、眉蹙、脸红",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_12_20_01": {
+   "slot": "angry",
+   "desc": "咬牙切齿怒视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_m_12_20_01": {
+   "slot": "angry",
+   "desc": "咬牙切齿怒视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_m_12_20_02": {
+   "slot": "angry",
+   "desc": "侧目咬牙、脸红",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_20_02": {
+   "slot": "angry",
+   "desc": "咬牙怒视、带汗滴",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_12_20_03": {
+   "slot": "angry",
+   "desc": "低头咬牙、眉压低",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_21_00": {
+   "slot": "surprised",
+   "desc": "睁大眼、口微张",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_12_21_01": {
+   "slot": "surprised",
+   "desc": "睁大眼、眉上扬、口张",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_12_21_05": {
+   "slot": "surprised",
+   "desc": "睁大眼、眉上扬、口微张",
+   "conf": "high",
+   "src": "sub"
+  }
+ },
+ "A4": {
+  "aok_a_03_02_00": {
+   "slot": "neutral",
+   "desc": "睁眼平视、嘴微闭",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_03_02_00": {
+   "slot": "neutral",
+   "desc": "平静直视、小嘴闭合",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_03_02_00": {
+   "slot": "neutral",
+   "desc": "睁眼平视、嘴微闭",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_a_03_02_04": {
+   "slot": "angry",
+   "desc": "眉倒竖瞪眼、咧嘴",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_03_02_08": {
+   "slot": "neutral",
+   "desc": "睁眼平视、嘴微闭",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_03_03_00": {
+   "slot": "neutral",
+   "desc": "平静直视、小嘴闭合",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_03_03_04": {
+   "slot": "angry",
+   "desc": "眉拧、张口怒喊",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_03_08_01": {
+   "slot": "neutral",
+   "desc": "睁眼平视、小嘴闭合",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_s_03_08_01": {
+   "slot": "glare",
+   "desc": "眯眼瞪视、嘴紧闭",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_03_08_06": {
+   "slot": "smile",
+   "desc": "半眯眼、嘴角微扬",
+   "conf": "low",
+   "src": "sub"
+  },
+  "aok_s_03_09_00": {
+   "slot": "neutral",
+   "desc": "抱臂站姿、表情平静",
+   "conf": "low",
+   "src": "sub"
+  },
+  "aok_l_03_09_02": {
+   "slot": "glare",
+   "desc": "眯眼瞪视、嘴平闭",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_l_03_09_03": {
+   "slot": "glare",
+   "desc": "眯眼瞪视、嘴平闭",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_03_09_03": {
+   "slot": "blink",
+   "desc": "双目闭合、表情平静",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_a_03_14_01": {
+   "slot": "glare",
+   "desc": "半垂眼侧视、嘴闭",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_03_14_05": {
+   "slot": "neutral",
+   "desc": "睁眼平视、小嘴平闭",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_03_16_00": {
+   "slot": "neutral",
+   "desc": "睁大眼平视、嘴平闭",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_03_16_03": {
+   "slot": "glare",
+   "desc": "眯眼皱眉、抿嘴",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_03_18_01": {
+   "slot": "troubled",
+   "desc": "眉蹙眼垂、嘴微撇",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_a_03_20_00": {
+   "slot": "angry",
+   "desc": "眉倒竖、嘴角下撇",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_03_21_00": {
+   "slot": "surprised",
+   "desc": "睁大眼、小嘴微张",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_s_03_21_00": {
+   "slot": "surprised",
+   "desc": "睁大眼、小嘴微张",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_m_03_21_01": {
+   "slot": "surprised",
+   "desc": "圆睁眼、张嘴惊愕",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_03_21_01": {
+   "slot": "neutral",
+   "desc": "睁大眼平视、嘴闭合",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_s_03_21_01": {
+   "slot": "surprised",
+   "desc": "睁大眼、张嘴惊讶",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_03_21_04": {
+   "slot": "surprised",
+   "desc": "瞳孔缩、张口大惊",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_n_03_21_08": {
+   "slot": "troubled",
+   "desc": "眉拧抿嘴、头冒汗",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "aok_n_03_21_09": {
+   "slot": "surprised",
+   "desc": "瞳孔缩小、张口呆愕",
+   "conf": "high",
+   "src": "sub"
+  },
+  "aok_m_03_24_01": {
+   "slot": "angry",
+   "desc": "眉倒竖、抿嘴瞪视",
+   "conf": "mid",
+   "src": "sub"
+  }
+ },
+ "A1": {
+  "ari_a_01_02_00": {
+   "slot": "neutral",
+   "desc": "半垂眼、平直小口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_02_00": {
+   "slot": "neutral",
+   "desc": "半垂眼、嘴角微垂",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_m_01_02_00": {
+   "slot": "neutral",
+   "desc": "睁眼平视、小口平直",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_00": {
+   "slot": "neutral",
+   "desc": "半垂眼、平直小口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_s_01_02_00": {
+   "slot": "neutral",
+   "desc": "全身远景、半垂眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_02_01": {
+   "slot": "neutral",
+   "desc": "半垂眼斜视、小口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_02_01": {
+   "slot": "blink",
+   "desc": "双眼闭合、小圆口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_m_01_02_01": {
+   "slot": "neutral",
+   "desc": "半垂眼、平直小口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_01": {
+   "slot": "neutral",
+   "desc": "半垂眼斜视、小口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_02_02": {
+   "slot": "talk",
+   "desc": "圆睁眼、小开口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_02_02": {
+   "slot": "blink",
+   "desc": "双眼闭合、小圆口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_m_01_02_02": {
+   "slot": "blink",
+   "desc": "双眼闭合、小圆口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_02": {
+   "slot": "talk",
+   "desc": "圆睁眼、小开口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_02_03": {
+   "slot": "neutral",
+   "desc": "睁圆眼、嘴闭合",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_03": {
+   "slot": "blink",
+   "desc": "闭眼、小圆口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_02_04": {
+   "slot": "blink",
+   "desc": "闭眼、小开口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_02_04": {
+   "slot": "blink",
+   "desc": "闭眼、嘴平直",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_02_05": {
+   "slot": "blink",
+   "desc": "闭眼、嘴角平直",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_03_00": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_03_00": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_03_00": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_01": {
+   "slot": "glare",
+   "desc": "半眯眼侧视、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_03_01": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_03_01": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_02": {
+   "slot": "angry",
+   "desc": "眉压低内斜、眼细口垂",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_m_01_03_02": {
+   "slot": "blink",
+   "desc": "闭眼、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_03": {
+   "slot": "glare",
+   "desc": "眉斜压、细眼侧视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_03_03": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_04": {
+   "slot": "surprised",
+   "desc": "圆睁大眼、小开口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_l_01_03_04": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_05": {
+   "slot": "blink",
+   "desc": "闭眼、嘴角微垂",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_03_06": {
+   "slot": "glare",
+   "desc": "眉斜压、细眼侧视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、眼下视、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_m_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_01": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、小三角口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_m_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、小三角口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_03": {
+   "slot": "troubled",
+   "desc": "眉下垂、侧垂眼",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_08_04": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_04": {
+   "slot": "troubled",
+   "desc": "垂眼半闭、口平",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_08_05": {
+   "slot": "troubled",
+   "desc": "眉下垂、单眼微闭",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_08_05": {
+   "slot": "blink",
+   "desc": "闭眼、小圆口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_08_06": {
+   "slot": "troubled",
+   "desc": "眉下垂、小三角口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_06": {
+   "slot": "troubled",
+   "desc": "睁圆眼、口平",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_00": {
+   "slot": "surprised",
+   "desc": "半闭眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_m_01_10_00": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_01": {
+   "slot": "surprised",
+   "desc": "半闭眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_l_01_10_01": {
+   "slot": "surprised",
+   "desc": "睁眼、手掩口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_10_01": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_02": {
+   "slot": "surprised",
+   "desc": "半闭眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_m_01_10_02": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_n_01_10_02": {
+   "slot": "surprised",
+   "desc": "圆睁眼、手掩口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_10_03": {
+   "slot": "surprised",
+   "desc": "圆睁眼、手掩口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_10_03": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_m_01_10_03": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_04": {
+   "slot": "blink",
+   "desc": "闭眼、手掩口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_10_04": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_l_01_10_05": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_06": {
+   "slot": "surprised",
+   "desc": "圆睁眼、手掩口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_10_07": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_14_01": {
+   "slot": "neutral",
+   "desc": "侧脸、睁眼平视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_14_01": {
+   "slot": "neutral",
+   "desc": "侧脸、睁眼平视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_14_02": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_14_02": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_16_00": {
+   "slot": "neutral",
+   "desc": "侧脸、睁眼平视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_16_01": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_16_01": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_19_00": {
+   "slot": "blink",
+   "desc": "闭眼、小开口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_19_01": {
+   "slot": "smile",
+   "desc": "闭眼、口平近微笑",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_n_01_19_01": {
+   "slot": "unknown",
+   "desc": "仅下半脸残片、无眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_19_02": {
+   "slot": "talk",
+   "desc": "半垂眼、张口",
+   "conf": "high",
+   "src": "sub"
+  }
+ },
+ "A2": {
+  "ari_a_01_02_00": {
+   "slot": "neutral",
+   "desc": "半垂眼、平直小口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_02_00": {
+   "slot": "neutral",
+   "desc": "半垂眼、嘴角微垂",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_m_01_02_00": {
+   "slot": "neutral",
+   "desc": "睁眼平视、小口平直",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_00": {
+   "slot": "neutral",
+   "desc": "半垂眼、平直小口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_s_01_02_00": {
+   "slot": "neutral",
+   "desc": "全身远景、半垂眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_02_01": {
+   "slot": "neutral",
+   "desc": "半垂眼斜视、小口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_02_01": {
+   "slot": "blink",
+   "desc": "双眼闭合、小圆口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_m_01_02_01": {
+   "slot": "neutral",
+   "desc": "半垂眼、平直小口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_01": {
+   "slot": "neutral",
+   "desc": "半垂眼斜视、小口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_02_02": {
+   "slot": "talk",
+   "desc": "圆睁眼、小开口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_02_02": {
+   "slot": "blink",
+   "desc": "双眼闭合、小圆口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_m_01_02_02": {
+   "slot": "blink",
+   "desc": "双眼闭合、小圆口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_02": {
+   "slot": "talk",
+   "desc": "圆睁眼、小开口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_02_03": {
+   "slot": "neutral",
+   "desc": "睁圆眼、嘴闭合",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_02_03": {
+   "slot": "blink",
+   "desc": "闭眼、小圆口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_02_04": {
+   "slot": "blink",
+   "desc": "闭眼、小开口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_02_04": {
+   "slot": "blink",
+   "desc": "闭眼、嘴平直",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_02_05": {
+   "slot": "blink",
+   "desc": "闭眼、嘴角平直",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_03_00": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_03_00": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_03_00": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_01": {
+   "slot": "glare",
+   "desc": "半眯眼侧视、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_03_01": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_03_01": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_02": {
+   "slot": "angry",
+   "desc": "眉压低内斜、眼细口垂",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_m_01_03_02": {
+   "slot": "blink",
+   "desc": "闭眼、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_03": {
+   "slot": "glare",
+   "desc": "眉斜压、细眼侧视",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_03_03": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_04": {
+   "slot": "surprised",
+   "desc": "圆睁大眼、小开口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_l_01_03_04": {
+   "slot": "glare",
+   "desc": "细眼侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_03_05": {
+   "slot": "blink",
+   "desc": "闭眼、嘴角微垂",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_03_06": {
+   "slot": "glare",
+   "desc": "眉斜压、细眼侧视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、眼下视、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_m_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_08_00": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_01": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、小三角口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、侧视、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_m_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、小三角口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_08_02": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_03": {
+   "slot": "troubled",
+   "desc": "眉下垂、侧垂眼",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_08_04": {
+   "slot": "troubled",
+   "desc": "眉下垂、垂眼、口平",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_04": {
+   "slot": "troubled",
+   "desc": "垂眼半闭、口平",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_08_05": {
+   "slot": "troubled",
+   "desc": "眉下垂、单眼微闭",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_08_05": {
+   "slot": "blink",
+   "desc": "闭眼、小圆口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_08_06": {
+   "slot": "troubled",
+   "desc": "眉下垂、小三角口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_n_01_08_06": {
+   "slot": "troubled",
+   "desc": "睁圆眼、口平",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_00": {
+   "slot": "surprised",
+   "desc": "半闭眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_m_01_10_00": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_01": {
+   "slot": "surprised",
+   "desc": "半闭眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_l_01_10_01": {
+   "slot": "surprised",
+   "desc": "睁眼、手掩口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_n_01_10_01": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_02": {
+   "slot": "surprised",
+   "desc": "半闭眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_m_01_10_02": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_n_01_10_02": {
+   "slot": "surprised",
+   "desc": "圆睁眼、手掩口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_a_01_10_03": {
+   "slot": "surprised",
+   "desc": "圆睁眼、手掩口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_10_03": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_m_01_10_03": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_04": {
+   "slot": "blink",
+   "desc": "闭眼、手掩口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_10_04": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_l_01_10_05": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_10_06": {
+   "slot": "surprised",
+   "desc": "圆睁眼、手掩口",
+   "conf": "high",
+   "src": "sub"
+  },
+  "ari_l_01_10_07": {
+   "slot": "surprised",
+   "desc": "细眼、手掩口",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_a_01_14_01": {
+   "slot": "neutral",
+   "desc": "侧脸、睁眼平视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_14_01": {
+   "slot": "neutral",
+   "desc": "侧脸、睁眼平视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_14_02": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_14_02": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_16_00": {
+   "slot": "neutral",
+   "desc": "侧脸、睁眼平视",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_16_01": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_l_01_16_01": {
+   "slot": "blink",
+   "desc": "侧脸、闭眼、口平",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_19_00": {
+   "slot": "blink",
+   "desc": "闭眼、小开口",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_19_01": {
+   "slot": "smile",
+   "desc": "闭眼、口平近微笑",
+   "conf": "low",
+   "src": "sub"
+  },
+  "ari_n_01_19_01": {
+   "slot": "unknown",
+   "desc": "仅下半脸残片、无眼",
+   "conf": "mid",
+   "src": "sub"
+  },
+  "ari_a_01_19_02": {
+   "slot": "talk",
+   "desc": "半垂眼、张口",
+   "conf": "high",
+   "src": "sub"
+  }
+ }
+}

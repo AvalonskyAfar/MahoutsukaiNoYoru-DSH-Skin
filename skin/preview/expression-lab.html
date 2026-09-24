@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>魔法使之夜皮肤 · 表情与切换实验台</title>
+<style>
+  :root{ --ink:#E9E4D8; --mist:#AFC3CB; --cy:#58FFFD; --bg:#0b1014; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+  header{padding:12px 20px;border-bottom:1px solid rgba(88,255,253,.25);
+         display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+  header h1{margin:0;font-size:16px;letter-spacing:.16em;font-weight:600}
+  header .sub{color:var(--mist);font-size:12px}
+  .wrap{display:grid;grid-template-columns:minmax(380px,1fr) minmax(430px,1.1fr);height:calc(100vh - 55px)}
+  .left{padding:14px 20px;overflow:auto;border-right:1px solid rgba(88,255,253,.18)}
+  .right{padding:14px 20px;overflow:auto}
+  h2{font-size:12px;letter-spacing:.2em;color:var(--mist);margin:18px 0 7px;font-weight:600}
+  h2:first-child{margin-top:0}
+  textarea{width:100%;min-height:132px;background:#0e161c;color:var(--ink);
+           border:1px solid rgba(88,255,253,.28);border-radius:6px;padding:10px 12px;
+           font:13px/1.75 inherit;resize:vertical}
+  .row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:9px}
+  button{background:#0b1d24;color:#DFF3F7;border:1px solid var(--cy);border-radius:5px;
+         padding:5px 12px;font:inherit;font-weight:600;cursor:pointer}
+  button:hover{background:#123039}
+  button.ghost{border-color:rgba(88,255,253,.35);font-weight:400}
+  button[data-on="1"]{background:#123039;border-color:var(--cy);font-weight:700}
+  input[type=range]{background:#0e161c;border:1px solid rgba(88,255,253,.28);border-radius:5px}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .tabs button{padding:3px 9px;font-weight:400;font-size:13px}
+  /* ★ 舞台必须与实机**同比例**（2026-09-21 修）：
+     实机 = manifest.canvas 1920×1080（16:9），立绘高 76vh、期望站位偏移 ±30vw
+     （2026-09-20 用户定案：20vw → 30vw，"往自己的那一边再靠近 50%"）。
+     本页舞台是 16:9 的**等比小舞台**，所以立绘几何一律改用**相对舞台自身**的量：
+       76%  ≡ 实机 76vh（舞台高/舞台宽 = 9/16 = 实机 1080/1920 → 比例等价）
+       30%  ≡ 实机 30vw
+       盒子宽 = ar × 76% × 9/16（把"76% 的舞台高"折成"舞台宽的百分比"）
+     → "立绘宽 / 画面宽" 与 1920×1080 实机**逐个数字对得上**（页脚几何对照行里有实测值）。
+     上一版这里是 height:97% + ±20vw：vw 永远按**浏览器窗口**算，而本页舞台只占窗口里的
+     一列（~600px）。1920 窗口下 20vw = 384px = 舞台宽的 **64%**，等于把立绘整体推出舞台，
+     overflow:hidden 一切 → 用户看到的"全都贴边"。实机 1920 窗口下这 384px 只占画面 20%，
+     两边根本不是同一个量。 */
+  .stage{position:relative;aspect-ratio:16/9;display:grid;align-items:end;justify-items:start;
+         align-content:end;border-radius:8px;overflow:hidden;background:#0e161c center/cover no-repeat;
+         border:1px solid rgba(88,255,253,.2);--myh-sprite-x:30%}
+  /* ★ 左右站位来自 manifest.expressions[景].spriteSide（loadScene 里写 --myh-sprite-x）。
+     与运行时**同一条口径、同一条公式**：期望偏移 ±30%，最终位移按**盒子宽** clamp
+     （margin-left 百分比按包含块=舞台宽解析；推导见 lib/client.js §1 的 .myh-stage 注释）。
+     为什么金鹿（A5）在左：她面朝右，站右侧视线冲屏幕外，站左侧才横穿画面朝向对话框。
+     ★★ 盒子尺寸用**宽**定，不用 height:76% —— 实测踩过：百分比高度在 aspect-ratio 网格里
+        会**循环**（行高由 item 撑着、item 高又是行高的百分比），Chrome 会退化成
+        "自然尺寸的 76%"：884 画布渲染成 672px = 设计值的 2.8 倍，照样出框。
+        百分比宽度按包含块（=舞台）的**宽**解析，永远有解，不需要第二步布局。 */
+  .stage img.sprite{--myh-sprite-ar:1.2893;
+        --myh-sprite-bw:calc(var(--myh-sprite-ar) * 76% * 9 / 16);
+        width:var(--myh-sprite-bw);height:auto;max-width:none;
+        margin-left:max(min(calc(50% - var(--myh-sprite-bw) / 2 + var(--myh-sprite-x,30%)),calc(100% - var(--myh-sprite-bw))),min(calc(50% - var(--myh-sprite-bw) / 2),0px));
+        transition:opacity .12s linear;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+  .stage .band{position:absolute;inset:0;background:rgba(20,26,30,.42)}
+  .stage .name{position:absolute;left:14px;bottom:10px;font-size:13px;letter-spacing:.2em;
+        text-shadow:0 2px 6px #000}
+  .stage .slot{position:absolute;right:12px;top:10px;font-size:12px;letter-spacing:.14em;
+        background:rgba(6,15,22,.82);border:1px solid rgba(88,255,253,.5);border-radius:4px;padding:3px 9px}
+  /* 站位徽标：直接显示 manifest 里的 spriteSide，肉眼一眼核对（class 在 loadScene 里加） */
+  .stage .sideTag{position:absolute;right:12px;top:44px;font-size:12px;letter-spacing:.14em;
+        background:rgba(6,15,22,.82);border:1px solid rgba(88,255,253,.5);border-radius:4px;padding:3px 9px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:left;padding:4px 6px;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top}
+  th{color:var(--mist);font-weight:600}
+  tr.now{background:rgba(88,255,253,.09)}
+  .chip{display:inline-block;padding:1px 7px;border-radius:3px;background:#123039;
+        border:1px solid rgba(88,255,253,.45);font-size:11.5px}
+  .chip.no{background:#1a1414;border-color:rgba(255,140,120,.4);color:#E6C0B6}
+  .why{color:var(--mist);font-size:11.5px}
+  code{background:#0e161c;padding:1px 5px;border-radius:3px;font-size:11.5px;color:#CFE8EE}
+  .slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px}
+  .slots figure{margin:0;background:#0e161c;border:1px solid rgba(88,255,253,.18);
+        border-radius:6px;overflow:hidden;text-align:center;cursor:pointer}
+  .slots figure[data-on="1"]{border-color:var(--cy);box-shadow:0 0 0 1px var(--cy) inset}
+  .slots img{width:100%;height:92px;object-fit:contain;object-position:50% 8%;
+        background:linear-gradient(#131c22,#0c1216);display:block}
+  .slots figcaption{font-size:11px;padding:2px 2px 4px}
+  .miss{color:#E6C0B6} .ok{color:#9FE7D2}
+  .scoreTable{font-size:12px}
+  .scoreTable td:first-child{width:84px}
+  .bar{display:inline-block;height:8px;background:linear-gradient(90deg,#58FFFD,#2b6f7d);
+       border-radius:2px;vertical-align:middle}
+  .note{color:var(--mist);font-size:12px;margin-top:7px}
+</style>
+</head>
+<body>
+<header>
+  <h1>表情与切换实验台</h1>
+  <span class="sub">逻辑是运行时从 <code>lib/client.js</code> 抽取的同一段，不是复制</span>
+  <span class="sub">舞台 = 16:9 等比（≡ 实机 1920×1080：<code>76%</code>≡<code>76vh</code>、<code>30%</code>≡<code>30vw</code>）</span>
+  <span class="sub" id="boot">加载中…</span>
+</header>
+
+<div class="wrap">
+  <section class="left">
+    <h2>① 场景</h2>
+    <div class="tabs" id="sceneTabs"></div>
+
+    <h2>② 手动验表情（<b>不经过分类器</b>，直接看素材）</h2>
+    <div class="tabs" id="slotTabs"></div>
+    <div class="row">
+      <button id="walk">逐个遍历 12 槽</button>
+      <button class="ghost" id="nextFrame">换一帧（同槽位变体）</button>
+      <span class="why" id="walkState"></span>
+    </div>
+    <div class="note">点某个槽位 = 直接把那张立绘放上舞台；本景没有的槽位会当场显示它回退到了谁。</div>
+
+    <h2>③ 输入文本（逐句播放，走真分类器）</h2>
+    <div class="tabs" id="sampleTabs"></div>
+    <textarea id="text"></textarea>
+    <div class="row">
+      <button id="play">逐句播放</button>
+      <button class="ghost" id="step">下句</button>
+      <button class="ghost" id="reset">重置状态</button>
+      <label class="why">间隔 <input type="range" id="pace" min="0" max="600" step="50" value="250"> <span id="paceVal">250ms</span></label>
+    </div>
+    <div class="note">间隔调到 <b>0ms</b> 能看「180ms 节流」把切换挡掉的样子。</div>
+
+    <h2>④ 这一句为什么是这个表情</h2>
+    <div id="explain" class="why">（还没跑）</div>
+
+    <h2>⑤ 本景的表情素材覆盖</h2>
+    <div class="note" id="coverNote"></div>
+    <div class="slots" id="slots"></div>
+  </section>
+
+  <section class="right">
+    <h2>舞台（122ms crossfade）</h2>
+    <div class="stage" id="stage">
+      <img class="sprite" id="sprite" alt="">
+      <div class="band"></div>
+      <div class="name" id="name"></div>
+      <div class="slot" id="slotTag">neutral</div>
+      <div class="sideTag" id="sideTag"></div>
+    </div>
+    <div class="note" id="stageNote"></div>
+    <div class="note" id="geomNote"></div>
+
+    <h2>逐句判定（时间线）</h2>
+    <table><thead><tr><th>#</th><th>句子</th><th>判定</th><th>为什么</th></tr></thead>
+      <tbody id="timeline"></tbody></table>
+  </section>
+</div>
+
+<script>
+'use strict';
+const MANIFEST_URL = '../data/manifest.json';
+const CLIENT_URL = '../lib/client.js';
+const ASSET_BASE = '../assets/';
+const CHARACTER_CN = { aoko: '蒼崎青子', alice: '久遠寺有珠', kumari: '久万梨金鹿' };
+const SLOTS = ['neutral', 'smile', 'laugh', 'angry', 'glare', 'surprised',
+               'troubled', 'sad', 'serious', 'think', 'tired', 'shy'];
+
+/* 两套示例：
+   daily    = 像真实聊天那样，看"自然文本能走到哪一步"
+   coverage = **每个槽位一句**，专门用来暴露分类器到不了的槽位 */
+const SAMPLES = {
+  daily: [
+    '夜里的林荫道，挂满了蓝色的灯饰。',
+    '「……真漂亮啊。」她轻声说了一句。',
+    '「你在笑什么呀，真是的。」',
+    '青子皱起眉头，瞪了过来。',
+    '「才、才没有害羞呢！」',
+    '她眯起眼睛，微微一笑。',
+    '「……谢谢你。」',
+    '远处传来电车经过的声音。',
+  ].join('\n'),
+  coverage: [
+    '嗯，我知道了。',
+    '「谢谢你，我很高兴。」',
+    '「哈哈哈，你太逗了！」',
+    '「你这话什么意思，我生气了。」',
+    '她冷冷地瞪着对方，一句话也没说。',
+    '「诶？真的假的，我吃了一惊。」',
+    '「这……这可真让人为难啊。」',
+    '「……有点难过呢。」',
+    '「我说认真的，这件事很严肃。」',
+    '「让我想想，我得好好考虑一下。」',
+    '「好累啊……」她打了个哈欠。',
+    '「别、别看我，我脸都红了。」',
+  ].join('\n'),
+};
+
+/* ---------- 从 client.js 抽取同一段逻辑 ---------- */
+function sliceBrace(src, mk){
+  const i = src.indexOf(mk); if (i < 0) throw new Error('抽取失败：' + mk);
+  let d = 0, s = false;
+  for (let j = i; j < src.length; j++){ const c = src[j];
+    if (c === '{'){ d++; s = true } else if (c === '}'){ d--; if (s && d === 0) return src.slice(i, j + 1) } }
+  throw new Error('括号不配平：' + mk);
+}
+function sliceBracket(src, mk, o, c2){
+  const i = src.indexOf(mk); if (i < 0) throw new Error('抽取失败：' + mk);
+  let d = 0, s = false;
+  for (let j = i; j < src.length; j++){ const c = src[j];
+    if (c === o){ d++; s = true } else if (c === c2){ d--; if (s && d === 0) return src.slice(i, j + 1) } }
+  throw new Error('括号不配平：' + mk);
+}
+function buildEngine(src, emo, lexiconIndex){
+  const blocks = [
+    sliceBracket(src, 'const PRIORITY = [', '[', ']') + ';',
+    sliceBrace(src, 'const DEFAULT_FALLBACK = {'),
+    sliceBrace(src, 'function buildLexiconIndex('),
+    sliceBrace(src, 'function classifyText('),
+    sliceBrace(src, 'function stepEmotion('),
+    sliceBrace(src, 'function splitSentences('),
+  ];
+  const f = new Function('clamp', 'emo', 'lexiconIndex',
+    blocks.join('\n') + '\nreturn {buildLexiconIndex, classifyText, stepEmotion, splitSentences, DEFAULT_FALLBACK};');
+  return f((v, a, b) => Math.min(b, Math.max(a, v)), emo, lexiconIndex);
+}
+
+let MANIFEST = null, CLIENT_SRC = null, LB = null;
+let engine = null, emo = null, lexiconIndex = null;
+let spriteTable = {}, sceneId = 'A4', curSlot = 'neutral', curFile = '', roll = 0;
+let sentences = [], cursor = 0, playing = false, walking = false, sceneChar = '';
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function boot(){
+  try{
+    const [mres, cres, lb] = await Promise.all([
+      fetch(MANIFEST_URL, {cache:'no-store'}), fetch(CLIENT_URL, {cache:'no-store'}),
+      import('../tools/lexicon-build.mjs')]);
+    if (!mres.ok) throw new Error('manifest HTTP ' + mres.status);
+    if (!cres.ok) throw new Error('client.js HTTP ' + cres.status);
+    MANIFEST = await mres.json(); CLIENT_SRC = await cres.text(); LB = lb;
+    $('boot').textContent = '已载入 manifest + client.js（' + (CLIENT_SRC.length/1024|0) + ' KB）+ 词表模块';
+  }catch(e){ $('boot').textContent = '加载失败：' + (e && e.message || e); return }
+  renderSceneTabs(); renderSampleTabs();
+  $('text').value = SAMPLES.daily;
+  // ★ 量 ar 的监听必须在第一次 loadScene 之前挂上（loadScene → showSprite 会设 src）
+  const sp = $('sprite');
+  sp.addEventListener('load', measureSpriteAr);
+  if (sp.complete) measureSpriteAr();   // 命中缓存时 load 可能已经错过
+  loadScene('A4');
+  $('play').onclick = play;
+  $('step').onclick = () => { prep(); step(false) };
+  $('reset').onclick = () => loadScene(sceneId);
+  $('walk').onclick = walkAll;
+  $('nextFrame').onclick = () => { if (roll !== undefined) { roll++; showSprite(true) } };
+  $('pace').oninput = () => { $('paceVal').textContent = $('pace').value + 'ms' };
+  $('text').oninput = liveOne;
+}
+
+function renderSceneTabs(){
+  const box = $('sceneTabs'); box.innerHTML = '';
+  for (const sid of Object.keys(MANIFEST.expressions || {})){
+    const b = document.createElement('button');
+    b.textContent = sid; b.dataset.sid = sid; b.onclick = () => loadScene(sid);
+    box.appendChild(b);
+  }
+}
+function renderSampleTabs(){
+  const box = $('sampleTabs'); box.innerHTML = '';
+  for (const kv of [['daily','日常对话示例'],['coverage','12 情绪覆盖测试']]){
+    const b = document.createElement('button');
+    b.textContent = kv[1]; b.dataset.k = kv[0];
+    b.onclick = () => { $('text').value = SAMPLES[kv[0]]; markSample(kv[0]); loadScene(sceneId) };
+    box.appendChild(b);
+  }
+  markSample('daily');
+}
+function markSample(k){ for (const b of document.querySelectorAll('#sampleTabs button')) b.dataset.on = (b.dataset.k === k ? '1' : '0') }
+
+function loadScene(sid){
+  sceneId = sid;
+  const sc = (MANIFEST.scenes || {})[sid] || {};
+  $('stage').style.backgroundImage = sc.bg ? 'url("' + ASSET_BASE + sc.bg + '")' : '';
+  // ★ 立绘左右站位：读 manifest 的按景字段（与运行时同一条口径，见 lib/client.js）
+  //   A5 = 金鹿面朝右 → 'left'，视线横穿画面落到中央对话框；其余 'right'（历史行为）。
+  //   单位是**舞台宽的比例**（30%）而不是 vw —— 舞台是 16:9 等比小舞台，
+  //   30% ≡ 实机 30vw，这样"站位"这个量和实机同义（上一版写 20vw：它按窗口算，
+  //   1920 窗口下 384px = 本页舞台宽的 64% → 立绘被推出舞台切掉）。
+  const side = (((MANIFEST.expressions || {})[sid] || {}).spriteSide === 'left') ? 'left' : 'right';
+  $('stage').style.setProperty('--myh-sprite-x', side === 'left' ? '-30%' : '30%');
+  $('sideTag').textContent = 'spriteSide=' + side + (side === 'left' ? '（镜像位 -30%）' : '（+30%）');
+  const ch = (MANIFEST.characters || []).find(c => c.light === sid || c.dark === sid);
+  $('name').textContent = ch ? (CHARACTER_CN[ch.id] || ch.cn || ch.id) : '';
+  spriteTable = {};
+  const raw = ((MANIFEST.expressions || {})[sid] || {}).slots || {};
+  for (const k of Object.keys(raw)) spriteTable[k] = raw[k].map(f => ASSET_BASE + f);
+  emo = { slot: 'neutral', since: 0, weakStreak: 0, lastSwitch: 0, roll: 0, sentence: '' };
+  engine = buildEngine(CLIENT_SRC, emo, null);
+  // ★ 角色专属词表并进来（青子/有珠/金鹿各一套说法，来源是各 skill 的 voice.md）
+  const slug = ch ? ch.id : '';
+  const extra = (MANIFEST.lexiconByCharacter || {})[slug] || null;
+  const lx = extra ? LB.mergeLexicon(MANIFEST.lexicon || {}, extra) : (MANIFEST.lexicon || {});
+  lexiconIndex = engine.buildLexiconIndex(lx);
+  sceneChar = slug;
+  engine = buildEngine(CLIENT_SRC, emo, lexiconIndex);
+  curSlot = 'neutral'; curFile = ''; roll = 0;
+  for (const b of document.querySelectorAll('#sceneTabs button')) b.dataset.on = (b.dataset.sid === sid ? '1' : '0');
+  renderSlotTabs(); renderSlots(); resetTimeline(); showSprite(); liveOne();
+}
+
+/** 槽位 → 文件（含回退链），规则与客户端 pickSprite 一致 */
+function pickFile(slot, r){
+  const chain = [slot].concat((engine.DEFAULT_FALLBACK && engine.DEFAULT_FALLBACK[slot]) || []).concat(['neutral']);
+  for (const s of chain){
+    const files = spriteTable[s];
+    if (files && files.length) return { file: files[r % files.length], via: (s === slot ? '' : s), n: files.length };
+  }
+  for (const sid of Object.keys(spriteTable)){
+    const f = spriteTable[sid]; if (f && f.length) return { file: f[0], via: sid, n: f.length };
+  }
+  return { file: '', via: '', n: 0 };
+}
+
+function renderSlotTabs(){
+  const box = $('slotTabs'); box.innerHTML = '';
+  for (const s of SLOTS){
+    const own = spriteTable[s];
+    const b = document.createElement('button');
+    b.textContent = own && own.length ? s : s + ' ↗';
+    b.title = own && own.length ? ('本景有 ' + own.length + ' 张')
+                                : ('本景没有 → 回退到 ' + pickFile(s, 0).via);
+    b.dataset.slot = s;
+    if (!(own && own.length)) b.className = 'ghost';
+    b.onclick = () => { curSlot = s; roll = 0; showSprite(true) };
+    box.appendChild(b);
+  }
+  markSlotTabs();
+}
+function markSlotTabs(){
+  for (const b of document.querySelectorAll('#slotTabs button')) b.dataset.on = (b.dataset.slot === curSlot ? '1' : '0');
+  for (const f of document.querySelectorAll('#slots figure')) f.dataset.on = (f.dataset.slot === curSlot ? '1' : '0');
+}
+
+function renderSlots(){
+  const box = $('slots'); box.innerHTML = '';
+  let have = 0; const miss = [];
+  for (const s of SLOTS){
+    const own = spriteTable[s];
+    const p = pickFile(s, 0);
+    if (own && own.length) have++; else miss.push(s);
+    const fig = document.createElement('figure');
+    fig.dataset.slot = s;
+    fig.innerHTML = (p.file ? '<img src="' + p.file + '" alt="">'
+        : '<div style="height:92px;display:flex;align-items:center;justify-content:center;color:#E6C0B6;font-size:11px">无素材</div>')
+      + '<figcaption>' + s + (own && own.length
+          ? ' <span class="ok">' + own.length + '</span>'
+          : ' <span class="miss">→' + p.via + '</span>') + '</figcaption>';
+    fig.onclick = () => { curSlot = s; roll = 0; showSprite(true) };
+    box.appendChild(fig);
+  }
+  $('coverNote').innerHTML = '本景 <b>' + sceneId + '</b>：12 槽里 <span class="ok">' + have + ' 个有差分</span>，'
+    + '<span class="miss">' + miss.length + ' 个回退</span>' + (miss.length ? '（' + miss.join(' / ') + '）' : '') + '。'
+    + '回退链来自客户端 <code>DEFAULT_FALLBACK</code>（= spec-switching §6 的 fallback 表）。当前用的是 <b>' + (sceneChar || '通用') + '</b> 词表（含角色专属说法 ' + (lexiconIndex.length) + ' 条索引）。';
+  markSlotTabs();
+}
+
+function showSprite(){
+  const p = pickFile(curSlot, roll);
+  if (!p.file) return;
+  const img = $('sprite');
+  if (p.file !== curFile){
+    img.style.opacity = '0';
+    setTimeout(function(){ img.src = p.file; img.style.opacity = '1' }, 120);
+    curFile = p.file;
+  }
+  $('slotTag').textContent = curSlot + (p.n > 1 ? ' ' + ((roll % p.n) + 1) + '/' + p.n : '');
+  $('stageNote').innerHTML = p.via
+    ? '本景没有 <code>' + curSlot + '</code> 的差分 → 按回退链取了 <code>' + p.via + '</code>（' + p.file.split('/').pop() + '）'
+    : '本景的 <code>' + curSlot + '</code> 共 ' + p.n + ' 张：' + p.file.split('/').pop()
+      + (p.n > 1 ? '（「换一帧」看其它变体；客户端里同槽位连续 ≥3 句会自动换）' : '');
+  markSlotTabs();
+}
+
+/* ★ 立绘盒子宽 = 素材宽高比 ar × 舞台高：ar 只有图自己知道 → 加载后量一次写 CSS 变量
+   （与运行时同一条机制，见 lib/client.js 的 Sprite：onLoad 写 --myh-sprite-ar）。
+   量不到就继续用 CSS 里的兜底 1.2893 = 最宽画布 1640/1272（**高估** → 只会往里收，不会出框）。 */
+function measureSpriteAr(){
+  const img = $('sprite');
+  const w = img.naturalWidth, h = img.naturalHeight;
+  if (w > 0 && h > 0) img.style.setProperty('--myh-sprite-ar', String(w / h));
+  renderGeomNote();
+}
+
+/* 几何对照：本页舞台 vs 实机 1920×1080（同一张画布）——"立绘宽 / 画面宽"应当逐个数字一致。
+   这是"站位这个量在两边同义"的机械证据，不靠肉眼。 */
+function renderGeomNote(){
+  const img = $('sprite'), stage = $('stage');
+  const ib = img.getBoundingClientRect();
+  // 分母用**内容宽**（百分比位移就是按它解析的）；getBoundingClientRect 含边框，
+  // 舞台有 1px 边框 → 拿它当分母会凭空差 0.1 个百分点。
+  const sw = stage.clientWidth;
+  if (!sw || !ib.width) return;
+  const labPct = ib.width / sw * 100;
+  const realPct = (img.naturalWidth / img.naturalHeight) * 0.76 * (1080 / 1920) * 100;
+  $('geomNote').innerHTML = '几何对照：舞台 ' + sw + '×' + stage.clientHeight
+    + '（16:9，= 实机 1920×1080 的 ' + (sw / 1920 * 100).toFixed(1) + '% 等比缩放）'
+    + '　立绘宽 / 画面宽：本页 <b>' + labPct.toFixed(2) + '%</b>，实机同画布 <b>' + realPct.toFixed(2) + '%</b>'
+    + '（差 ' + Math.abs(labPct - realPct).toFixed(2) + ' 个百分点）'
+    + '<br>同义关系：期望偏移 30% ≡ 实机 30vw、盒高 76% ≡ 实机 76vh；'
+    + '最终位移由与**盒子宽**挂钩的 clamp 决定（margin-left 那行），立绘右缘不再越出画面，'
+    + 'A5 的 left 是它的镜像。';
+}
+
+async function walkAll(){
+  if (walking){ walking = false; $('walkState').textContent = '已停止'; return }
+  walking = true;
+  for (const s of SLOTS){
+    if (!walking) break;
+    curSlot = s; roll = 0; showSprite();
+    $('walkState').textContent = '正在看：' + s;
+    await new Promise(function(r){ setTimeout(r, 900) });
+  }
+  walking = false;
+  $('walkState').textContent = '遍历结束';
+}
+
+/* ---------- 时间线 ---------- */
+function resetTimeline(){ $('timeline').innerHTML = ''; sentences = []; cursor = 0; playing = false }
+function prep(){ if (!sentences.length){ sentences = engine.splitSentences($('text').value); cursor = 0; $('timeline').innerHTML = '' } }
+
+function step(){
+  prep();
+  if (cursor >= sentences.length) return null;
+  const s = sentences[cursor++];
+  const cls = engine.classifyText(s, lexiconIndex);
+  const before = emo.slot;
+  const verdict = engine.stepEmotion(s, cursor * 1000, lexiconIndex);
+  let why, slot;
+  if (verdict){
+    slot = verdict.slot;
+    why = (slot === before) ? '同槽位第 3 句 → <b>换帧</b>（roll=' + verdict.roll + '）'
+                            : '切换 → <b>' + slot + '</b>（conf ' + cls.conf.toFixed(2) + '）';
+    roll = verdict.roll || 0; curSlot = slot; showSprite();
+  } else {
+    slot = before;
+    if (cls.conf < 0.5) why = 'conf ' + cls.conf.toFixed(2) + ' &lt; 0.5 → <b>保持</b>（宁可不换）';
+    else if (cls.slot === before) why = '同槽位第 ' + (emo.since + 1) + ' 句 → 未到 3 句，保持';
+    else if (cls.slot === 'neutral') why = '转为平静需连续 2 句 → 还差 ' + (2 - emo.weakStreak) + ' 句';
+    else why = '判定 ' + cls.slot + '，但未触发（节流/迟滞）';
+  }
+  addRow(cursor, s, cls, slot, why);
+  renderExplain(s, cls, before, slot, verdict);
+  return slot;
+}
+
+function addRow(i, s, cls, slot, why){
+  const prev = document.querySelector('#timeline tr.now'); if (prev) prev.className = '';
+  const tr = document.createElement('tr'); tr.className = 'now';
+  tr.innerHTML = '<td>' + i + '</td><td>' + esc(s) + '</td>'
+    + '<td><span class="chip' + (cls.score === 0 ? ' no' : '') + '">' + slot + '</span>'
+    + '<div class="why">判定 ' + cls.slot + ' · ' + cls.score + '分</div></td>'
+    + '<td class="why">' + why + '</td>';
+  $('timeline').appendChild(tr); tr.scrollIntoView({block:'nearest'});
+}
+
+function renderExplain(s, cls, before, after, verdict){
+  const rows = Object.keys(MANIFEST.lexicon || {}).map(function(k){
+    const idx = (MANIFEST.lexicon[k] || []).map(function(w){ return [w.w, k, w.n] });
+    const sub = engine.classifyText(s, idx);
+    return { slot: k, score: sub.score, words: sub.words };
+  }).filter(function(r){ return r.score > 0 }).sort(function(a, b){ return b.score - a.score });
+  const max = Math.max(1, Math.max.apply(null, rows.map(function(r){ return r.score }).concat([1])));
+  $('explain').innerHTML = '<div><b>「' + esc(s) + '」</b></div>'
+    + (rows.length ? '<table class="scoreTable">' + rows.map(function(r){
+        return '<tr><td><code>' + r.slot + '</code></td><td><span class="bar" style="width:'
+          + Math.round(r.score / max * 170) + 'px"></span> ' + r.score + '</td><td class="why">'
+          + r.words.join('、') + '</td></tr>' }).join('') + '</table>'
+      : '<div class="why">没有命中任何词 → neutral（兜底）</div>')
+    + '<div>胜出 <span class="chip">' + cls.slot + '</span> · ' + cls.score + ' 分 · 置信度 ' + cls.conf.toFixed(2)
+    + '（= ' + cls.score + '/' + cls.score + '+8）　本句结果：<b>' + after + '</b>'
+    + (verdict ? '（有切换/换帧）' : '（保持）') + (before !== after ? '，' + before + ' → ' + after : '') + '</div>';
+  if (cls.score === 0) $('explain').innerHTML +=
+    '<div class="why">⚠ 0 命中 = 词表里没有能匹配这句的词。这正是「表情不动」的现场 —— 补词，或改用模型判定。</div>';
+  else if (cls.conf < 0.5) $('explain').innerHTML +=
+    '<div class="why">⚠ 置信度 0.5 是硬门限（spec-switching §4.6）：低于它一律保持现状。</div>';
+}
+
+function liveOne(){
+  const txt = $('text').value.trim(); if (!txt || !engine) return;
+  const parts = engine.splitSentences(txt); const last = parts[parts.length - 1] || '';
+  renderExplain(last, engine.classifyText(last, lexiconIndex), emo.slot, emo.slot, null);
+}
+
+async function play(){
+  resetTimeline(); emo.lastSwitch = 0; prep(); playing = true;
+  const gap = Number($('pace').value);
+  while (playing && cursor < sentences.length){
+    step();
+    if (gap > 0) await new Promise(function(r){ setTimeout(r, gap) });
+  }
+  playing = false;
+}
+
+boot();
+</script>
+</body>
+</html>

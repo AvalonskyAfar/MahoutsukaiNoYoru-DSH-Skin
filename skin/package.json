@@ -1,0 +1,83 @@
+{
+  "name": "dsh-skin-mahoyo",
+  "version": "0.1.0",
+  "description": "《魔法使之夜》(Witch on the Holy Night) 主题的 DeepSeek Harness Web UI 整屏皮肤 —— 原作 UI 复刻、三角色立绘与表情切换、昼夜两套 BGM、人格 skill、片尾彩蛋",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./manifest": "./data/manifest.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "data/",
+    "assets/",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "pack:dist": "node tools/pack-dist.mjs",
+    "check": "node tools/check-client.mjs",
+    "verify": "node tools/check-client.mjs && node tools/check-hooks.mjs && node tools/check-hooks-per-component.mjs && node tools/check-css.mjs && node tools/lint-identifiers.mjs && node tools/audit-render.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    },
+    "engines": {
+      "dsh": ">=0.1.5-rc.1"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.1.5-rc.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "license": "MIT",
+  "author": "AvalonskyAfar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin.git"
+  },
+  "homepage": "https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin#readme",
+  "bugs": {
+    "url": "https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-theme",
+    "dsh-skin",
+    "theme",
+    "skin",
+    "visual-novel",
+    "visualnovel",
+    "galgame",
+    "mahoyo",
+    "mahoutsukai-no-yoru",
+    "witch-on-the-holy-night",
+    "type-moon",
+    "aoko",
+    "alice",
+    "kumari"
+  ],
+  "private": false
+}

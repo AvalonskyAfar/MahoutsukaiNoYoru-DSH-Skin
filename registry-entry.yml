@@ -1,0 +1,38 @@
+# awesome-dsh-plugin registry 条目
+# ---------------------------------------------------------------------------
+# 提交方式：把这个文件**改名后**放进 awesome-dsh-plugin/awesome-dsh-plugin 的
+#   data/plugins/<owner>__<repo>.yml
+# 然后开一个 PR，**PR 里只加这一个文件**（不要动 README —— 它们是从
+# data/plugins/*.yml 自动生成的，手改会被维护者打回）。
+#
+# 提交前请把下面两件事替换掉：
+#   1. 文件名 → data/plugins/AvalonskyAfar__dsh-skin-mahoyo.yml
+#   2. 确认 url 与你仓库地址**逐字符一致**（registry 会校验）
+# ---------------------------------------------------------------------------
+
+url: https://github.com/AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin
+
+name: AvalonskyAfar/MahotsukaiNoYoru-DSH-Skin
+
+# 有效分类共 23 个，皮肤/主题必须用 theme（不要填 ui）。
+# 填 theme 的条目会自动流入 dsh-market 的 Themes 标签页。
+category: theme
+
+description:
+  # en 必填。一行，以句号结尾。描述里若出现「: 」（冒号加空格）必须给整个
+  # 字符串加引号，否则 YAML 解析失败。
+  en: A Witch on the Holy Night (Mahoutsukai no Yoru) visual-novel theme for the DeepSeek Harness Web UI, with original-style menus, three characters with sprites and expressions, day and night BGM, persona skills, and an ending sequence.
+  zh: 《魔法使之夜》(Witch on the Holy Night) 风格的 DeepSeek Harness Web UI 整屏皮肤 —— 原作式菜单、三角色立绘与表情、昼夜两套 BGM、人格 skill，以及上下文到阈值触发的片尾演出。
+
+# ---------------------------------------------------------------------------
+# 上架前自检（详见 RELEASING.md）
+# ---------------------------------------------------------------------------
+# [x] package.json 声明了 dsh.bundle（不是只有 dsh.client）—— 最高频被拒原因
+# [x] package.json 有 repository / homepage / bugs
+# [x] 仓库打了 dsh-plugin topic
+# [ ] 仓库已建立、代码已推上去
+# [ ] 实测 `dsh plugin --profile web add dsh-skin-mahoyo#path:/skin` 能装上
+# [ ] 一行描述没有夸大（registry 会对着源码查数字）
+#
+# 注意：仓库根没有 package.json，插件在 skin/ 子目录里，所以用户要带
+# #path: 片段安装。见 RELEASING.md 的「安装方式」一节。

@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;height:100%;background:#ccc}
+/* 模拟 DSH：主内容很高 → 文档出现纵向滚动条 */
+.tall{height:3000px;width:100%}
+.myh-root{position:fixed;inset:0;width:100vw;height:100vh;margin:0;padding:0;
+  z-index:0;pointer-events:none;background:#000;overflow:hidden}
+.myh-under{position:absolute;inset:0;width:100vw;height:100vh;margin:0;
+  z-index:0;pointer-events:none;overflow:hidden;background:inherit}
+.myh-bg{position:absolute;inset:0;display:block;width:100vw;height:100vh;
+  max-width:none;max-height:none;margin:0;overflow:hidden;
+  object-fit:cover;object-position:50% 50%}
+</style></head><body>
+<div class="tall"></div>
+<div class="myh-root"><div class="myh-under">
+  <img class="myh-bg" src="../assets/bg/A3_img0231_01_01.mzp.png">
+</div></div>
+</body></html>

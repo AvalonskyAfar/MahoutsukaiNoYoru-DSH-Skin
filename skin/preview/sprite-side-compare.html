@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>立绘站位对照：left / right 并排</title>
+<style>
+  :root{--ink:#E9E4D8;--mist:#AFC3CB;--cy:#58FFFD;--bg:#0b1014}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+  header{padding:12px 20px;border-bottom:1px solid rgba(88,255,253,.25)}
+  header h1{margin:0;font-size:16px;letter-spacing:.16em}
+  header .sub{color:var(--mist);font-size:12px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:14px 20px}
+  @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+  .cell{background:#0e161c;border:1px solid rgba(88,255,253,.18);border-radius:8px;overflow:hidden}
+  .cell h2{margin:0;padding:7px 12px;font-size:12.5px;letter-spacing:.14em;color:var(--mist);
+           border-bottom:1px solid rgba(88,255,253,.14);display:flex;justify-content:space-between;gap:8px}
+  .cell h2 b{color:var(--ink)}
+  .cell h2 .tag{color:var(--cy);font-weight:600;white-space:nowrap}
+  .cell.now{border-color:var(--cy)}
+  .cell .geom{padding:5px 12px 8px;color:var(--mist);font-size:11.5px;letter-spacing:.04em}
+  /* ★ 与运行时同构（2026-09-21 修）：舞台固定 16:9（= manifest.canvas 1920×1080 的比例），
+     立绘几何全部取**相对舞台自身**的量，所以 20% ≡ 实机 20vw、76% ≡ 实机 76vh：
+       · 底边对齐舞台下沿、盒高 76%
+       · 盒子宽 = ar × 76% × 9/16（16:9 时"76% 的舞台高"折成"舞台宽的百分比"）
+       · 期望站位 ±20%，最终位移按**盒子宽** clamp（margin-left 那行）
+     上一版是 height:76% + translateX(±20vw)：vw 按**浏览器窗口**算，而舞台只是窗口里的
+     一格（3 列布局 → 每格 ~400~600px）—— 20vw 在 1920 窗口下是 384px，比整格还宽，
+     于是**每张立绘都被切**。现在舞台宽窄只影响缩放，不影响比例与是否出框。 */
+  .stage{position:relative;aspect-ratio:16/9;overflow:hidden;display:grid;align-items:end;justify-items:start;
+         align-content:end;background:#04070B center/cover no-repeat;--myh-sprite-x:20%}
+  .stage img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .stage .band{position:absolute;inset:0;background:rgba(20,26,30,.42)}
+  /* ★ 盒子尺寸用**宽**定（不用 height:76%）：百分比高度在 aspect-ratio 网格里会循环
+     （行高由 item 撑、item 高又是行高的百分比）→ 实测退化成"自然尺寸的 76%"，
+     884 画布渲成 672px、比舞台还宽，于是**每张都出框** —— 那正是这一页原来的毛病之一。
+     写成"舞台宽的百分比"后：宽 = ar × 76% × 9/16，高由宽按素材比例推出来，
+     等价于实机的 76vh，且永远有解。 */
+  .stage img.sprite{--myh-sprite-ar:1.2893;
+        --myh-sprite-bw:calc(var(--myh-sprite-ar) * 76% * 9 / 16);
+        width:var(--myh-sprite-bw);height:auto;max-width:none;
+        margin-left:max(min(calc(50% - var(--myh-sprite-bw) / 2 + var(--myh-sprite-x,20%)),calc(100% - var(--myh-sprite-bw))),min(calc(50% - var(--myh-sprite-bw) / 2),0px));
+        filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+  /* 中央对话框位置示意（运行时 .myh-dlg 落在底部中央） */
+  .stage .dlg{position:absolute;left:12%;right:12%;bottom:6%;height:20%;
+        background:linear-gradient(180deg,#305B73,#3D7C96 50%,#35667D);border-radius:2px;opacity:.85}
+  /* 画面中线：看立绘主体是不是跨到了这一侧 */
+  .stage .mid{position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(88,255,253,.35)}
+  .note{padding:0 20px 24px;color:var(--mist);font-size:12px;line-height:2}
+  .note code{background:#0e161c;padding:1px 5px;border-radius:3px;color:#CFE8EE}
+</style>
+</head>
+<body>
+<!--
+  立绘站位对照页 —— 2026-09-19 随「spriteSide 改由 manifest 驱动」一起加。
+  用途：站位是**几何可验、朝向不可验**的那类改动。属性→CSS 变量→位移符号这条链
+  离线能证明（见 skin/tools/check-client.mjs §9 与 .tmp 里的两个只读验证脚本），
+  但"这张立绘到底面朝哪边、摆左侧好不好看"只能人眼看。本页把同一素材的
+  left / right 两种站位**并排**摆出来，省掉来回改 manifest 的成本。
+
+  打开方式（需要 HTTP，fetch 在 file:// 下会被拒）：
+    node skin/tools/preview-server.mjs 8123
+    → http://127.0.0.1:8123/preview/sprite-side-compare.html
+-->
+<header>
+  <h1>立绘站位对照：left / right 并排</h1>
+  <div class="sub">同一张素材（<code>neutral</code> 槽第一张）+ 本景真实背景 + 同一尺度（高度 = 画面高 76%、底边对齐），
+    唯一差别是 <code>--myh-sprite-x</code>：左格 -20%、右格 +20%（舞台 16:9 → 20% ≡ 实机 20vw）。
+    青色竖线是画面中线，"（现值）"那格是
+    <code>manifest.expressions[景].spriteSide</code> 当前生效的站位。</div>
+</header>
+<div class="grid" id="grid"></div>
+<div class="note" id="foot">加载中…</div>
+<script>
+'use strict'
+const MANIFEST_URL = '../data/manifest.json'
+const ASSET_BASE = '../assets/'
+const $ = (id) => document.getElementById(id)
+const SCENES = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+
+/* ★ 量 ar + 自检"出不出框"（2026-09-21）：
+   盒子宽 = ar × 舞台高，ar 只有图自己知道 → load 后量一次写 --myh-sprite-ar
+   （与运行时同一条机制：lib/client.js 的 Sprite 在 onLoad 里量 naturalWidth/naturalHeight）。
+   量不到就继续用 CSS 兜底 1.2893 = 最宽画布 1640/1272（**高估** → 只会往里收，不会出框）。
+   下面这行文字是**机械判据**：盒宽/画面宽 与实机同画布应当一致，左右缘必须都在舞台内。 */
+function bindGeom(cell){
+  const img = cell.querySelector('img.sprite')
+  const line = cell.querySelector('.geom')
+  const apply = function(){
+    const w = img.naturalWidth, h = img.naturalHeight
+    if (!(w > 0 && h > 0)) return
+    img.style.setProperty('--myh-sprite-ar', String(w / h))
+    const stage = cell.querySelector('.stage')
+    const sb = stage.getBoundingClientRect(), ib = img.getBoundingClientRect()
+    if (!sb.width || !ib.width) return
+    const labPct = ib.width / sb.width * 100
+    const realPct = (w / h) * 0.76 * (1080 / 1920) * 100
+    const inFrame = ib.left >= sb.left - 0.5 && ib.right <= sb.right + 0.5
+    line.textContent = '画布 ' + w + '×' + h + '　盒宽 ' + labPct.toFixed(1) + '% / 实机同画布 '
+      + realPct.toFixed(1) + '%　画面内 [' + Math.round(ib.left - sb.left) + '..'
+      + Math.round(ib.right - sb.left) + '] / 宽 ' + Math.round(sb.width) + '　'
+      + (inFrame ? '✓ 不出框' : '✗ 出框')
+  }
+  img.addEventListener('load', apply)
+  if (img.complete) apply()   // 命中缓存时 load 可能已经错过
+}
+
+;(async function () {
+  let M
+  try { M = await (await fetch(MANIFEST_URL, { cache: 'no-store' })).json() }
+  catch (e) { $('foot').textContent = '加载失败：' + ((e && e.message) || e) + '（请用本地 HTTP 服务打开本页）'; return }
+  const grid = $('grid')
+  const rows = []
+  for (const sid of SCENES) {
+    const e = M.expressions[sid] || {}
+    const sc = M.scenes[sid] || {}
+    const file = ((e.slots || {}).neutral || [])[0]
+    const side = e.spriteSide === 'left' ? 'left' : 'right'
+    const ch = (M.characters || []).find((c) => c.sprite === sc.character || c.id === sc.character)
+    rows.push(sid + ' ' + (ch ? ch.cn : sc.character) + ' = ' + side)
+    for (const view of ['left', 'right']) {
+      const cell = document.createElement('div')
+      cell.className = 'cell' + (view === side ? ' now' : '')
+      cell.innerHTML =
+        '<h2><span><b>' + sid + '</b> ' + (ch ? ch.cn : sc.character) + '　' + (sc.name || '') + '</span>' +
+        '<span class="tag">' + (view === 'left' ? '← 左 -20%' : '右 +20% →') +
+        (view === side ? '（现值）' : '（对照）') + '</span></h2>' +
+        '<div class="stage">' +
+        (sc.bg ? '<img class="bg" src="' + ASSET_BASE + sc.bg + '" alt="">' : '') +
+        '<div class="band"></div>' +
+        '<img class="sprite" style="--myh-sprite-x:' + (view === 'left' ? '-20%' : '20%') + '" src="' +
+        ASSET_BASE + file + '" alt="">' +
+        '<div class="dlg"></div><div class="mid"></div>' +
+        '</div>' +
+        '<div class="geom">量尺寸中…</div>'
+      grid.appendChild(cell)
+      bindGeom(cell)
+    }
+  }
+  $('foot').innerHTML = '共 ' + SCENES.length + ' 景 × 2 站位。看什么：立绘在**哪一侧**、'
+    + '她的**视线与身体朝向**是不是横穿画面指向中央的对话框。'
+    + '<br>清单：' + rows.join('　|　')
+    + '<br>几何：舞台固定 16:9（= manifest.canvas 1920×1080），立绘几何取相对舞台自身的量 —— '
+    + '盒高 76%、期望偏移 ±20%，所以 <b>20% ≡ 实机 20vw、76% ≡ 实机 76vh</b>；'
+    + '每格下方那行是实测的"盒宽 / 画面宽"，与"实机同画布"一列应当数字一致（差 &lt;0.1 个百分点），'
+    + '末尾的 ✓ 表示左右缘都在舞台内（不再出框）。'
+    + '<br>注：舞台宽窄只改变缩放，不改变比例 —— 换窗口大小不用重新判断站位。'
+})().catch((e) => { $('foot').textContent = '出错：' + ((e && e.message) || e) })
+</script>
+</body>
+</html>

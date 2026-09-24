@@ -1,0 +1,814 @@
+{
+ "generated_by": "persona_work/tools/build_scenes.py",
+ "staging": "persona_work/stage/spec-staging.md",
+ "switching": "persona_work/stage/spec-switching.md",
+ "canvas": {
+  "w": 1920,
+  "h": 1080
+ },
+ "dialog_safe_top": 770,
+ "scenes": {
+  "A1": {
+   "name": "洋房客厅·白天",
+   "role": "dialogue",
+   "tone": "light",
+   "background": "data02010/img3008.mzp.png",
+   "bg_alt": {
+    "same_shot_night": "data02010/img3006.mzp.png",
+    "dusk": "data02010/img3003.mzp.png"
+   },
+   "character": "ari",
+   "outfit_i3": "01",
+   "outfit_name": "黑色连衣裙（久远寺洋房日常）",
+   "chapters": [
+    "4_2",
+    "4_3",
+    "9_3",
+    "9_7",
+    "wik_b_1_b",
+    "wik_e",
+    "wik_g_a",
+    "wik_h_a",
+    "wik_k",
+    "wik_l_2"
+   ],
+   "outfit_evidence": "有珠在洋馆戏所属的 10 个 .chs 里无一例外只引用 ari i3=01",
+   "scene_id": "A1",
+   "frames_referenced": {
+    "v00": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10",
+      "16",
+      "19"
+     ],
+     "count": 38,
+     "example_file": "data02110/ari_n_01_02_00.mzp.png"
+    },
+    "v01": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10",
+      "14",
+      "16",
+      "19"
+     ],
+     "count": 21,
+     "example_file": "data02110/ari_n_01_08_01.mzp.png"
+    },
+    "v02": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10",
+      "14",
+      "19"
+     ],
+     "count": 17,
+     "example_file": "data02110/ari_n_01_08_02.mzp.png"
+    },
+    "v03": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 10,
+     "example_file": "data02110/ari_n_01_02_03.mzp.png"
+    },
+    "v04": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 13,
+     "example_file": "data02110/ari_a_01_02_04.mzp.png"
+    },
+    "v05": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 9,
+     "example_file": "data02110/ari_n_01_08_05.mzp.png"
+    },
+    "v06": {
+     "i4_channels": [
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 5,
+     "example_file": "data02110/ari_n_01_08_06.mzp.png"
+    },
+    "v07": {
+     "i4_channels": [
+      "10"
+     ],
+     "count": 1,
+     "example_file": "data02110/ari_l_01_10_07.mzp.png"
+    }
+   },
+   "frames_referenced_count": 8,
+   "stage": {
+    "kind": "closeup",
+    "source_suffix": "",
+    "preprocess": [
+     "alpha_bbox_crop"
+    ],
+    "scale": 0.7,
+    "anchor": "bbox-center",
+    "x": "50%",
+    "y": "50%",
+    "overflow": {
+     "top": "visible",
+     "bottom": "behind_dialog"
+    },
+    "dialog_safe_top": 770,
+    "alternates": {
+     "scale_compact": 0.55
+    },
+    "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+   }
+  },
+  "A2": {
+   "name": "洋房客厅·夜晚",
+   "role": "dialogue",
+   "tone": "dark",
+   "background": "data02010/img3006.mzp.png",
+   "bg_alt": {
+    "same_shot_day": "data02010/img3008.mzp.png"
+   },
+   "character": "ari",
+   "outfit_i3": "01",
+   "outfit_name": "黑色连衣裙（久远寺洋房日常）",
+   "same_as": "A1",
+   "scene_id": "A2",
+   "chapters": [
+    "4_2",
+    "4_3",
+    "9_3",
+    "9_7",
+    "wik_b_1_b",
+    "wik_e",
+    "wik_g_a",
+    "wik_h_a",
+    "wik_k",
+    "wik_l_2"
+   ],
+   "frames_referenced": {
+    "v00": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10",
+      "16",
+      "19"
+     ],
+     "count": 38,
+     "example_file": "data02110/ari_n_01_02_00.mzp.png"
+    },
+    "v01": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10",
+      "14",
+      "16",
+      "19"
+     ],
+     "count": 21,
+     "example_file": "data02110/ari_n_01_08_01.mzp.png"
+    },
+    "v02": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10",
+      "14",
+      "19"
+     ],
+     "count": 17,
+     "example_file": "data02110/ari_n_01_08_02.mzp.png"
+    },
+    "v03": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 10,
+     "example_file": "data02110/ari_n_01_02_03.mzp.png"
+    },
+    "v04": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 13,
+     "example_file": "data02110/ari_a_01_02_04.mzp.png"
+    },
+    "v05": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 9,
+     "example_file": "data02110/ari_n_01_08_05.mzp.png"
+    },
+    "v06": {
+     "i4_channels": [
+      "03",
+      "08",
+      "10"
+     ],
+     "count": 5,
+     "example_file": "data02110/ari_n_01_08_06.mzp.png"
+    },
+    "v07": {
+     "i4_channels": [
+      "10"
+     ],
+     "count": 1,
+     "example_file": "data02110/ari_l_01_10_07.mzp.png"
+    }
+   },
+   "frames_referenced_count": 8,
+   "stage": {
+    "kind": "closeup",
+    "source_suffix": "",
+    "preprocess": [
+     "alpha_bbox_crop"
+    ],
+    "scale": 0.7,
+    "anchor": "bbox-center",
+    "x": "50%",
+    "y": "50%",
+    "overflow": {
+     "top": "visible",
+     "bottom": "behind_dialog"
+    },
+    "dialog_safe_top": 770,
+    "alternates": {
+     "scale_compact": 0.55
+    },
+    "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+   }
+  },
+  "A3": {
+   "name": "教室·白天",
+   "role": "dialogue",
+   "tone": "light",
+   "background": "data02050/img0231_01_01.mzp.png",
+   "bg_alt": {
+    "same_shot_night": "data02050/img0231_02_02.mzp.png",
+    "same_shot_night2": "data02050/img0231_03_03.mzp.png"
+   },
+   "character": "aok",
+   "outfit_i3": "12",
+   "outfit_name": "三咲高校制服（棕外套＋红领结＋百褶裙＋黑长袜）",
+   "chapters": [
+    "2_1",
+    "2_2",
+    "2_3",
+    "2_4",
+    "2_5"
+   ],
+   "outfit_evidence": "2_3/2_4 只引用 aok_{a,l,m,n}12",
+   "scene_id": "A3",
+   "frames_referenced": {
+    "v00": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "09",
+      "14",
+      "16",
+      "20",
+      "21"
+     ],
+     "count": 10,
+     "example_file": "data02100/aok_m_12_20_00.mzp.png"
+    },
+    "v01": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "09",
+      "14",
+      "20",
+      "21"
+     ],
+     "count": 20,
+     "example_file": "data02100/aok_m_12_02_01.mzp.png"
+    },
+    "v02": {
+     "i4_channels": [
+      "02",
+      "03",
+      "08",
+      "09",
+      "10",
+      "14",
+      "16",
+      "20"
+     ],
+     "count": 10,
+     "example_file": "data02100/aok_l_12_09_02.mzp.png"
+    },
+    "v03": {
+     "i4_channels": [
+      "02",
+      "03",
+      "09",
+      "14",
+      "20"
+     ],
+     "count": 10,
+     "example_file": "data02100/aok_l_12_09_03.mzp.png"
+    },
+    "v04": {
+     "i4_channels": [
+      "02",
+      "08",
+      "09",
+      "14",
+      "16"
+     ],
+     "count": 6,
+     "example_file": "data02100/aok_a_12_09_04.mzp.png"
+    },
+    "v05": {
+     "i4_channels": [
+      "03",
+      "08",
+      "09",
+      "21"
+     ],
+     "count": 6,
+     "example_file": "data02100/aok_m_12_09_05.mzp.png"
+    },
+    "v06": {
+     "i4_channels": [
+      "02",
+      "09"
+     ],
+     "count": 3,
+     "example_file": "data02100/aok_m_12_09_06.mzp.png"
+    },
+    "v07": {
+     "i4_channels": [
+      "02"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_12_02_07.mzp.png"
+    },
+    "v08": {
+     "i4_channels": [
+      "02",
+      "09"
+     ],
+     "count": 3,
+     "example_file": "data02100/aok_l_12_02_08.mzp.png"
+    },
+    "v09": {
+     "i4_channels": [
+      "02"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_12_02_09.mzp.png"
+    },
+    "v10": {
+     "i4_channels": [
+      "02",
+      "09"
+     ],
+     "count": 2,
+     "example_file": "data02100/aok_n_12_09_10.mzp.png"
+    },
+    "v11": {
+     "i4_channels": [
+      "09"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_12_09_11.mzp.png"
+    },
+    "v15": {
+     "i4_channels": [
+      "09"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_12_09_15.mzp.png"
+    },
+    "v19": {
+     "i4_channels": [
+      "02"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_12_02_19.mzp.png"
+    }
+   },
+   "frames_referenced_count": 14,
+   "stage": {
+    "kind": "closeup",
+    "source_suffix": "",
+    "preprocess": [
+     "alpha_bbox_crop"
+    ],
+    "scale": 0.7,
+    "anchor": "bbox-center",
+    "x": "50%",
+    "y": "50%",
+    "overflow": {
+     "top": "visible",
+     "bottom": "behind_dialog"
+    },
+    "dialog_safe_top": 770,
+    "alternates": {
+     "scale_compact": 0.55
+    },
+    "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+   }
+  },
+  "A4": {
+   "name": "夜·灯饰通学路",
+   "role": "dialogue",
+   "tone": "dark",
+   "background": "data02000/img0296.mzp.png",
+   "bg_alt": {
+    "warning": "绝不能用 img0295（同机位但属第10章，那章青子穿浅蓝高领毛衣）"
+   },
+   "character": "aok",
+   "outfit_i3": "03",
+   "outfit_name": "白色羽绒服（毛领）＋酒红短裙＋黑裤袜＋黑长靴",
+   "chapters": [
+    "d_8"
+   ],
+   "outfit_evidence": "img0296 被 d_8 引用；d_8 只引用 aok_{a,l,m,n,s}03",
+   "scene_id": "A4",
+   "frames_referenced": {
+    "v00": {
+     "i4_channels": [
+      "02",
+      "03",
+      "09",
+      "16",
+      "20",
+      "21"
+     ],
+     "count": 9,
+     "example_file": "data02100/aok_a_03_02_00.mzp.png"
+    },
+    "v01": {
+     "i4_channels": [
+      "08",
+      "14",
+      "18",
+      "21",
+      "24"
+     ],
+     "count": 8,
+     "example_file": "data02100/aok_m_03_24_01.mzp.png"
+    },
+    "v02": {
+     "i4_channels": [
+      "09"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_l_03_09_02.mzp.png"
+    },
+    "v03": {
+     "i4_channels": [
+      "09",
+      "16"
+     ],
+     "count": 3,
+     "example_file": "data02100/aok_n_03_16_03.mzp.png"
+    },
+    "v04": {
+     "i4_channels": [
+      "02",
+      "03",
+      "21"
+     ],
+     "count": 3,
+     "example_file": "data02100/aok_a_03_02_04.mzp.png"
+    },
+    "v05": {
+     "i4_channels": [
+      "14"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_03_14_05.mzp.png"
+    },
+    "v06": {
+     "i4_channels": [
+      "08"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_03_08_06.mzp.png"
+    },
+    "v08": {
+     "i4_channels": [
+      "02",
+      "21"
+     ],
+     "count": 2,
+     "example_file": "data02100/aok_n_03_21_08.mzp.png"
+    },
+    "v09": {
+     "i4_channels": [
+      "21"
+     ],
+     "count": 1,
+     "example_file": "data02100/aok_n_03_21_09.mzp.png"
+    }
+   },
+   "frames_referenced_count": 9,
+   "stage": {
+    "kind": "closeup",
+    "source_suffix": "",
+    "preprocess": [
+     "alpha_bbox_crop"
+    ],
+    "scale": 0.7,
+    "anchor": "bbox-center",
+    "x": "50%",
+    "y": "50%",
+    "overflow": {
+     "top": "visible",
+     "bottom": "behind_dialog"
+    },
+    "dialog_safe_top": 770,
+    "alternates": {
+     "scale_compact": 0.55
+    },
+    "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+   }
+  },
+  "A5": {
+   "name": "公园步道·秋",
+   "role": "dialogue",
+   "tone": "light",
+   "background": "data02000/img0349.mzp.png",
+   "bg_alt": {
+    "same_shot_night": "data02000/img0345.mzp.png",
+    "snowy_night": "data02000/img0344.mzp.png",
+    "square_day": "data02000/img0347.mzp.png"
+   },
+   "character": "koj",
+   "outfit_i3": "00",
+   "outfit_name": "三咲高校制服（第7章）；若走 8dot5 线则为冬季便服 i3=01",
+   "chapters": [
+    "7_1",
+    "8dot5"
+   ],
+   "outfit_evidence": "7_1 引用 koj_{a,l,n,s}00；8dot5 引用 koj_n01",
+   "outfit_variants": {
+    "7_1": "00",
+    "8dot5": "01"
+   },
+   "scene_id": "A5",
+   "frames_referenced": {
+    "v00": {
+     "i4_channels": [
+      "01"
+     ],
+     "count": 1,
+     "example_file": "data02150/koj_s_00_01_00.mzp.png"
+    },
+    "v01": {
+     "i4_channels": [
+      "07"
+     ],
+     "count": 2,
+     "example_file": "data02150/koj_l_00_07_01.mzp.png"
+    },
+    "v02": {
+     "i4_channels": [
+      "07"
+     ],
+     "count": 2,
+     "example_file": "data02150/koj_l_00_07_02.mzp.png"
+    },
+    "v03": {
+     "i4_channels": [
+      "07"
+     ],
+     "count": 2,
+     "example_file": "data02150/koj_l_00_07_03.mzp.png"
+    },
+    "v06": {
+     "i4_channels": [
+      "07"
+     ],
+     "count": 1,
+     "example_file": "data02150/koj_n_00_07_06.mzp.png"
+    },
+    "v07": {
+     "i4_channels": [
+      "01",
+      "07"
+     ],
+     "count": 2,
+     "example_file": "data02150/koj_n_00_01_07.mzp.png"
+    }
+   },
+   "frames_referenced_count": 6,
+   "stage": {
+    "kind": "closeup",
+    "source_suffix": "",
+    "preprocess": [
+     "alpha_bbox_crop"
+    ],
+    "scale": 0.7,
+    "anchor": "bbox-center",
+    "x": "50%",
+    "y": "50%",
+    "overflow": {
+     "top": "visible",
+     "bottom": "behind_dialog"
+    },
+    "dialog_safe_top": 770,
+    "alternates": {
+     "scale_compact": 0.55
+    },
+    "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+   }
+  },
+  "A6": {
+   "name": "洋馆客室·夜",
+   "role": "dialogue",
+   "tone": "dark",
+   "background": "data02000/img0222.mzp.png",
+   "bg_alt": {
+    "same_shot_ref": "data02000/img0221.mzp.png",
+    "daytime": "data02000/img0135.mzp.png"
+   },
+   "character": "koj",
+   "outfit_i3": "01",
+   "outfit_name": "冬季便服（青绿色上衣＋格子围巾）",
+   "chapters": [
+    "wik_nap",
+    "wik_wakeup",
+    "wik_noroom",
+    "wik_room"
+   ],
+   "outfit_evidence": "wik_nap 引用 koj_a01",
+   "scene_id": "A6",
+   "frames_referenced": {
+    "v00": {
+     "i4_channels": [
+      "01",
+      "07"
+     ],
+     "count": 2,
+     "example_file": "data02150/koj_a_01_07_00.mzp.png"
+    },
+    "v01": {
+     "i4_channels": [
+      "01"
+     ],
+     "count": 1,
+     "example_file": "data02150/koj_l_01_01_01.mzp.png"
+    },
+    "v07": {
+     "i4_channels": [
+      "01",
+      "07"
+     ],
+     "count": 2,
+     "example_file": "data02150/koj_a_01_07_07.mzp.png"
+    },
+    "v11": {
+     "i4_channels": [
+      "07"
+     ],
+     "count": 1,
+     "example_file": "data02150/koj_a_01_07_11.mzp.png"
+    },
+    "v12": {
+     "i4_channels": [
+      "07"
+     ],
+     "count": 1,
+     "example_file": "data02150/koj_a_01_07_12.mzp.png"
+    },
+    "v17": {
+     "i4_channels": [
+      "07"
+     ],
+     "count": 1,
+     "example_file": "data02150/koj_a_01_07_17.mzp.png"
+    }
+   },
+   "frames_referenced_count": 6,
+   "stage": {
+    "kind": "closeup",
+    "source_suffix": "",
+    "preprocess": [
+     "alpha_bbox_crop"
+    ],
+    "scale": 0.7,
+    "anchor": "bbox-center",
+    "x": "50%",
+    "y": "50%",
+    "overflow": {
+     "top": "visible",
+     "bottom": "behind_dialog"
+    },
+    "dialog_safe_top": 770,
+    "alternates": {
+     "scale_compact": 0.55
+    },
+    "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+   }
+  },
+  "B1": {
+   "name": "洋房正面全景·晴",
+   "role": "shell",
+   "tone": "light",
+   "background": "data02010/img3000.mzp.png",
+   "character": null,
+   "scene_id": "B1",
+   "stage": {
+    "kind": "none"
+   }
+  },
+  "B2": {
+   "name": "洋房正面全景·雪夜",
+   "role": "shell",
+   "tone": "dark",
+   "background": "data02010/img3002.mzp.png",
+   "character": null,
+   "scene_id": "B2",
+   "stage": {
+    "kind": "none"
+   }
+  },
+  "B3": {
+   "name": "标题画面·清晨云海",
+   "role": "shell",
+   "tone": "light",
+   "background": "data00000/title_bg1.cbg.png",
+   "character": null,
+   "scene_id": "B3",
+   "stage": {
+    "kind": "none"
+   }
+  },
+  "B4": {
+   "name": "标题画面·星空雪原",
+   "role": "shell",
+   "tone": "dark",
+   "background": "data00000/title_bg2.cbg.png",
+   "character": null,
+   "scene_id": "B4",
+   "stage": {
+    "kind": "none"
+   }
+  },
+  "B5": {
+   "name": "山路俯瞰城区·昼",
+   "role": "shell",
+   "tone": "light",
+   "background": "data02000/img0292.mzp.png",
+   "character": null,
+   "scene_id": "B5",
+   "stage": {
+    "kind": "none"
+   }
+  },
+  "B6": {
+   "name": "繁华街·夜霓虹",
+   "role": "shell",
+   "tone": "dark",
+   "background": "data02000/img0315.mzp.png",
+   "character": null,
+   "scene_id": "B6",
+   "stage": {
+    "kind": "none"
+   }
+  }
+ }
+}

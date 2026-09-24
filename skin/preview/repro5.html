@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* 复现"盒子的 100vw/100vh 与真实可见区域不一致"：
+   一个固定尺寸的"窗口"里再放皮肤，皮肤用视口单位铺 → 必然溢出被裁 */
+html,body{margin:0;height:100%;background:#444;overflow:hidden}
+.win{position:absolute;left:20px;top:20px;width:1280px;height:720px;overflow:hidden;background:#000;outline:2px solid red}
+.myh-root{position:absolute;inset:0;width:100vw;height:100vh;margin:0;padding:0;background:#000;overflow:hidden}
+.myh-bg{position:absolute;inset:0;display:block;width:100vw;height:100vh;max-width:none;max-height:none;margin:0;object-fit:cover}
+</style></head><body>
+<div class="win"><div class="myh-root"><img class="myh-bg" src="../assets/bg/A3_img0231_01_01.mzp.png"></div></div>
+</body></html>

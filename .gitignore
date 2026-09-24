@@ -1,0 +1,108 @@
+# ============================================================================
+# dsh-skin-mahoyo — 公开仓库的排除规则
+# ----------------------------------------------------------------------------
+# 三类东西不进仓库：
+#   ① 版权材料（原著本体 / 解包产物 / 剧本全文 / 原著 UI 截图）
+#   ② 原作美术与音频（263 MB，README §14 承诺"本仓库不含素材"）
+#   ③ 大件中间产物与过程证据（合计约 16 GB，与皮肤运行时无关）
+#
+# ⚠ 最关键的是 ① —— 那不是"太大了"的问题，是"放上去就侵权"。
+# ============================================================================
+
+# --- ① 版权材料：绝对不进 -----------------------------------------------
+
+# 原著本体（17 GB 的 7z）
+*.7z
+WITCH ON THE HOLY NIGHT.7z
+
+# 原著解包产物（13 GB / 24284 张）—— 路线 A 的输入，但不是本仓库的产物
+hfa_png/
+
+# 原著剧本全文（日文 24134 行 + 简中）—— 人格证据的**上游**，
+# 引用行号即可，不随仓库分发
+game_scripts/
+
+# 原著 UI 文字截图（54 张）+ 表情笔记
+# 笔记本身是原创分析，但 54 张 png 是原著素材截图
+image_notes/mu_text_preview/
+*.chs
+
+# --- ② 原作美术与音频 ---------------------------------------------------
+
+# 素材目录整体排除，只留骨架标记。
+# 拿到仓库的人按 skin/ASSET-RECOVERY.md 自己接回来。
+skin/assets/*
+!skin/assets/.gitkeep
+!skin/assets/README.md
+!skin/assets/**/.gitkeep
+
+# BGM 的中间产物（2.5 GB）—— 只保留映射表
+bgm/*.ogg
+bgm/*.wav
+bgm/*.mp3
+bgm/op_mp4/
+bgm/wav/
+
+# --- ③ 大件中间产物与过程证据 -------------------------------------------
+
+# 立绘合成管线（960 MB 过程证据）—— 只留 tools/ 与 stage/*.json|md
+persona_work/agg/
+persona_work/audio/
+persona_work/catalog/
+persona_work/expressions/
+persona_work/out/
+persona_work/scene/
+persona_work/shards/
+persona_work/tmp/
+
+# ⚠ stage/ 里的合成预览图（14 张 jpg / ~6 MB）——
+# 它们是**原著背景 + 原著立绘的拼合结果**，等于把原作美术直接放进了仓库。
+# 打包脚本早就排除了它们（"重建只需要 json"），但 .gitignore 一开始漏了。
+# 实测 `stage_final_all.jpg` 一张就含 6 张立绘 + 6 张背景，**必须排除**。
+persona_work/stage/**/*.jpg
+persona_work/stage/**/*.jpeg
+persona_work/stage/**/*.png
+persona_work/stage/**/*.webp
+
+# DSH 配置快照（159 MB）
+recovery/backups/
+*.bak
+
+# recovery/ 下的开发期快照（11 个 client.js 的历史备份 + settings 快照）
+# 它们是排查问题用的，不是发布物，也没有进分发包
+recovery/client.js.bak-*
+recovery/settings.yaml.bak-*
+
+# 打包产物（发布物统一放这里，不进仓库）
+release/
+skin/dist/
+
+# 制作期草稿（627 项 / 95 MB 截图与临时脚本）
+.tmp/
+
+# --- ④ 内部工作文档（不公开）---------------------------------------------
+# 制作期的过程记录：会话交接、交付说明、独立验收、早期调研。
+# 对使用者没有用，且会暴露大量内部决策过程。
+# 注意：这几份**也不进 release 的 zip** —— 那个 zip 是 GitHub Release 附件，
+# 同样是公开的（见 pack-source-dist.mjs 的 INCLUDE 注释）。
+
+HANDOFF.md
+DELIVERY.md
+ACCEPTANCE-REVIEW.md
+dsh-skin-plugin-research.md
+
+# 原始截图（22 MB，中文文件名）—— 已由 screenshots/ 的压缩英文名版本取代
+屏幕截图/
+
+# --- ⑤ 常规 -------------------------------------------------------------
+
+node_modules/
+__pycache__/
+*.pyc
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 本地环境（如有）
+.env
+.env.local

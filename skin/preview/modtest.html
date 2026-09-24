@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>client.js 真实模块自检</title>
+<style>body{background:#111;color:#ddd;font:12px/1.55 monospace;padding:12px;margin:0}
+#out{white-space:pre-wrap;max-height:46vh;overflow:auto}
+#stage{position:relative;height:46vh;background:#0b0f14;overflow:hidden}</style>
+</head><body>
+<div id="out">…</div>
+<div id="stage"></div>
+<script>
+const out = document.getElementById('out')
+const log = (s) => { out.textContent += '\n' + s }
+out.textContent = ''
+window.__ModuleLoader__ = {
+  load(def) {
+    try {
+      const factory = def.factory || (def.default && def.default.factory)
+      window.__SKIN__ = factory((name) => {
+        if (name === 'react') return window.__REACT_STUB__
+        if (name === 'react/jsx-runtime') return { jsx: window.__REACT_STUB__.createElement, jsxs: window.__REACT_STUB__.createElement, Fragment: 'frag' }
+        if (name === 'react-dom/client') return { createRoot: function () { return { render: function () {}, unmount: function () {} } } }
+        throw new Error('未播种: ' + name)
+      })
+      log('✓ client.js 加载成功')
+    } catch (e) { log('✗ ' + (e && e.stack || e)) }
+  },
+}
+</script>
+<script src="react-stub.js"></script>
+<script src="/lib/client.js"></script>
+<script>
+setTimeout(function () {
+  const S = window.__SKIN__
+  if (!S || !S.__internals) { log('✗ __internals 不在'); return }
+  const I = S.__internals
+
+  // ---- ① 用 DSH 真实节点形状验数据链 ----
+  const stepNode = { kind:'assistant-step', seq:30,
+    data:{ turn:1, step:1, status:'settled',
+      blocks:[{kind:'text',text:'こんな教室、久しぶりだわ。'},
+              {kind:'reasoning',text:'うーん'},
+              {kind:'tool-call',callId:'c1',name:'Bash',argsRaw:'{"command":"ls"}'}],
+      finalNode:{kind:'assistant',seq:31,blocks:[{kind:'text',text:'こんな教室、久しぶりだわ。'}]} } }
+  const userNode = { kind:'user', seq:10, content:[{type:'text',text:'教室に来たよ'}] }
+  const nodes = new Map([['k10',userNode],['k30',stepNode]])
+  const chat = { order:['k10','k30'], nodes:{ get:k=>nodes.get(k) },
+    legacy:{ nodes:[userNode,stepNode], partial:null, runningCalls:[] } }
+  log('normalizeNode(assistant-step) = ' + JSON.stringify(I.normalizeNode(stepNode,0)))
+  log('readMessages 条数 = ' + I.readMessages(chat).length)
+  log('extractAssistantText = ' + JSON.stringify(I.extractAssistantText(chat)))
+  const chat2 = { order:['k10'], nodes:{get:k=>nodes.get(k)},
+    legacy:{ nodes:[userNode], partial:{turn:2,step:1,blocks:[{kind:'text',text:'まだ書いている途中'}]}, runningCalls:[] } }
+  log('流式 partial 优先 = ' + JSON.stringify(I.extractAssistantText(chat2)))
+
+  // ---- ② 用皮肤**自己的 CSS** 渲染一个复刻 DSH composer 的 DOM ----
+  document.body.setAttribute('data-myh-skin', '')
+  const st = document.createElement('style')
+  st.textContent = Array.isArray(I.CSS) ? I.CSS.join("") : String(I.CSS)
+  document.head.appendChild(st)
+  log('CSS 注入 ' + (Array.isArray(I.CSS) ? I.CSS.length + ' 条' : String(I.CSS).length + ' 字符'))
+
+  const seat = document.createElement('div')
+  seat.setAttribute('data-composer-seat', '')
+  const stack = document.createElement('div'); stack.className = 'x_stack'
+  const root = document.createElement('div'); root.className = 'x_root'
+  const card = document.createElement('div'); card.setAttribute('data-composer-card', '')
+  const inp = document.createElement('div'); inp.setAttribute('data-composer-input', ''); inp.contentEditable = 'true'
+  inp.textContent = ''
+  card.appendChild(inp); root.appendChild(card); stack.appendChild(root); seat.appendChild(stack)
+  const stage = document.getElementById('stage'); stage.appendChild(seat)
+  // DSH 原本的样式（气泡卡片），验皮肤能不能压过它
+  const dsh = document.createElement('style')
+  dsh.textContent = '.x_stack{width:100%;max-width:780px}'
+    + '.x_root{padding:0 16px 8px;display:flex;flex-direction:column;align-items:center}'
+    + '.x_card{}'
+    + '[data-composer-card]{box-sizing:border-box;width:100%;max-width:780px;background:#1e1e1e;'
+    + 'box-shadow:0 2px 12px rgba(0,0,0,.4);border-radius:22px;display:flex;flex-direction:column;padding-top:8px}'
+  document.head.appendChild(dsh)   // 故意插在皮肤之后，验优先级
+
+  setTimeout(function () {
+    log('composerState = ' + JSON.stringify(I.composerState()))
+    const probe = I.composerProbe()
+    log('composerProbe = ' + JSON.stringify(probe, null, 0).slice(0, 900))
+    // 关键像素：卡片背景是不是我们的渐变、圆角是不是 0、宽高
+    const cs = getComputedStyle(document.querySelector('[data-composer-card]'))
+    const r = document.querySelector('[data-composer-card]').getBoundingClientRect()
+    log('卡片实测 w=' + Math.round(r.width) + ' h=' + Math.round(r.height)
+      + ' radius=' + cs.borderRadius + ' bg=' + String(cs.backgroundImage).slice(0, 60))
+    log('--- 完 ---')
+  }, 120)
+}, 700)
+</script>
+</body></html>

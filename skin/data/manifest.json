@@ -1,0 +1,3071 @@
+{
+  "generated_at": "2026-09-16T13:10:44.694Z",
+  "ui": {
+    "txtwindow": [
+      "ui/txtwindow00.mzp.png",
+      "ui/txtwindow01.mzp.png",
+      "ui/txtwindow02.mzp.png"
+    ],
+    "lineBreak": "ui/lineBreak.cbg.png",
+    "menuWindow": "ui/menu_window.cbg.png",
+    "menuBtn": "ui/menu_btn_zc.cbg.png",
+    "muText": [
+      "ui/mu_text1_select_zc.cbg.png",
+      "ui/mu_text2_select_zc.cbg.png",
+      "ui/mu_text3_select_zc.cbg.png"
+    ],
+    "muTitle": "ui/mu_title_zc.cbg.png",
+    "muBar": "ui/mu_bar.cbg.png",
+    "titleMenu": "ui/title_menu_zc.cbg.png",
+    "archiveBackground": "ui/archive_background.cbg.png",
+    "archiveFrame": "ui/archive_frame.cbg.png",
+    "archiveWindow": "ui/archive_window_slider.cbg.png",
+    "archiveRead": "ui/archive_read_zc.cbg.png",
+    "archiveUnread": "ui/archive_unread_zc.cbg.png",
+    "bgBacklog": "ui/bg_backlog.cbg.png",
+    "backWin": "ui/back_win.cbg.png",
+    "nz": "ui/nz19CC.cbg.png",
+    "nzEdge": "ui/nz19LU.cbg.png",
+    "confTitle": "ui/conf_title_zc.cbg.png",
+    "confFrame": "ui/conf_frame.cbg.png",
+    "confBand": "ui/conf_band.cbg.png",
+    "dialogWin": "ui/dialog_win.cbg.png",
+    "caution": "ui/caution_zc.cbg.png",
+    "scrollBar": "ui/scroll_bar.cbg.png",
+    "selWin": "ui/sel_win.cbg.png",
+    "bookButtons": [
+      "ui/archive_bookbutton01.cbg.png",
+      "ui/archive_bookbutton03.cbg.png",
+      "ui/archive_bookbutton04.cbg.png",
+      "ui/archive_bookbutton05.cbg.png",
+      "ui/archive_bookbutton06.cbg.png",
+      "ui/archive_bookbutton07.cbg.png",
+      "ui/archive_bookbutton08.cbg.png",
+      "ui/archive_bookbutton09.cbg.png",
+      "ui/archive_bookbutton10.cbg.png",
+      "ui/archive_bookbutton11.cbg.png",
+      "ui/archive_bookbutton12.cbg.png",
+      "ui/archive_bookbutton13.cbg.png",
+      "ui/archive_bookbutton14.cbg.png",
+      "ui/archive_bookbutton15.cbg.png",
+      "ui/archive_bookbutton16.cbg.png",
+      "ui/archive_bookbutton17.cbg.png",
+      "ui/archive_bookbutton18.cbg.png",
+      "ui/archive_bookbutton19.cbg.png",
+      "ui/archive_bookbutton20.cbg.png",
+      "ui/archive_bookbutton21.cbg.png"
+    ],
+    "cap": "ui/mu_bar.cbg.png",
+    "band": "ui/mu_bar.cbg.png",
+    "wood": "ui/archive_frame.cbg.png"
+  },
+  "scenes": {
+    "A1": {
+      "id": "A1",
+      "name": "洋房客厅·白天",
+      "role": "dialogue",
+      "tone": "light",
+      "character": "ari",
+      "outfit_i3": "01",
+      "outfit_name": "黑色连衣裙（久远寺洋房日常）",
+      "bg": "bg/A1_img3008.mzp.png",
+      "stage": {
+        "kind": "closeup",
+        "source_suffix": "",
+        "preprocess": [
+          "alpha_bbox_crop"
+        ],
+        "scale": 0.7,
+        "anchor": "bbox-center",
+        "x": "50%",
+        "y": "50%",
+        "overflow": {
+          "top": "visible",
+          "bottom": "behind_dialog"
+        },
+        "dialog_safe_top": 770,
+        "alternates": {
+          "scale_compact": 0.55
+        },
+        "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+      }
+    },
+    "A2": {
+      "id": "A2",
+      "name": "洋房客厅·夜晚",
+      "role": "dialogue",
+      "tone": "dark",
+      "character": "ari",
+      "outfit_i3": "01",
+      "outfit_name": "黑色连衣裙（久远寺洋房日常）",
+      "bg": "bg/A2_img3006.mzp.png",
+      "stage": {
+        "kind": "closeup",
+        "source_suffix": "",
+        "preprocess": [
+          "alpha_bbox_crop"
+        ],
+        "scale": 0.7,
+        "anchor": "bbox-center",
+        "x": "50%",
+        "y": "50%",
+        "overflow": {
+          "top": "visible",
+          "bottom": "behind_dialog"
+        },
+        "dialog_safe_top": 770,
+        "alternates": {
+          "scale_compact": 0.55
+        },
+        "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+      }
+    },
+    "A3": {
+      "id": "A3",
+      "name": "教室·白天",
+      "role": "dialogue",
+      "tone": "light",
+      "character": "aok",
+      "outfit_i3": "12",
+      "outfit_name": "三咲高校制服（棕外套＋红领结＋百褶裙＋黑长袜）",
+      "bg": "bg/A3_img0231_01_01.mzp.png",
+      "stage": {
+        "kind": "closeup",
+        "source_suffix": "",
+        "preprocess": [
+          "alpha_bbox_crop"
+        ],
+        "scale": 0.7,
+        "anchor": "bbox-center",
+        "x": "50%",
+        "y": "50%",
+        "overflow": {
+          "top": "visible",
+          "bottom": "behind_dialog"
+        },
+        "dialog_safe_top": 770,
+        "alternates": {
+          "scale_compact": 0.55
+        },
+        "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+      }
+    },
+    "A4": {
+      "id": "A4",
+      "name": "夜·灯饰通学路",
+      "role": "dialogue",
+      "tone": "dark",
+      "character": "aok",
+      "outfit_i3": "03",
+      "outfit_name": "白色羽绒服（毛领）＋酒红短裙＋黑裤袜＋黑长靴",
+      "bg": "bg/A4_img0296.mzp.png",
+      "stage": {
+        "kind": "closeup",
+        "source_suffix": "",
+        "preprocess": [
+          "alpha_bbox_crop"
+        ],
+        "scale": 0.7,
+        "anchor": "bbox-center",
+        "x": "50%",
+        "y": "50%",
+        "overflow": {
+          "top": "visible",
+          "bottom": "behind_dialog"
+        },
+        "dialog_safe_top": 770,
+        "alternates": {
+          "scale_compact": 0.55
+        },
+        "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+      }
+    },
+    "A5": {
+      "id": "A5",
+      "name": "公园步道·秋",
+      "role": "dialogue",
+      "tone": "light",
+      "character": "koj",
+      "outfit_i3": "00",
+      "outfit_name": "三咲高校制服（第7章）；若走 8dot5 线则为冬季便服 i3=01",
+      "bg": "bg/A5_img0349.mzp.png",
+      "stage": {
+        "kind": "closeup",
+        "source_suffix": "",
+        "preprocess": [
+          "alpha_bbox_crop"
+        ],
+        "scale": 0.7,
+        "anchor": "bbox-center",
+        "x": "50%",
+        "y": "50%",
+        "overflow": {
+          "top": "visible",
+          "bottom": "behind_dialog"
+        },
+        "dialog_safe_top": 770,
+        "alternates": {
+          "scale_compact": 0.55
+        },
+        "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+      }
+    },
+    "A6": {
+      "id": "A6",
+      "name": "洋馆客室·夜",
+      "role": "dialogue",
+      "tone": "dark",
+      "character": "koj",
+      "outfit_i3": "01",
+      "outfit_name": "冬季便服（青绿色上衣＋格子围巾）",
+      "bg": "bg/A6_img0222.mzp.png",
+      "stage": {
+        "kind": "closeup",
+        "source_suffix": "",
+        "preprocess": [
+          "alpha_bbox_crop"
+        ],
+        "scale": 0.7,
+        "anchor": "bbox-center",
+        "x": "50%",
+        "y": "50%",
+        "overflow": {
+          "top": "visible",
+          "bottom": "behind_dialog"
+        },
+        "dialog_safe_top": 770,
+        "alternates": {
+          "scale_compact": 0.55
+        },
+        "asset_root": "hfa_png/out（交付时由皮肤侧指定实际根目录）"
+      }
+    },
+    "B1": {
+      "id": "B1",
+      "name": "洋房正面全景·晴",
+      "role": "shell",
+      "tone": "light",
+      "character": null,
+      "bg": "bg/B1_img3000.mzp.png",
+      "stage": {
+        "kind": "none"
+      }
+    },
+    "B2": {
+      "id": "B2",
+      "name": "洋房正面全景·雪夜",
+      "role": "shell",
+      "tone": "dark",
+      "character": null,
+      "bg": "bg/B2_img3002.mzp.png",
+      "stage": {
+        "kind": "none"
+      }
+    },
+    "B3": {
+      "id": "B3",
+      "name": "标题画面·清晨云海",
+      "role": "shell",
+      "tone": "light",
+      "character": null,
+      "bg": "bg/B3_title_bg1.cbg.png",
+      "stage": {
+        "kind": "none"
+      }
+    },
+    "B4": {
+      "id": "B4",
+      "name": "标题画面·星空雪原",
+      "role": "shell",
+      "tone": "dark",
+      "character": null,
+      "bg": "bg/B4_title_bg2.cbg.png",
+      "stage": {
+        "kind": "none"
+      }
+    },
+    "B5": {
+      "id": "B5",
+      "name": "山路俯瞰城区·昼",
+      "role": "shell",
+      "tone": "light",
+      "character": null,
+      "bg": "bg/B5_img0292.mzp.png",
+      "stage": {
+        "kind": "none"
+      }
+    },
+    "B6": {
+      "id": "B6",
+      "name": "繁华街·夜霓虹",
+      "role": "shell",
+      "tone": "dark",
+      "character": null,
+      "bg": "bg/B6_img0315.mzp.png",
+      "stage": {
+        "kind": "none"
+      }
+    }
+  },
+  "edBackground": "bg/ED_img2073.mzp.png",
+  "expressions": {
+    "A1": {
+      "slots": {
+        "blink": [
+          "sprite/stage_a1_c02_03.png",
+          "sprite/stage_a1_c02_04.png",
+          "sprite/stage_a1_c08_05.png"
+        ],
+        "glare": [
+          "sprite/stage_a1_c03_00.png",
+          "sprite/stage_a1_c03_01.png"
+        ],
+        "neutral": [
+          "sprite/stage_a1_c02_00.png",
+          "sprite/stage_a1_c02_01.png"
+        ],
+        "surprised": [
+          "sprite/stage_a1_c10_01.png",
+          "sprite/stage_a1_c10_02.png",
+          "sprite/stage_a1_c10_00.png"
+        ],
+        "troubled": [
+          "sprite/stage_a1_c08_00.png",
+          "sprite/stage_a1_c08_01.png",
+          "sprite/stage_a1_c08_02.png",
+          "sprite/stage_a1_c08_03.png",
+          "sprite/stage_a1_c08_04.png",
+          "sprite/stage_a1_c08_06.png"
+        ]
+      },
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "stageSource": {
+        "char": "ari",
+        "batch": "n",
+        "i3": "01",
+        "framing": "胸像",
+        "channels": [
+          "02",
+          "03",
+          "08",
+          "10"
+        ]
+      },
+      "spriteSide": "right"
+    },
+    "A2": {
+      "slots": {
+        "blink": [
+          "sprite/stage_a1_c02_03.png",
+          "sprite/stage_a1_c02_04.png",
+          "sprite/stage_a1_c08_05.png"
+        ],
+        "glare": [
+          "sprite/stage_a1_c03_00.png",
+          "sprite/stage_a1_c03_01.png"
+        ],
+        "neutral": [
+          "sprite/stage_a1_c02_00.png",
+          "sprite/stage_a1_c02_01.png"
+        ],
+        "surprised": [
+          "sprite/stage_a1_c10_01.png",
+          "sprite/stage_a1_c10_02.png",
+          "sprite/stage_a1_c10_00.png"
+        ],
+        "troubled": [
+          "sprite/stage_a1_c08_00.png",
+          "sprite/stage_a1_c08_01.png",
+          "sprite/stage_a1_c08_02.png",
+          "sprite/stage_a1_c08_03.png",
+          "sprite/stage_a1_c08_04.png",
+          "sprite/stage_a1_c08_06.png"
+        ]
+      },
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "stageSource": {
+        "char": "ari",
+        "batch": "n",
+        "i3": "01",
+        "framing": "胸像",
+        "channels": [
+          "02",
+          "03",
+          "08",
+          "10"
+        ]
+      },
+      "spriteSide": "right"
+    },
+    "A3": {
+      "slots": {
+        "angry": [
+          "sprite/stage_a3_c09_03.png",
+          "sprite/stage_a3_c09_05.png",
+          "sprite/stage_a3_c09_10.png",
+          "sprite/stage_a3_c09_11.png",
+          "sprite/stage_a3_c09_15.png",
+          "sprite/stage_a3_c20_02.png",
+          "sprite/stage_a3_c20_03.png"
+        ],
+        "blink": [
+          "sprite/stage_a3_c09_06.png",
+          "sprite/stage_a3_c02_03.png",
+          "sprite/stage_a3_c09_04.png"
+        ],
+        "glare": [
+          "sprite/stage_a3_c02_15.png",
+          "sprite/stage_a3_c02_18.png",
+          "sprite/stage_a3_c09_02.png",
+          "sprite/stage_a3_c09_09.png"
+        ],
+        "laugh": [
+          "sprite/stage_a3_c02_04.png",
+          "sprite/stage_a3_c02_05.png",
+          "sprite/stage_a3_c03_03.png",
+          "sprite/stage_a3_c03_04.png",
+          "sprite/stage_a3_c03_09.png"
+        ],
+        "neutral": [
+          "sprite/stage_a3_c02_01.png",
+          "sprite/stage_a3_c03_01.png",
+          "sprite/stage_a3_c09_00.png",
+          "sprite/stage_a3_c02_00.png",
+          "sprite/stage_a3_c02_12.png",
+          "sprite/stage_a3_c09_12.png",
+          "sprite/stage_a3_c09_13.png"
+        ],
+        "sad": [
+          "sprite/stage_a3_c08_05.png",
+          "sprite/stage_a3_c09_14.png"
+        ],
+        "serious": [
+          "sprite/stage_a3_c08_01.png",
+          "sprite/stage_a3_c09_01.png"
+        ],
+        "smile": [
+          "sprite/stage_a3_c02_07.png",
+          "sprite/stage_a3_c09_08.png",
+          "sprite/stage_a3_c03_06.png",
+          "sprite/stage_a3_c03_08.png",
+          "sprite/stage_a3_c03_10.png"
+        ],
+        "surprised": [
+          "sprite/stage_a3_c21_05.png",
+          "sprite/stage_a3_c02_17.png",
+          "sprite/stage_a3_c03_07.png"
+        ],
+        "think": [
+          "sprite/stage_a3_c02_02.png"
+        ],
+        "troubled": [
+          "sprite/stage_a3_c02_08.png",
+          "sprite/stage_a3_c02_09.png",
+          "sprite/stage_a3_c02_10.png",
+          "sprite/stage_a3_c02_19.png",
+          "sprite/stage_a3_c03_00.png",
+          "sprite/stage_a3_c02_16.png"
+        ]
+      },
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "stageSource": {
+        "char": "aok",
+        "batch": "n",
+        "i3": "12",
+        "framing": "胸像",
+        "channels": [
+          "02",
+          "03",
+          "08",
+          "09",
+          "20",
+          "21"
+        ]
+      },
+      "spriteSide": "right"
+    },
+    "A4": {
+      "slots": {
+        "angry": [
+          "sprite/stage_a4_c16_02.png",
+          "sprite/stage_a4_c21_02.png",
+          "sprite/stage_a4_c21_07.png"
+        ],
+        "blink": [
+          "sprite/stage_a4_c09_03.png"
+        ],
+        "glare": [
+          "sprite/stage_a4_c16_03.png",
+          "sprite/stage_a4_c02_06.png",
+          "sprite/stage_a4_c02_03.png",
+          "sprite/stage_a4_c21_06.png"
+        ],
+        "laugh": [
+          "sprite/stage_a4_c02_04.png",
+          "sprite/stage_a4_c03_06.png",
+          "sprite/stage_a4_c03_08.png",
+          "sprite/stage_a4_c03_02.png",
+          "sprite/stage_a4_c16_04.png",
+          "sprite/stage_a4_c16_07.png"
+        ],
+        "neutral": [
+          "sprite/stage_a4_c02_00.png",
+          "sprite/stage_a4_c02_08.png",
+          "sprite/stage_a4_c14_05.png",
+          "sprite/stage_a4_c16_00.png",
+          "sprite/stage_a4_c21_01.png",
+          "sprite/stage_a4_c02_01.png",
+          "sprite/stage_a4_c03_00.png",
+          "sprite/stage_a4_c03_01.png"
+        ],
+        "sad": [
+          "sprite/stage_a4_c02_13.png"
+        ],
+        "shy": [
+          "sprite/stage_a4_c16_05.png"
+        ],
+        "smile": [
+          "sprite/stage_a4_c08_06.png",
+          "sprite/stage_a4_c02_02.png",
+          "sprite/stage_a4_c02_09.png",
+          "sprite/stage_a4_c03_05.png",
+          "sprite/stage_a4_c03_07.png",
+          "sprite/stage_a4_c16_01.png",
+          "sprite/stage_a4_c16_06.png"
+        ],
+        "surprised": [
+          "sprite/stage_a4_c21_00.png",
+          "sprite/stage_a4_c21_04.png",
+          "sprite/stage_a4_c21_09.png",
+          "sprite/stage_a4_c02_10.png"
+        ],
+        "think": [
+          "sprite/stage_a4_c02_07.png",
+          "sprite/stage_a4_c02_12.png"
+        ],
+        "tired": [
+          "sprite/stage_a4_c02_05.png"
+        ],
+        "troubled": [
+          "sprite/stage_a4_c18_01.png",
+          "sprite/stage_a4_c21_08.png",
+          "sprite/stage_a4_c02_11.png"
+        ]
+      },
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "stageSource": {
+        "char": "aok",
+        "batch": "n",
+        "i3": "03",
+        "framing": "胸像",
+        "channels": [
+          "02",
+          "03",
+          "08",
+          "09",
+          "14",
+          "16",
+          "18",
+          "21"
+        ]
+      },
+      "spriteSide": "right"
+    },
+    "A5": {
+      "slots": {
+        "angry": [
+          "sprite/stage_a5_c07_09.png",
+          "sprite/stage_a5_c07_06.png"
+        ],
+        "blink": [
+          "sprite/stage_a5_c01_04.png"
+        ],
+        "neutral": [
+          "sprite/stage_a5_c07_00.png",
+          "sprite/stage_a5_c07_07.png",
+          "sprite/stage_a5_c01_00.png",
+          "sprite/stage_a5_c01_07.png"
+        ],
+        "sad": [
+          "sprite/stage_a5_c07_10.png",
+          "sprite/stage_a5_c01_06.png"
+        ],
+        "serious": [
+          "sprite/stage_a5_c01_03.png"
+        ],
+        "smile": [
+          "sprite/stage_a5_c07_01.png",
+          "sprite/stage_a5_c07_05.png"
+        ],
+        "surprised": [
+          "sprite/stage_a5_c07_02.png",
+          "sprite/stage_a5_c07_11.png",
+          "sprite/stage_a5_c07_03.png",
+          "sprite/stage_a5_c01_02.png",
+          "sprite/stage_a5_c01_08.png"
+        ],
+        "troubled": [
+          "sprite/stage_a5_c07_04.png",
+          "sprite/stage_a5_c07_08.png",
+          "sprite/stage_a5_c01_01.png",
+          "sprite/stage_a5_c01_05.png",
+          "sprite/stage_a5_c01_09.png"
+        ]
+      },
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "stageSource": {
+        "char": "koj",
+        "batch": "n",
+        "i3": "00",
+        "framing": "胸像",
+        "channels": [
+          "01",
+          "07"
+        ]
+      },
+      "spriteSide": "left"
+    },
+    "A6": {
+      "slots": {
+        "blink": [
+          "sprite/stage_a6_c01_05.png",
+          "sprite/stage_a6_c01_08.png"
+        ],
+        "laugh": [
+          "sprite/stage_a6_c01_11.png"
+        ],
+        "neutral": [
+          "sprite/stage_a6_c01_03.png",
+          "sprite/stage_a6_c01_01.png"
+        ],
+        "smile": [
+          "sprite/stage_a6_c01_17.png",
+          "sprite/stage_a6_c01_10.png"
+        ],
+        "surprised": [
+          "sprite/stage_a6_c01_15.png",
+          "sprite/stage_a6_c01_16.png",
+          "sprite/stage_a6_c01_14.png"
+        ],
+        "tired": [
+          "sprite/stage_a6_c01_00.png",
+          "sprite/stage_a6_c01_07.png"
+        ]
+      },
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "stageSource": {
+        "char": "koj",
+        "batch": "l",
+        "i3": "01",
+        "framing": "半身",
+        "channels": [
+          "01"
+        ]
+      },
+      "spriteSide": "right"
+    },
+    "B1": {
+      "slots": {},
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "spriteSide": "right"
+    },
+    "B2": {
+      "slots": {},
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "spriteSide": "right"
+    },
+    "B3": {
+      "slots": {},
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "spriteSide": "right"
+    },
+    "B4": {
+      "slots": {},
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "spriteSide": "right"
+    },
+    "B5": {
+      "slots": {},
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "spriteSide": "right"
+    },
+    "B6": {
+      "slots": {},
+      "fallback": {
+        "laugh": [
+          "smile",
+          "neutral"
+        ],
+        "sad": [
+          "troubled",
+          "neutral"
+        ],
+        "shy": [
+          "troubled",
+          "neutral"
+        ],
+        "tired": [
+          "neutral",
+          "think"
+        ],
+        "think": [
+          "neutral"
+        ],
+        "angry": [
+          "serious",
+          "neutral"
+        ],
+        "glare": [
+          "serious",
+          "neutral"
+        ],
+        "smile": [
+          "neutral"
+        ],
+        "troubled": [
+          "neutral"
+        ],
+        "serious": [
+          "neutral"
+        ],
+        "surprised": [
+          "neutral"
+        ],
+        "neutral": []
+      },
+      "spriteSide": "right"
+    }
+  },
+  "lexicon": {
+    "tired": [
+      {
+        "w": "打了个哈欠",
+        "n": 40
+      },
+      {
+        "w": "叹了口气",
+        "n": 40
+      },
+      {
+        "w": "无精打采",
+        "n": 40
+      },
+      {
+        "w": "叹口气",
+        "n": 40
+      },
+      {
+        "w": "打哈欠",
+        "n": 40
+      },
+      {
+        "w": "叹气",
+        "n": 40
+      },
+      {
+        "w": "疲惫",
+        "n": 40
+      },
+      {
+        "w": "熬夜",
+        "n": 40
+      },
+      {
+        "w": "疲劳",
+        "n": 40
+      },
+      {
+        "w": "厌烦",
+        "n": 40
+      },
+      {
+        "w": "长叹",
+        "n": 40
+      },
+      {
+        "w": "累",
+        "n": 40
+      },
+      {
+        "w": "困",
+        "n": 40
+      },
+      {
+        "w": "倦",
+        "n": 40
+      },
+      {
+        "w": "乏",
+        "n": 40
+      },
+      {
+        "w": "疲",
+        "n": 40
+      },
+      {
+        "w": "做学生会杂务",
+        "n": 30
+      },
+      {
+        "w": "被吵醒",
+        "n": 30
+      },
+      {
+        "w": "收工",
+        "n": 30
+      },
+      {
+        "w": "深夜",
+        "n": 30
+      },
+      {
+        "w": "工具调用失败",
+        "n": 20
+      },
+      {
+        "w": "报错",
+        "n": 20
+      },
+      {
+        "w": "受不了",
+        "n": 18
+      },
+      {
+        "w": "好困",
+        "n": 18
+      },
+      {
+        "w": "张口叹气状",
+        "n": 12
+      },
+      {
+        "w": "眼下阴影",
+        "n": 12
+      },
+      {
+        "w": "半闭眼",
+        "n": 12
+      },
+      {
+        "w": "放松",
+        "n": 6
+      },
+      {
+        "w": "脱力",
+        "n": 6
+      }
+    ],
+    "sad": [
+      {
+        "w": "悲伤",
+        "n": 40
+      },
+      {
+        "w": "失落",
+        "n": 40
+      },
+      {
+        "w": "难过",
+        "n": 40
+      },
+      {
+        "w": "沮丧",
+        "n": 40
+      },
+      {
+        "w": "消沉",
+        "n": 40
+      },
+      {
+        "w": "寂寞",
+        "n": 40
+      },
+      {
+        "w": "孤独",
+        "n": 40
+      },
+      {
+        "w": "叹息",
+        "n": 40
+      },
+      {
+        "w": "垂头",
+        "n": 40
+      },
+      {
+        "w": "黯淡",
+        "n": 40
+      },
+      {
+        "w": "伤心",
+        "n": 40
+      },
+      {
+        "w": "遗憾",
+        "n": 40
+      },
+      {
+        "w": "落寞",
+        "n": 40
+      },
+      {
+        "w": "黯然",
+        "n": 40
+      },
+      {
+        "w": "委屈",
+        "n": 40
+      },
+      {
+        "w": "悲",
+        "n": 40
+      },
+      {
+        "w": "哀",
+        "n": 40
+      },
+      {
+        "w": "泪",
+        "n": 40
+      },
+      {
+        "w": "哭",
+        "n": 40
+      },
+      {
+        "w": "泣",
+        "n": 40
+      },
+      {
+        "w": "唉声叹气",
+        "n": 18
+      },
+      {
+        "w": "呜呜",
+        "n": 18
+      },
+      {
+        "w": "眼睑下垂",
+        "n": 12
+      },
+      {
+        "w": "嘴角下压",
+        "n": 12
+      },
+      {
+        "w": "可闭眼",
+        "n": 12
+      },
+      {
+        "w": "流泪",
+        "n": 5
+      }
+    ],
+    "angry": [
+      {
+        "w": "生气",
+        "n": 40
+      },
+      {
+        "w": "发火",
+        "n": 40
+      },
+      {
+        "w": "愤怒",
+        "n": 40
+      },
+      {
+        "w": "怒气",
+        "n": 40
+      },
+      {
+        "w": "不爽",
+        "n": 40
+      },
+      {
+        "w": "不悦",
+        "n": 40
+      },
+      {
+        "w": "火大",
+        "n": 40
+      },
+      {
+        "w": "咬牙",
+        "n": 40
+      },
+      {
+        "w": "呵斥",
+        "n": 40
+      },
+      {
+        "w": "斥责",
+        "n": 40
+      },
+      {
+        "w": "埋怨",
+        "n": 40
+      },
+      {
+        "w": "抱怨",
+        "n": 40
+      },
+      {
+        "w": "不满",
+        "n": 40
+      },
+      {
+        "w": "狠狠",
+        "n": 40
+      },
+      {
+        "w": "瞪眼",
+        "n": 40
+      },
+      {
+        "w": "恼",
+        "n": 40
+      },
+      {
+        "w": "吼",
+        "n": 40
+      },
+      {
+        "w": "怒",
+        "n": 40
+      },
+      {
+        "w": "斥",
+        "n": 40
+      },
+      {
+        "w": "愤",
+        "n": 40
+      },
+      {
+        "w": "骂",
+        "n": 40
+      },
+      {
+        "w": "凶",
+        "n": 40
+      },
+      {
+        "w": "被当成小孩",
+        "n": 30
+      },
+      {
+        "w": "被质疑能力",
+        "n": 30
+      },
+      {
+        "w": "被说教",
+        "n": 30
+      },
+      {
+        "w": "真是的",
+        "n": 18
+      },
+      {
+        "w": "讨厌",
+        "n": 18
+      },
+      {
+        "w": "过分",
+        "n": 18
+      },
+      {
+        "w": "够了",
+        "n": 18
+      },
+      {
+        "w": "可伴张口喊叫",
+        "n": 12
+      },
+      {
+        "w": "眉压低皱起",
+        "n": 12
+      },
+      {
+        "w": "嘴角下压",
+        "n": 12
+      },
+      {
+        "w": "不高兴",
+        "n": 7
+      },
+      {
+        "w": "发怒",
+        "n": 7
+      }
+    ],
+    "troubled": [
+      {
+        "w": "不知所措",
+        "n": 40
+      },
+      {
+        "w": "皱了皱眉",
+        "n": 40
+      },
+      {
+        "w": "皱着眉",
+        "n": 40
+      },
+      {
+        "w": "皱眉",
+        "n": 40
+      },
+      {
+        "w": "苦笑",
+        "n": 40
+      },
+      {
+        "w": "为难",
+        "n": 40
+      },
+      {
+        "w": "困扰",
+        "n": 40
+      },
+      {
+        "w": "困惑",
+        "n": 40
+      },
+      {
+        "w": "尴尬",
+        "n": 40
+      },
+      {
+        "w": "蹙眉",
+        "n": 40
+      },
+      {
+        "w": "苦恼",
+        "n": 40
+      },
+      {
+        "w": "语塞",
+        "n": 40
+      },
+      {
+        "w": "支吾",
+        "n": 40
+      },
+      {
+        "w": "纠结",
+        "n": 40
+      },
+      {
+        "w": "无奈",
+        "n": 40
+      },
+      {
+        "w": "害怕",
+        "n": 40
+      },
+      {
+        "w": "不安",
+        "n": 40
+      },
+      {
+        "w": "蹙",
+        "n": 40
+      },
+      {
+        "w": "烦",
+        "n": 40
+      },
+      {
+        "w": "怕",
+        "n": 40
+      },
+      {
+        "w": "被当成小孩子",
+        "n": 30
+      },
+      {
+        "w": "久遠寺家",
+        "n": 30
+      },
+      {
+        "w": "被起绰号",
+        "n": 30
+      },
+      {
+        "w": "被摸头",
+        "n": 30
+      },
+      {
+        "w": "被调侃",
+        "n": 30
+      },
+      {
+        "w": "怎么办",
+        "n": 18
+      },
+      {
+        "w": "不会吧",
+        "n": 18
+      },
+      {
+        "w": "糟糕",
+        "n": 18
+      },
+      {
+        "w": "糟了",
+        "n": 18
+      },
+      {
+        "w": "眉眼下垂",
+        "n": 12
+      },
+      {
+        "w": "视线游移",
+        "n": 12
+      },
+      {
+        "w": "手掩口",
+        "n": 12
+      },
+      {
+        "w": "面露阴霾",
+        "n": 5
+      }
+    ],
+    "serious": [
+      {
+        "w": "认真",
+        "n": 40
+      },
+      {
+        "w": "严肃",
+        "n": 40
+      },
+      {
+        "w": "正色",
+        "n": 40
+      },
+      {
+        "w": "坚定",
+        "n": 40
+      },
+      {
+        "w": "决意",
+        "n": 40
+      },
+      {
+        "w": "郑重",
+        "n": 40
+      },
+      {
+        "w": "正视",
+        "n": 40
+      },
+      {
+        "w": "沉声",
+        "n": 40
+      },
+      {
+        "w": "断言",
+        "n": 40
+      },
+      {
+        "w": "坚决",
+        "n": 40
+      },
+      {
+        "w": "提到妹妹橙子",
+        "n": 30
+      },
+      {
+        "w": "苍崎家继承",
+        "n": 30
+      },
+      {
+        "w": "学生会正事",
+        "n": 30
+      },
+      {
+        "w": "被交付任务",
+        "n": 30
+      },
+      {
+        "w": "打工收入",
+        "n": 30
+      },
+      {
+        "w": "涉及魔术",
+        "n": 30
+      },
+      {
+        "w": "プラント",
+        "n": 30
+      },
+      {
+        "w": "发现异常",
+        "n": 30
+      },
+      {
+        "w": "追查证据",
+        "n": 30
+      },
+      {
+        "w": "魔术行使",
+        "n": 30
+      },
+      {
+        "w": "涉及钱",
+        "n": 30
+      },
+      {
+        "w": "生活费",
+        "n": 30
+      },
+      {
+        "w": "说重话",
+        "n": 30
+      },
+      {
+        "w": "结界",
+        "n": 30
+      },
+      {
+        "w": "战斗",
+        "n": 30
+      },
+      {
+        "w": "话题涉及金钱",
+        "n": 20
+      },
+      {
+        "w": "成本",
+        "n": 20
+      },
+      {
+        "w": "眼神坚定直视",
+        "n": 12
+      },
+      {
+        "w": "眉平",
+        "n": 12
+      },
+      {
+        "w": "唇紧",
+        "n": 12
+      },
+      {
+        "w": "视线",
+        "n": 8
+      }
+    ],
+    "surprised": [
+      {
+        "w": "措手不及",
+        "n": 40
+      },
+      {
+        "w": "睁大眼",
+        "n": 40
+      },
+      {
+        "w": "没想到",
+        "n": 40
+      },
+      {
+        "w": "吃惊",
+        "n": 40
+      },
+      {
+        "w": "惊讶",
+        "n": 40
+      },
+      {
+        "w": "意外",
+        "n": 40
+      },
+      {
+        "w": "震惊",
+        "n": 40
+      },
+      {
+        "w": "竟然",
+        "n": 40
+      },
+      {
+        "w": "惊愕",
+        "n": 40
+      },
+      {
+        "w": "惊吓",
+        "n": 40
+      },
+      {
+        "w": "惊叫",
+        "n": 40
+      },
+      {
+        "w": "吓",
+        "n": 40
+      },
+      {
+        "w": "惊",
+        "n": 40
+      },
+      {
+        "w": "愣",
+        "n": 40
+      },
+      {
+        "w": "呆",
+        "n": 40
+      },
+      {
+        "w": "愕",
+        "n": 40
+      },
+      {
+        "w": "意外事件发生",
+        "n": 30
+      },
+      {
+        "w": "独自遇险",
+        "n": 30
+      },
+      {
+        "w": "什么？",
+        "n": 18
+      },
+      {
+        "w": "咦？",
+        "n": 18
+      },
+      {
+        "w": "诶？",
+        "n": 18
+      },
+      {
+        "w": "哎呀",
+        "n": 18
+      },
+      {
+        "w": "天啊",
+        "n": 18
+      },
+      {
+        "w": "眉上扬",
+        "n": 12
+      },
+      {
+        "w": "口微张",
+        "n": 12
+      },
+      {
+        "w": "安心",
+        "n": 5
+      },
+      {
+        "w": "满足",
+        "n": 5
+      },
+      {
+        "w": "紧张",
+        "n": 5
+      },
+      {
+        "w": "戒备",
+        "n": 5
+      }
+    ],
+    "smile": [
+      {
+        "w": "嘴角上扬",
+        "n": 40
+      },
+      {
+        "w": "嘴角一扬",
+        "n": 40
+      },
+      {
+        "w": "笑着说",
+        "n": 40
+      },
+      {
+        "w": "笑了笑",
+        "n": 40
+      },
+      {
+        "w": "笑眯眯",
+        "n": 40
+      },
+      {
+        "w": "笑出声",
+        "n": 40
+      },
+      {
+        "w": "微笑",
+        "n": 40
+      },
+      {
+        "w": "笑容",
+        "n": 40
+      },
+      {
+        "w": "含笑",
+        "n": 40
+      },
+      {
+        "w": "笑意",
+        "n": 40
+      },
+      {
+        "w": "浅笑",
+        "n": 40
+      },
+      {
+        "w": "失笑",
+        "n": 40
+      },
+      {
+        "w": "一笑",
+        "n": 40
+      },
+      {
+        "w": "抿嘴",
+        "n": 40
+      },
+      {
+        "w": "轻笑",
+        "n": 40
+      },
+      {
+        "w": "开心",
+        "n": 40
+      },
+      {
+        "w": "高兴",
+        "n": 40
+      },
+      {
+        "w": "愉快",
+        "n": 40
+      },
+      {
+        "w": "欣喜",
+        "n": 40
+      },
+      {
+        "w": "愉悦",
+        "n": 40
+      },
+      {
+        "w": "满意",
+        "n": 40
+      },
+      {
+        "w": "笑",
+        "n": 40
+      },
+      {
+        "w": "八卦",
+        "n": 30
+      },
+      {
+        "w": "用户开玩笑",
+        "n": 20
+      },
+      {
+        "w": "太好了",
+        "n": 18
+      },
+      {
+        "w": "不错嘛",
+        "n": 18
+      },
+      {
+        "w": "真好",
+        "n": 18
+      },
+      {
+        "w": "眉眼放松",
+        "n": 12
+      }
+    ],
+    "shy": [
+      {
+        "w": "脸都红了",
+        "n": 40
+      },
+      {
+        "w": "不好意思",
+        "n": 40
+      },
+      {
+        "w": "别开视线",
+        "n": 40
+      },
+      {
+        "w": "脸红了",
+        "n": 40
+      },
+      {
+        "w": "红着脸",
+        "n": 40
+      },
+      {
+        "w": "别开脸",
+        "n": 40
+      },
+      {
+        "w": "害羞",
+        "n": 40
+      },
+      {
+        "w": "脸红",
+        "n": 40
+      },
+      {
+        "w": "涨红",
+        "n": 40
+      },
+      {
+        "w": "绯红",
+        "n": 40
+      },
+      {
+        "w": "忸怩",
+        "n": 40
+      },
+      {
+        "w": "别扭",
+        "n": 40
+      },
+      {
+        "w": "局促",
+        "n": 40
+      },
+      {
+        "w": "心跳",
+        "n": 40
+      },
+      {
+        "w": "羞",
+        "n": 40
+      },
+      {
+        "w": "慌",
+        "n": 40
+      },
+      {
+        "w": "被人认真夸奖",
+        "n": 30
+      },
+      {
+        "w": "被感谢",
+        "n": 30
+      },
+      {
+        "w": "被用户夸奖",
+        "n": 20
+      },
+      {
+        "w": "别看我",
+        "n": 18
+      },
+      {
+        "w": "讨厌啦",
+        "n": 18
+      },
+      {
+        "w": "可含手部动作",
+        "n": 12
+      },
+      {
+        "w": "视线游移",
+        "n": 12
+      }
+    ],
+    "glare": [
+      {
+        "w": "瞪视",
+        "n": 40
+      },
+      {
+        "w": "半眼",
+        "n": 40
+      },
+      {
+        "w": "锐利",
+        "n": 40
+      },
+      {
+        "w": "冰冷",
+        "n": 40
+      },
+      {
+        "w": "冷冷",
+        "n": 40
+      },
+      {
+        "w": "杀意",
+        "n": 40
+      },
+      {
+        "w": "威压",
+        "n": 40
+      },
+      {
+        "w": "警告",
+        "n": 40
+      },
+      {
+        "w": "冷眼",
+        "n": 40
+      },
+      {
+        "w": "眯眼",
+        "n": 40
+      },
+      {
+        "w": "斜视",
+        "n": 40
+      },
+      {
+        "w": "睥睨",
+        "n": 40
+      },
+      {
+        "w": "瞪",
+        "n": 40
+      },
+      {
+        "w": "睨",
+        "n": 40
+      },
+      {
+        "w": "剜",
+        "n": 40
+      },
+      {
+        "w": "青子做出越界",
+        "n": 30
+      },
+      {
+        "w": "瞥了一眼",
+        "n": 18
+      },
+      {
+        "w": "白了一眼",
+        "n": 18
+      },
+      {
+        "w": "不爱搭理",
+        "n": 18
+      },
+      {
+        "w": "冷冷地",
+        "n": 18
+      },
+      {
+        "w": "眼睑压低",
+        "n": 12
+      },
+      {
+        "w": "半眼凌厉",
+        "n": 12
+      },
+      {
+        "w": "视线锁定",
+        "n": 12
+      },
+      {
+        "w": "横目",
+        "n": 7
+      }
+    ],
+    "think": [
+      {
+        "w": "思考",
+        "n": 40
+      },
+      {
+        "w": "琢磨",
+        "n": 40
+      },
+      {
+        "w": "沉思",
+        "n": 40
+      },
+      {
+        "w": "寻思",
+        "n": 40
+      },
+      {
+        "w": "回想",
+        "n": 40
+      },
+      {
+        "w": "回忆",
+        "n": 40
+      },
+      {
+        "w": "权衡",
+        "n": 40
+      },
+      {
+        "w": "考虑",
+        "n": 40
+      },
+      {
+        "w": "侧目",
+        "n": 40
+      },
+      {
+        "w": "沉吟",
+        "n": 40
+      },
+      {
+        "w": "犹豫",
+        "n": 40
+      },
+      {
+        "w": "思索",
+        "n": 40
+      },
+      {
+        "w": "视线偏移",
+        "n": 12
+      },
+      {
+        "w": "眉微动",
+        "n": 12
+      }
+    ],
+    "neutral": [
+      {
+        "w": "面无表情",
+        "n": 40
+      },
+      {
+        "w": "没反应",
+        "n": 40
+      },
+      {
+        "w": "摇头",
+        "n": 40
+      },
+      {
+        "w": "点头",
+        "n": 40
+      },
+      {
+        "w": "平静",
+        "n": 40
+      },
+      {
+        "w": "平淡",
+        "n": 40
+      },
+      {
+        "w": "沉默",
+        "n": 40
+      },
+      {
+        "w": "寻常",
+        "n": 40
+      },
+      {
+        "w": "照常",
+        "n": 40
+      },
+      {
+        "w": "如常",
+        "n": 40
+      },
+      {
+        "w": "普通",
+        "n": 40
+      },
+      {
+        "w": "默认",
+        "n": 40
+      },
+      {
+        "w": "无视",
+        "n": 40
+      },
+      {
+        "w": "淡淡",
+        "n": 40
+      },
+      {
+        "w": "随口",
+        "n": 40
+      },
+      {
+        "w": "随便吧",
+        "n": 18
+      },
+      {
+        "w": "随意",
+        "n": 18
+      },
+      {
+        "w": "眉眼平",
+        "n": 12
+      },
+      {
+        "w": "嘴闭合",
+        "n": 12
+      },
+      {
+        "w": "无张力",
+        "n": 12
+      },
+      {
+        "w": "视线",
+        "n": 8
+      },
+      {
+        "w": "无表情",
+        "n": 5
+      }
+    ],
+    "laugh": [
+      {
+        "w": "忍俊不禁",
+        "n": 40
+      },
+      {
+        "w": "乐不可支",
+        "n": 40
+      },
+      {
+        "w": "笑出声",
+        "n": 40
+      },
+      {
+        "w": "大笑",
+        "n": 40
+      },
+      {
+        "w": "爆笑",
+        "n": 40
+      },
+      {
+        "w": "捧腹",
+        "n": 40
+      },
+      {
+        "w": "放声",
+        "n": 40
+      },
+      {
+        "w": "哄笑",
+        "n": 40
+      },
+      {
+        "w": "哈哈",
+        "n": 40
+      },
+      {
+        "w": "笑翻",
+        "n": 40
+      },
+      {
+        "w": "喷笑",
+        "n": 40
+      },
+      {
+        "w": "笑得",
+        "n": 40
+      },
+      {
+        "w": "嘿嘿",
+        "n": 18
+      },
+      {
+        "w": "呵呵",
+        "n": 18
+      },
+      {
+        "w": "张口露齿",
+        "n": 12
+      },
+      {
+        "w": "闭眼仰头",
+        "n": 12
+      },
+      {
+        "w": "笑肌明显",
+        "n": 12
+      }
+    ]
+  },
+  "lexiconByCharacter": {
+    "aoko": {
+      "neutral": [
+        {
+          "w": "哦",
+          "n": 40
+        },
+        {
+          "w": "随便吧",
+          "n": 40
+        },
+        {
+          "w": "怎么",
+          "n": 40
+        },
+        {
+          "w": "行吧",
+          "n": 40
+        },
+        {
+          "w": "知道了",
+          "n": 40
+        }
+      ],
+      "smile": [
+        {
+          "w": "哼，还行",
+          "n": 40
+        },
+        {
+          "w": "算你识相",
+          "n": 40
+        },
+        {
+          "w": "算了，就这样吧",
+          "n": 40
+        },
+        {
+          "w": "就这一次",
+          "n": 40
+        }
+      ],
+      "laugh": [
+        {
+          "w": "哈哈，没救了",
+          "n": 40
+        },
+        {
+          "w": "笑死我了",
+          "n": 40
+        },
+        {
+          "w": "你这人真是",
+          "n": 40
+        }
+      ],
+      "angry": [
+        {
+          "w": "笨死了",
+          "n": 40
+        },
+        {
+          "w": "笨蛋",
+          "n": 40
+        },
+        {
+          "w": "真是的",
+          "n": 40
+        },
+        {
+          "w": "这个常识白痴",
+          "n": 40
+        },
+        {
+          "w": "你这家伙",
+          "n": 40
+        },
+        {
+          "w": "少来",
+          "n": 40
+        }
+      ],
+      "glare": [
+        {
+          "w": "哼",
+          "n": 40
+        },
+        {
+          "w": "懒得说",
+          "n": 40
+        },
+        {
+          "w": "失望",
+          "n": 40
+        },
+        {
+          "w": "瞪",
+          "n": 40
+        },
+        {
+          "w": "别用那种眼神",
+          "n": 40
+        }
+      ],
+      "surprised": [
+        {
+          "w": "诶",
+          "n": 40
+        },
+        {
+          "w": "真的假的",
+          "n": 40
+        },
+        {
+          "w": "你说什么",
+          "n": 40
+        },
+        {
+          "w": "不会吧",
+          "n": 40
+        }
+      ],
+      "troubled": [
+        {
+          "w": "啧",
+          "n": 40
+        },
+        {
+          "w": "麻烦了",
+          "n": 40
+        },
+        {
+          "w": "啊——真是的",
+          "n": 40
+        },
+        {
+          "w": "头疼",
+          "n": 40
+        }
+      ],
+      "sad": [
+        {
+          "w": "随你便",
+          "n": 40
+        },
+        {
+          "w": "算了",
+          "n": 40
+        },
+        {
+          "w": "……没什么",
+          "n": 40
+        }
+      ],
+      "serious": [
+        {
+          "w": "我说认真的",
+          "n": 40
+        },
+        {
+          "w": "听好了",
+          "n": 40
+        },
+        {
+          "w": "别废话",
+          "n": 40
+        },
+        {
+          "w": "正经点",
+          "n": 40
+        }
+      ],
+      "think": [
+        {
+          "w": "让我想想",
+          "n": 40
+        },
+        {
+          "w": "嗯——",
+          "n": 40
+        },
+        {
+          "w": "不好说",
+          "n": 40
+        }
+      ],
+      "tired": [
+        {
+          "w": "好累",
+          "n": 40
+        },
+        {
+          "w": "受不了",
+          "n": 40
+        },
+        {
+          "w": "啊——",
+          "n": 40
+        }
+      ],
+      "shy": [
+        {
+          "w": "别看我",
+          "n": 40
+        },
+        {
+          "w": "闭嘴啦",
+          "n": 40
+        },
+        {
+          "w": "才不是",
+          "n": 40
+        },
+        {
+          "w": "别说了",
+          "n": 40
+        }
+      ]
+    },
+    "alice": {
+      "neutral": [
+        {
+          "w": "嗯",
+          "n": 40
+        },
+        {
+          "w": "哦",
+          "n": 40
+        },
+        {
+          "w": "这样",
+          "n": 40
+        },
+        {
+          "w": "知道了",
+          "n": 40
+        }
+      ],
+      "smile": [
+        {
+          "w": "……还行",
+          "n": 40
+        },
+        {
+          "w": "难得",
+          "n": 40
+        },
+        {
+          "w": "嗯，可以",
+          "n": 40
+        }
+      ],
+      "glare": [
+        {
+          "w": "你再说一遍",
+          "n": 40
+        },
+        {
+          "w": "冷冷地",
+          "n": 40
+        },
+        {
+          "w": "别看我",
+          "n": 40
+        },
+        {
+          "w": "毫无表情",
+          "n": 40
+        }
+      ],
+      "surprised": [
+        {
+          "w": "……诶",
+          "n": 40
+        },
+        {
+          "w": "没想到",
+          "n": 40
+        },
+        {
+          "w": "是吗",
+          "n": 40
+        }
+      ],
+      "troubled": [
+        {
+          "w": "谁知道呢",
+          "n": 40
+        },
+        {
+          "w": "……不知道",
+          "n": 40
+        },
+        {
+          "w": "不说话",
+          "n": 40
+        },
+        {
+          "w": "……",
+          "n": 40
+        }
+      ],
+      "sad": [
+        {
+          "w": "……没什么",
+          "n": 40
+        },
+        {
+          "w": "算了",
+          "n": 40
+        }
+      ],
+      "serious": [
+        {
+          "w": "我说过了",
+          "n": 40
+        },
+        {
+          "w": "听清楚",
+          "n": 40
+        },
+        {
+          "w": "这是规矩",
+          "n": 40
+        }
+      ],
+      "think": [
+        {
+          "w": "让我想想",
+          "n": 40
+        },
+        {
+          "w": "……嗯",
+          "n": 40
+        }
+      ],
+      "tired": [
+        {
+          "w": "……唉",
+          "n": 40
+        },
+        {
+          "w": "真拿你没办法",
+          "n": 40
+        }
+      ],
+      "shy": [
+        {
+          "w": "别说了",
+          "n": 40
+        },
+        {
+          "w": "不是那样",
+          "n": 40
+        }
+      ],
+      "angry": [
+        {
+          "w": "你是傻子吗",
+          "n": 40
+        },
+        {
+          "w": "……呆住",
+          "n": 40
+        },
+        {
+          "w": "不像话",
+          "n": 40
+        }
+      ]
+    },
+    "kumari": {
+      "neutral": [
+        {
+          "w": "哦——",
+          "n": 40
+        },
+        {
+          "w": "这样啊",
+          "n": 40
+        },
+        {
+          "w": "嗯哼",
+          "n": 40
+        },
+        {
+          "w": "知道了",
+          "n": 40
+        }
+      ],
+      "smile": [
+        {
+          "w": "算你有点用",
+          "n": 40
+        },
+        {
+          "w": "还不错嘛",
+          "n": 40
+        },
+        {
+          "w": "嘿嘿",
+          "n": 40
+        }
+      ],
+      "laugh": [
+        {
+          "w": "哈哈",
+          "n": 40
+        },
+        {
+          "w": "笑死我了",
+          "n": 40
+        },
+        {
+          "w": "你这人真有意思",
+          "n": 40
+        }
+      ],
+      "angry": [
+        {
+          "w": "啧",
+          "n": 40
+        },
+        {
+          "w": "喂",
+          "n": 40
+        },
+        {
+          "w": "别闹",
+          "n": 40
+        },
+        {
+          "w": "行了行了",
+          "n": 40
+        }
+      ],
+      "glare": [
+        {
+          "w": "瞪",
+          "n": 40
+        },
+        {
+          "w": "你再说一遍",
+          "n": 40
+        },
+        {
+          "w": "盯着",
+          "n": 40
+        }
+      ],
+      "surprised": [
+        {
+          "w": "啥",
+          "n": 40
+        },
+        {
+          "w": "什么鬼",
+          "n": 40
+        },
+        {
+          "w": "什么玩意",
+          "n": 40
+        },
+        {
+          "w": "诶诶",
+          "n": 40
+        }
+      ],
+      "troubled": [
+        {
+          "w": "呃",
+          "n": 40
+        },
+        {
+          "w": "不是吧",
+          "n": 40
+        },
+        {
+          "w": "好恶心",
+          "n": 40
+        },
+        {
+          "w": "恶——",
+          "n": 40
+        }
+      ],
+      "sad": [
+        {
+          "w": "啊——完了",
+          "n": 40
+        },
+        {
+          "w": "失落",
+          "n": 40
+        },
+        {
+          "w": "没劲",
+          "n": 40
+        }
+      ],
+      "serious": [
+        {
+          "w": "我说正经的",
+          "n": 40
+        },
+        {
+          "w": "听好",
+          "n": 40
+        },
+        {
+          "w": "别开玩笑",
+          "n": 40
+        }
+      ],
+      "think": [
+        {
+          "w": "嗯——",
+          "n": 40
+        },
+        {
+          "w": "我想想",
+          "n": 40
+        }
+      ],
+      "tired": [
+        {
+          "w": "好烦",
+          "n": 40
+        },
+        {
+          "w": "累死了",
+          "n": 40
+        },
+        {
+          "w": "烦死了",
+          "n": 40
+        }
+      ],
+      "shy": [
+        {
+          "w": "别说这个",
+          "n": 40
+        },
+        {
+          "w": "喂喂",
+          "n": 40
+        },
+        {
+          "w": "别看我",
+          "n": 40
+        }
+      ]
+    }
+  },
+  "bgm": {
+    "dailyLight": [
+      {
+        "id": "m02",
+        "url": "bgm/m02.ogg"
+      },
+      {
+        "id": "m08",
+        "url": "bgm/m08.ogg"
+      },
+      {
+        "id": "m09",
+        "url": "bgm/m09.ogg"
+      },
+      {
+        "id": "m17",
+        "url": "bgm/m17.ogg"
+      },
+      {
+        "id": "m27",
+        "url": "bgm/m27.ogg"
+      },
+      {
+        "id": "m29",
+        "url": "bgm/m29.ogg"
+      },
+      {
+        "id": "m37",
+        "url": "bgm/m37.ogg"
+      },
+      {
+        "id": "m49",
+        "url": "bgm/m49.ogg"
+      }
+    ],
+    "dailyDark": [
+      {
+        "id": "m06",
+        "url": "bgm/m06.ogg"
+      },
+      {
+        "id": "m18",
+        "url": "bgm/m18.ogg"
+      },
+      {
+        "id": "m46",
+        "url": "bgm/m46.ogg"
+      },
+      {
+        "id": "m47",
+        "url": "bgm/m47.ogg"
+      },
+      {
+        "id": "m63",
+        "url": "bgm/m63.ogg"
+      }
+    ],
+    "titleLight": "bgm/m01s.ogg",
+    "titleDark": "bgm/m56.ogg",
+    "ending": "bgm/m53.ogg"
+  }
+}

@@ -1,0 +1,515 @@
+=== data00000.hfa  count=1094  base=140,048  size=156,887,596
+    .mzp×571, .cbg×523
+=== data00010.hfa  count=20  base=2,576  size=19,221,853
+    .cbg×14, .mzp×6
+=== data00100.hfa  count=171  base=21,904  size=27,217,988
+    .mzp×155, .ccit×16
+=== data00200.hfa  count=4  base=528  size=3,284,891
+    .ctd×4
+=== data00300.hfa  count=7  base=912  size=109,923
+    .hw×7
+=== data00400.hfa  count=1  base=144  size=3,788,254
+    .mp4×1
+=== data01000.hfa  count=4  base=528  size=18,226
+    .chs×4
+=== data01100.hfa  count=138  base=17,680  size=3,173,765
+    .chs×138
+=== data01200.hfa  count=13  base=1,680  size=15,565
+    .chs×13
+=== data01300.hfa  count=69  base=8,848  size=405,990
+    .chs×69
+=== data01400.hfa  count=26  base=3,344  size=19,246
+    .chs×26
+=== data02000.hfa  count=500  base=64,016  size=1,620,761,592
+    .mzp×500
+=== data02001.hfa  count=800  base=102,416  size=1,677,171,144
+    .mzp×800
+=== data02002.hfa  count=1171  base=149,904  size=1,688,446,768
+    .mzp×1171
+=== data02010.hfa  count=645  base=82,576  size=1,614,530,920
+    .mzp×645
+=== data02020.hfa  count=10821  base=1,385,104  size=154,475,096
+    .mzp×10821
+=== data02050.hfa  count=713  base=91,280  size=1,629,156,024
+    .mzp×713
+=== data02051.hfa  count=1083  base=138,640  size=1,594,120,488
+    .mzp×1083
+=== data02052.hfa  count=1055  base=135,056  size=1,155,228,856
+    .mzp×1055
+=== data02100.hfa  count=1738  base=222,480  size=700,661,240
+    .mzp×1738
+=== data02105.hfa  count=519  base=66,448  size=877,906,680
+    .mzp×519
+=== data02110.hfa  count=660  base=84,496  size=191,067,336
+    .mzp×660
+=== data02115.hfa  count=242  base=30,992  size=269,724,840
+    .mzp×242
+=== data02120.hfa  count=134  base=17,168  size=36,528,544
+    .mzp×134
+=== data02125.hfa  count=27  base=3,472  size=36,024,760
+    .mzp×27
+=== data02130.hfa  count=123  base=15,760  size=30,708,624
+    .mzp×123
+=== data02135.hfa  count=16  base=2,064  size=10,721,928
+    .mzp×16
+=== data02140.hfa  count=214  base=27,408  size=57,018,832
+    .mzp×214
+=== data02145.hfa  count=36  base=4,624  size=49,211,240
+    .mzp×36
+=== data02150.hfa  count=204  base=26,128  size=50,897,432
+    .mzp×204
+=== data02155.hfa  count=20  base=2,576  size=42,513,288
+    .mzp×20
+=== data02160.hfa  count=66  base=8,464  size=24,102,792
+    .mzp×66
+=== data02165.hfa  count=19  base=2,448  size=76,281,000
+    .mzp×19
+=== data02170.hfa  count=144  base=18,448  size=38,271,552
+    .mzp×144
+=== data02175.hfa  count=19  base=2,448  size=29,117,840
+    .mzp×19
+=== data02180.hfa  count=932  base=119,312  size=280,249,816
+    .mzp×932
+=== data02185.hfa  count=434  base=55,568  size=626,716,592
+    .mzp×434
+=== data02190.hfa  count=208  base=26,640  size=78,025,864
+    .mzp×208
+=== data02195.hfa  count=48  base=6,160  size=73,222,144
+    .mzp×48
+=== data02200.hfa  count=29  base=3,728  size=14,461,984
+    .mzp×29
+=== data02210.hfa  count=172  base=22,032  size=51,089,296
+    .mzp×172
+=== data02215.hfa  count=73  base=9,360  size=130,174,096
+    .mzp×73
+=== data02220.hfa  count=24  base=3,088  size=8,751,560
+    .mzp×24
+=== data02225.hfa  count=10  base=1,296  size=38,130,152
+    .mzp×10
+=== data02230.hfa  count=82  base=10,512  size=23,795,408
+    .mzp×82
+=== data02235.hfa  count=14  base=1,808  size=16,756,616
+    .mzp×14
+=== data02300.hfa  count=7  base=912  size=152,928
+    .mzp×7
+=== data02400.hfa  count=13  base=1,680  size=7,203,096
+    .mzp×13
+=== data02900.hfa  count=4  base=528  size=1,567,168,959
+    .mp4×4
+=== data03000.hfa  count=64  base=8,208  size=262,020,637
+    .hw×64
+=== data03100.hfa  count=906  base=115,984  size=98,724,002
+    .hw×906
+=== data04000.hfa  count=9357  base=1,197,712  size=550,865,283
+    .hw×9357
+
+=== 全局扩展名统计（数量 / 总字节）===
+  .mzp         23747  15,068,544,152
+  .hw          10334     910,397,029
+  .cbg           537     134,945,529
+  .chs           250       3,600,712
+  .ccit           16         105,084
+  .mp4             5   1,570,956,541
+  .ctd             4       3,284,363
+
+=== 非图片条目：10609 个 ===
+  .ccit         1,259  data00100.hfa    Font000000.ccit
+  .ccit        16,020  data00100.hfa    Font000001.ccit
+  .ccit         2,821  data00100.hfa    Font000100.ccit
+  .ccit         9,456  data00100.hfa    Font000200.ccit
+  .ccit         1,218  data00100.hfa    Font010000.ccit
+  .ccit           123  data00100.hfa    Font010001.ccit
+  .ccit           787  data00100.hfa    Font010100.ccit
+  .ccit           921  data00100.hfa    Font010200.ccit
+  .ccit         1,250  data00100.hfa    Font020000.ccit
+  .ccit        19,582  data00100.hfa    Font020001.ccit
+  .ccit         2,849  data00100.hfa    Font020100.ccit
+  .ccit        12,471  data00100.hfa    Font020200.ccit
+  .ccit         1,255  data00100.hfa    Font030000.ccit
+  .ccit        19,708  data00100.hfa    Font030001.ccit
+  .ccit         2,928  data00100.hfa    Font030100.ccit
+  .ccit        12,436  data00100.hfa    Font030200.ccit
+  .chs          6,729  data01100.hfa    1_0.chs
+  .chs          9,755  data01100.hfa    1_1.chs
+  .chs         42,180  data01100.hfa    1_2.chs
+  .chs         22,584  data01100.hfa    1_3.chs
+  .chs         17,236  data01100.hfa    1_4.chs
+  .chs         31,805  data01100.hfa    1_5.chs
+  .chs          9,692  data01100.hfa    1dot5_1.chs
+  .chs          9,886  data01100.hfa    1dot5_2.chs
+  .chs         70,595  data01100.hfa    1dot5_3.chs
+  .chs         47,103  data01100.hfa    1dot5_4.chs
+  .chs         15,996  data01100.hfa    2_1.chs
+  .chs         31,009  data01100.hfa    2_2.chs
+  .chs         18,365  data01100.hfa    2_3.chs
+  .chs         22,933  data01100.hfa    2_4.chs
+  .chs         14,407  data01100.hfa    2_5.chs
+  .chs         24,006  data01100.hfa    3_1.chs
+  .chs         22,577  data01100.hfa    4_1.chs
+  .chs         16,782  data01100.hfa    4_2.chs
+  .chs         15,042  data01100.hfa    4_3.chs
+  .chs         39,096  data01100.hfa    4_4.chs
+  .chs          9,053  data01100.hfa    5a_1.chs
+  .chs         26,459  data01100.hfa    5a_10.chs
+  .chs         44,654  data01100.hfa    5a_11.chs
+  .chs         46,175  data01100.hfa    5a_12.chs
+  .chs         33,282  data01100.hfa    5a_2.chs
+  .chs          4,269  data01100.hfa    5a_3.chs
+  .chs         42,001  data01100.hfa    5a_4.chs
+  .chs         32,684  data01100.hfa    5a_5.chs
+  .chs         19,017  data01100.hfa    5a_6.chs
+  .chs         24,245  data01100.hfa    5a_7.chs
+  .chs         48,553  data01100.hfa    5a_8.chs
+  .chs         16,302  data01100.hfa    5a_9.chs
+  .chs         54,980  data01100.hfa    5b_1.chs
+  .chs         44,286  data01100.hfa    5b_10.chs
+  .chs         10,136  data01100.hfa    5b_11.chs
+  .chs         10,795  data01100.hfa    5b_12.chs
+  .chs         26,587  data01100.hfa    5b_13.chs
+  .chs        156,164  data01100.hfa    5b_14.chs
+  .chs         84,490  data01100.hfa    5b_15.chs
+  .chs         28,872  data01100.hfa    5b_16.chs
+  .chs         36,655  data01100.hfa    5b_2.chs
+  .chs         22,947  data01100.hfa    5b_3.chs
+  .chs          6,484  data01100.hfa    5b_4.chs
+  .chs         56,843  data01100.hfa    5b_5.chs
+  .chs         25,002  data01100.hfa    5b_6.chs
+  .chs         15,912  data01100.hfa    5b_7.chs
+  .chs          7,991  data01100.hfa    5b_8.chs
+  .chs         28,653  data01100.hfa    5b_9.chs
+  .chs          8,325  data01100.hfa    6_1.chs
+  .chs         14,048  data01100.hfa    6_2.chs
+  .chs          7,675  data01100.hfa    6_3.chs
+  .chs         24,564  data01100.hfa    6_4.chs
+  .chs         24,778  data01100.hfa    6_5.chs
+  .chs         31,546  data01100.hfa    6_6.chs
+  .chs         14,150  data01100.hfa    6_7.chs
+  .chs          6,991  data01100.hfa    6_8.chs
+  .chs         19,218  data01100.hfa    6_9.chs
+  .chs         53,088  data01100.hfa    7_1.chs
+  .chs            504  data01100.hfa    7_1b.chs
+  .chs          9,605  data01100.hfa    7_2.chs
+  .chs         14,922  data01100.hfa    7_3.chs
+  .chs          7,514  data01100.hfa    7_5.chs
+  .chs         18,852  data01100.hfa    7_6.chs
+  .chs         18,264  data01100.hfa    7_7.chs
+  .chs          9,028  data01100.hfa    7_8.chs
+  .chs         49,138  data01100.hfa    7_ex.chs
+  .chs         20,927  data01100.hfa    8_1.chs
+  .chs         17,295  data01100.hfa    8_2.chs
+  .chs         10,047  data01100.hfa    8_3.chs
+  .chs         20,477  data01100.hfa    8_4.chs
+  .chs          7,788  data01100.hfa    8_5.chs
+  .chs         18,821  data01100.hfa    8_6.chs
+  .chs         39,315  data01100.hfa    8_ex.chs
+  .chs         96,388  data01100.hfa    8dot5.chs
+  .chs          9,318  data01100.hfa    9_0.chs
+  .chs          3,185  data01100.hfa    9_1.chs
+  .chs          9,450  data01100.hfa    9_2.chs
+  .chs         12,896  data01100.hfa    9_3.chs
+  .chs         28,099  data01100.hfa    9_3c.chs
+  .chs         15,376  data01100.hfa    9_4.chs
+  .chs         23,086  data01100.hfa    9_5.chs
+  .chs         21,529  data01100.hfa    9_6.chs
+  .chs         26,948  data01100.hfa    9_7.chs
+  .chs          6,939  data01100.hfa    9_8.chs
+  .chs         27,810  data01100.hfa    a_0.chs
+  .chs         13,581  data01100.hfa    a_1.chs
+  .chs          4,283  data01100.hfa    a_2.chs
+  .chs          5,071  data01100.hfa    a_3.chs
+  .chs         61,378  data01100.hfa    a_4.chs
+  .chs         18,141  data01100.hfa    a_5.chs
+  .chs          4,387  data01100.hfa    a_6.chs
+  .chs         10,268  data01100.hfa    a_7.chs
+  .chs          9,047  data01100.hfa    a_8.chs
+  .chs          4,745  data01000.hfa    archive.chs
+  .chs         16,364  data01100.hfa    b_1.chs
+  .chs          7,045  data01100.hfa    b_2.chs
+  .chs         18,386  data01100.hfa    b_3.chs
+  .chs          5,658  data01100.hfa    b_4.chs
+  .chs          9,025  data01100.hfa    b_5.chs
+  .chs         12,839  data01100.hfa    b_6.chs
+  .chs         27,436  data01100.hfa    b_7.chs
+  .chs         22,302  data01100.hfa    b_8.chs
+  .chs         12,999  data01100.hfa    b_9.chs
+  .chs         12,063  data01100.hfa    c_0.chs
+  .chs         48,963  data01100.hfa    c_1.chs
+  .chs         42,712  data01100.hfa    c_10.chs
+  .chs         26,429  data01100.hfa    c_11.chs
+  .chs         29,787  data01100.hfa    c_12.chs
+  .chs         74,929  data01100.hfa    c_13.chs
+  .chs         36,169  data01100.hfa    c_14.chs
+  .chs         15,455  data01100.hfa    c_15.chs
+  .chs         19,571  data01100.hfa    c_2.chs
+  .chs         25,117  data01100.hfa    c_3.chs
+  .chs         12,919  data01100.hfa    c_4.chs
+  .chs         23,331  data01100.hfa    c_5.chs
+  .chs         17,610  data01100.hfa    c_5b.chs
+  .chs            509  data01100.hfa    c_5c.chs
+  .chs         12,082  data01100.hfa    c_6.chs
+  .chs          6,882  data01100.hfa    c_7.chs
+  .chs         16,139  data01100.hfa    c_8.chs
+  .chs         19,424  data01100.hfa    c_9.chs
+  .chs          8,665  data01100.hfa    d_1.chs
+  .chs          9,079  data01100.hfa    d_2.chs
+  .chs          7,879  data01100.hfa    d_3.chs
+  .chs          8,562  data01100.hfa    d_4.chs
+  .chs         16,338  data01100.hfa    d_5.chs
+  .chs         21,190  data01100.hfa    d_6.chs
+  .chs          6,711  data01100.hfa    d_7.chs
+  .chs         26,614  data01100.hfa    d_8.chs
+  .chs          3,359  data01100.hfa    d_9.chs
+  .chs         13,496  data01100.hfa    nz1.chs
+  .chs         12,870  data01100.hfa    nz2.chs
+  .chs         21,193  data01100.hfa    nz3.chs
+  .chs         17,160  data01100.hfa    nz4.chs
+  .chs          8,602  data01100.hfa    nz5.chs
+  .chs         17,055  data01100.hfa    nz6.chs
+  .chs            578  data01100.hfa    opening.chs
+  .chs         59,046  data01100.hfa    sp1.chs
+  .chs            214  data01100.hfa    sp2.chs
+  .chs            462  data01000.hfa    staffroll.chs
+  .chs            577  data01000.hfa    start_script.chs
+  .chs          1,064  data01200.hfa    teatime1.chs
+  .chs          1,062  data01200.hfa    teatime2.chs
+  .chs          1,065  data01200.hfa    teatime3.chs
+  .chs          1,071  data01200.hfa    teatime4.chs
+  .chs          1,072  data01200.hfa    teatime5a.chs
+  .chs          1,068  data01200.hfa    teatime5b.chs
+  .chs          1,074  data01200.hfa    teatime6.chs
+  .chs          1,066  data01200.hfa    teatime7.chs
+  .chs          1,071  data01200.hfa    teatime8.chs
+  .chs          1,072  data01200.hfa    teatime9.chs
+  .chs          1,066  data01200.hfa    teatimea.chs
+  .chs          1,070  data01200.hfa    teatimeb.chs
+  .chs          1,064  data01200.hfa    teatimec.chs
+  .chs         11,914  data01000.hfa    test_script.chs
+  .chs            921  data01300.hfa    wik_b_1.chs
+  .chs          1,165  data01300.hfa    wik_b_1_a.chs
+  .chs         14,779  data01300.hfa    wik_b_1_b.chs
+  .chs          2,507  data01300.hfa    wik_b_2.chs
+  .chs          3,082  data01300.hfa    wik_b_3.chs
+  .chs          3,516  data01300.hfa    wik_c_1.chs
+  .chs          1,040  data01300.hfa    wik_c_2.chs
+  .chs          8,662  data01300.hfa    wik_chap2start.chs
+  .chs         19,353  data01300.hfa    wik_chap3start.chs
+  .chs         13,661  data01300.hfa    wik_chap4start.chs
+  .chs            715  data01300.hfa    wik_d_1.chs
+  .chs            719  data01300.hfa    wik_d_2.chs
+  .chs          6,968  data01300.hfa    wik_d_3.chs
+  .chs          7,090  data01300.hfa    wik_d_a.chs
+  .chs         17,737  data01300.hfa    wik_e.chs
+  .chs            582  data01300.hfa    wik_f_1.chs
+  .chs            578  data01300.hfa    wik_f_2.chs
+  .chs            525  data01300.hfa    wik_f_3.chs
+  .chs         14,163  data01300.hfa    wik_f_a.chs
+  .chs          9,464  data01300.hfa    wik_fin.chs
+  .chs            617  data01300.hfa    wik_g_1.chs
+  .chs            616  data01300.hfa    wik_g_2.chs
+  .chs            640  data01300.hfa    wik_g_3.chs
+  .chs         28,448  data01300.hfa    wik_g_a.chs
+  .chs            808  data01300.hfa    wik_h_1.chs
+  .chs            802  data01300.hfa    wik_h_2.chs
+  .chs            799  data01300.hfa    wik_h_3.chs
+  .chs          8,193  data01300.hfa    wik_h_a.chs
+  .chs          2,419  data01300.hfa    wik_i.chs
+  .chs          2,027  data01300.hfa    wik_j.chs
+  .chs          9,320  data01300.hfa    wik_k.chs
+  .chs          5,630  data01300.hfa    wik_l_1.chs
+  .chs         14,908  data01300.hfa    wik_l_2.chs
+  .chs          1,420  data01300.hfa    wik_m_1.chs
+  .chs         14,637  data01300.hfa    wik_m_a.chs
+  .chs          3,119  data01300.hfa    wik_n_1.chs
+  .chs          7,356  data01300.hfa    wik_n_1_a.chs
+  .chs            580  data01300.hfa    wik_n_2.chs
+  .chs          4,197  data01300.hfa    wik_nap.chs
+  .chs          2,574  data01300.hfa    wik_noroom.chs
+  .chs         15,422  data01300.hfa    wik_o.chs
+  .chs         10,333  data01300.hfa    wik_p_1.chs
+  .chs          3,673  data01300.hfa    wik_p_2.chs
+  .chs            565  data01300.hfa    wik_q_1.chs
+  .chs            585  data01300.hfa    wik_q_2.chs
+  .chs         12,012  data01300.hfa    wik_q_a.chs
+  .chs          5,285  data01300.hfa    wik_r_1.chs
+  .chs          8,347  data01300.hfa    wik_r_2.chs
+  .chs          7,385  data01300.hfa    wik_robby.chs
+  .chs          2,311  data01300.hfa    wik_room.chs
+  .chs          1,335  data01300.hfa    wik_s_1.chs
+  .chs            634  data01300.hfa    wik_s_2.chs
+  .chs            623  data01300.hfa    wik_s_3.chs
+  .chs            617  data01300.hfa    wik_s_4.chs
+  .chs            624  data01300.hfa    wik_s_5.chs
+  .chs          2,953  data01300.hfa    wik_s_a.chs
+  .chs            589  data01400.hfa    wik_select_a.chs
+  .chs            594  data01400.hfa    wik_select_b.chs
+  .chs            522  data01400.hfa    wik_select_c.chs
+  .chs            556  data01400.hfa    wik_select_d.chs
+  .chs            561  data01400.hfa    wik_select_e.chs
+  .chs            557  data01400.hfa    wik_select_f.chs
+  .chs            576  data01400.hfa    wik_select_g.chs
+  .chs            576  data01400.hfa    wik_select_h.chs
+  .chs            648  data01400.hfa    wik_select_i.chs
+  .chs            636  data01400.hfa    wik_select_j.chs
+  .chs            552  data01400.hfa    wik_select_k.chs
+  .chs            525  data01400.hfa    wik_select_l.chs
+  .chs            513  data01400.hfa    wik_select_m.chs
+  .chs            509  data01400.hfa    wik_select_n.chs
+  .chs            518  data01400.hfa    wik_select_o.chs
+  .chs            511  data01400.hfa    wik_select_p.chs
+  .chs            525  data01400.hfa    wik_select_q.chs
+  .chs            526  data01400.hfa    wik_select_r.chs
+  .chs            641  data01400.hfa    wik_select_s.chs
+  .chs            524  data01400.hfa    wik_select_t.chs
+  .chs            513  data01400.hfa    wik_select_u.chs
+  .chs          1,194  data01400.hfa    wik_select_v.chs
+  .chs            675  data01400.hfa    wik_select_w.chs
+  .chs            634  data01400.hfa    wik_select_x.chs
+  .chs          1,131  data01400.hfa    wik_select_y.chs
+  .chs            596  data01400.hfa    wik_select_z.chs
+  .chs          9,975  data01300.hfa    wik_t_1.chs
+  .chs          6,824  data01300.hfa    wik_t_2.chs
+  .chs         18,285  data01300.hfa    wik_titlein.chs
+  .chs          3,990  data01300.hfa    wik_u_1.chs
+  .chs          5,020  data01300.hfa    wik_u_2.chs
+  .chs          7,208  data01300.hfa    wik_v_1.chs
+  .chs          6,427  data01300.hfa    wik_v_2.chs
+  .chs          4,219  data01300.hfa    wik_w_35.chs
+  .chs          6,039  data01300.hfa    wik_wakeup.chs
+  .chs          3,296  data01300.hfa    wik_wxyz.chs
+  .chs          3,571  data01300.hfa    wik_x_2.chs
+  .chs            880  data01300.hfa    wik_y.chs
+  .chs         12,367  data01300.hfa    wik_z_3.chs
+  .ctd        771,794  data00200.hfa    script_text_en.ctd
+  .ctd        895,880  data00200.hfa    script_text_ja.ctd
+  .ctd        806,325  data00200.hfa    script_text_zc.ctd
+  .ctd        810,364  data00200.hfa    script_text_zt.ctd
+  .hw           8,765  data00300.hfa    SSEBookChoiced.hw
+  .hw          13,188  data00300.hfa    SSEBookDecided.hw
+  .hw           7,565  data00300.hfa    SSECancelled.hw
+  .hw           9,205  data00300.hfa    SSEChoiced.hw
+  .hw          32,611  data00300.hfa    SSEDecided.hw
+  .hw          18,698  data00300.hfa    SSETurnedPage.hw
+  .hw          18,979  data00300.hfa    SSEUnable.hw
+  .hw          62,656  data04000.hfa    a10_1_1_0000.hw
+  .hw          30,477  data04000.hfa    a10_1_1_0001.hw
+  .hw          38,584  data04000.hfa    a10_1_1_0002.hw
+  .hw          23,691  data04000.hfa    a10_1_1_0003.hw
+  .hw          39,410  data04000.hfa    a10_1_1_0004.hw
+  .hw          28,658  data04000.hfa    a10_1_1_0005.hw
+  .hw          36,489  data04000.hfa    a10_1_1_0006.hw
+  .hw          41,103  data04000.hfa    a10_1_1_0007.hw
+  .hw          47,253  data04000.hfa    a10_1_2_0000.hw
+  .hw          17,188  data04000.hfa    a10_1_2_0001.hw
+  .hw          54,801  data04000.hfa    a10_1_2_0002.hw
+  .hw          67,556  data04000.hfa    a10_1_2_0003.hw
+  .hw          73,496  data04000.hfa    a10_1_2_0004.hw
+  .hw          70,519  data04000.hfa    a10_1_2_0005.hw
+  .hw          48,021  data04000.hfa    a10_1_2_0006.hw
+  .hw          32,999  data04000.hfa    a10_1_2_0007.hw
+  .hw           6,121  data04000.hfa    a10_1_2_0008.hw
+  .hw          50,217  data04000.hfa    a10_1_2_0009.hw
+  .hw          27,853  data04000.hfa    a10_1_2_0010.hw
+  .hw          49,742  data04000.hfa    a10_1_2_0011.hw
+  .hw          34,586  data04000.hfa    a10_1_2_0012.hw
+  .hw          38,154  data04000.hfa    a10_1_2_0013.hw
+  .hw          32,993  data04000.hfa    a10_1_2_0014.hw
+  .hw          56,214  data04000.hfa    a10_1_2_0015.hw
+  .hw          23,436  data04000.hfa    a10_1_2_0016.hw
+  .hw         110,760  data04000.hfa    a10_1_2_0017.hw
+  .hw          77,742  data04000.hfa    a10_1_2_0018.hw
+  .hw          92,813  data04000.hfa    a10_1_2_0019.hw
+  .hw          31,759  data04000.hfa    a10_1_2_0020.hw
+  .hw          14,291  data04000.hfa    a10_1_2_0021.hw
+  .hw          52,721  data04000.hfa    a10_1_2_0022.hw
+  .hw          50,202  data04000.hfa    a10_1_2_0023.hw
+  .hw          84,041  data04000.hfa    a10_1_2_0024.hw
+  .hw          68,667  data04000.hfa    a10_1_2_0025.hw
+  .hw         102,306  data04000.hfa    a10_1_2_0026.hw
+  .hw          86,200  data04000.hfa    a10_1_2_0027.hw
+  .hw          18,369  data04000.hfa    a10_1_2_0028.hw
+  .hw          18,365  data04000.hfa    a10_1_2_0029.hw
+  .hw          23,672  data04000.hfa    a10_1_2_0030.hw
+  .hw          42,986  data04000.hfa    a10_1_2_0031.hw
+  .hw          12,491  data04000.hfa    a10_1_2_0032.hw
+  .hw          68,567  data04000.hfa    a10_1_2_0033.hw
+  .hw          25,647  data04000.hfa    a10_1_2_0034.hw
+  .hw          27,627  data04000.hfa    a10_1_2_0035.hw
+  .hw          20,329  data04000.hfa    a10_1_2_0036.hw
+  .hw          46,843  data04000.hfa    a10_1_2_0037.hw
+  .hw          32,409  data04000.hfa    a10_1_2_0038.hw
+  .hw          16,181  data04000.hfa    a10_1_2_0039.hw
+  .hw          36,356  data04000.hfa    a10_1_2_0040.hw
+  .hw          32,260  data04000.hfa    a10_1_2_0041.hw
+  .hw          18,247  data04000.hfa    a10_1_2_0042.hw
+  .hw          53,172  data04000.hfa    a10_1_2_0043.hw
+  .hw          21,343  data04000.hfa    a10_1_2_0044.hw
+  .hw          39,566  data04000.hfa    a10_1_2_0045.hw
+  .hw           9,220  data04000.hfa    a10_1_2_0046.hw
+  .hw          12,823  data04000.hfa    a10_1_2_0047.hw
+  .hw          24,963  data04000.hfa    a10_1_2_0048.hw
+  .hw          65,587  data04000.hfa    a10_1_2_0049.hw
+  .hw          77,102  data04000.hfa    a10_1_2_0050.hw
+  .hw         109,118  data04000.hfa    a10_1_2_0051.hw
+  .hw          42,065  data04000.hfa    a10_1_2_0052.hw
+  .hw          35,805  data04000.hfa    a10_1_2_0053.hw
+  .hw          24,493  data04000.hfa    a10_1_2_0054.hw
+  .hw          49,434  data04000.hfa    a10_1_2_0055.hw
+  .hw         109,290  data04000.hfa    a10_1_2_0056.hw
+  .hw          47,959  data04000.hfa    a10_1_3_0000.hw
+  .hw         113,308  data04000.hfa    a10_1_3_0001.hw
+  .hw          11,707  data04000.hfa    a10_1_3_0002.hw
+  .hw          48,086  data04000.hfa    a10_1_3_0003.hw
+  .hw          71,136  data04000.hfa    a10_1_3_0004.hw
+  .hw          47,086  data04000.hfa    a10_1_3_0005.hw
+  .hw          90,178  data04000.hfa    a10_1_3_0006.hw
+  .hw          41,958  data04000.hfa    a10_1_3_0007.hw
+  .hw          26,446  data04000.hfa    a10_1_3_0008.hw
+  .hw           7,864  data04000.hfa    a10_1_3_0009.hw
+  .hw          30,461  data04000.hfa    a10_1_3_0010.hw
+  .hw          74,764  data04000.hfa    a10_1_3_0011.hw
+  .hw          15,510  data04000.hfa    a10_1_3_0012.hw
+  .hw          35,739  data04000.hfa    a10_1_3_0013.hw
+  .hw          30,836  data04000.hfa    a10_1_3_0014.hw
+  .hw         108,606  data04000.hfa    a10_1_3_0015.hw
+  .hw          14,188  data04000.hfa    a10_1_3_0016.hw
+  .hw          52,454  data04000.hfa    a10_1_3_0017.hw
+  .hw          37,890  data04000.hfa    a10_1_3_0018.hw
+  .hw          29,817  data04000.hfa    a10_1_3_0019.hw
+  .hw          38,213  data04000.hfa    a10_1_3_0020.hw
+  .hw          30,525  data04000.hfa    a10_1_3_0021.hw
+  .hw          28,520  data04000.hfa    a10_1_3_0022.hw
+  .hw          33,487  data04000.hfa    a10_1_3_0023.hw
+  .hw          89,939  data04000.hfa    a10_1_3_0024.hw
+  .hw          25,156  data04000.hfa    a10_1_3_0025.hw
+  .hw           7,872  data04000.hfa    a10_1_3_0026.hw
+  .hw          26,843  data04000.hfa    a10_1_3_0027.hw
+  .hw           7,879  data04000.hfa    a10_1_3_0028.hw
+  .hw           7,606  data04000.hfa    a10_1_3_0029.hw
+  .hw          27,773  data04000.hfa    a10_1_3_0030.hw
+  .hw          29,704  data04000.hfa    a10_1_3_0031.hw
+  .hw          39,499  data04000.hfa    a10_1_3_0032.hw
+  .hw          35,849  data04000.hfa    a10_1_3_0033.hw
+  .hw          27,475  data04000.hfa    a10_1_3_0034.hw
+  .hw          58,734  data04000.hfa    a10_1_3_0035.hw
+  .hw          27,003  data04000.hfa    a10_1_3_0036.hw
+  .hw          85,104  data04000.hfa    a10_1_3_0037.hw
+  .hw          52,519  data04000.hfa    a10_1_3_0038.hw
+  .hw          43,084  data04000.hfa    a10_1_3_0039.hw
+  .hw          14,257  data04000.hfa    a10_1_3_0040.hw
+  .hw          25,032  data04000.hfa    a10_1_3_0041.hw
+  .hw          22,913  data04000.hfa    a10_1_3_0042.hw
+  .hw          29,045  data04000.hfa    a10_1_4_0000.hw
+  .hw         105,208  data04000.hfa    a10_1_4_0001.hw
+  .hw          63,885  data04000.hfa    a10_1_4_0002.hw
+  .hw          41,461  data04000.hfa    a10_1_4_0003.hw
+  .hw           9,598  data04000.hfa    a10_1_4_0004.hw
+  .hw          39,816  data04000.hfa    a10_1_4_0005.hw
+  .hw          17,069  data04000.hfa    a10_1_4_0006.hw
+  .hw          38,970  data04000.hfa    a10_1_4_0007.hw
+  .hw          53,602  data04000.hfa    a10_1_4_0008.hw
+  .hw          40,398  data04000.hfa    a10_1_4_0009.hw
+  .hw          98,427  data04000.hfa    a10_1_4_0010.hw
+  .hw          22,381  data04000.hfa    a10_1_4_0011.hw
+  .hw          33,246  data04000.hfa    a10_1_4_0012.hw
+  .hw          57,046  data04000.hfa    a10_1_4_0013.hw
+  .hw          51,931  data04000.hfa    a10_1_5_0000.hw

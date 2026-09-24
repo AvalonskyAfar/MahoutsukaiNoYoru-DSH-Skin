@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* 复现 DSH composer 的真实结构 + 皮肤新写的规则（规则原样抄自 lib/client.js） */
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#111;font-family:sans-serif}
+body{padding:0}
+:root{--myh-mincho:serif;--myh-input-h:64px;
+  --myh-composer-grad:linear-gradient(180deg,#305B73 0%,#3D7C96 50%,#35667D 100%);
+  --myh-composer-glow:rgba(42,160,239,.55)}
+
+/* --- DSH 原样 --- */
+.seat{position:sticky;bottom:0;left:0;right:0;display:flex;flex-direction:column;flex:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0px,#000 36px)}
+.stack{width:100%;max-width:calc(748px + 32px);display:flex;flex-direction:column;gap:12px}
+.root{padding:0 16px 8px;display:flex;flex-direction:column;align-items:center}
+.card{width:100%;max-width:calc(748px + 32px);background:#1b1b1b;border-radius:22px;
+  box-shadow:0 2px 12px rgba(0,0,0,.4);display:flex;flex-direction:column;gap:12px;padding-top:8px}
+.input{min-height:24px;padding:8px 70px;color:#ddd;outline:none;font-size:clamp(15px,1.5vh,19px);line-height:1.7}
+
+/* --- 皮肤新规则（照抄 client.js 1h 段） --- */
+body[data-myh-skin] .seat{background:transparent!important;padding:0!important}
+body[data-myh-skin] .card{border:0!important;border-radius:0!important;
+  box-shadow:inset 0 -12px 0 -8px var(--myh-composer-glow)!important;
+  background:var(--myh-composer-grad)!important;backdrop-filter:none!important}
+body[data-myh-skin] .card *{font-family:var(--myh-mincho)!important}
+body[data-myh-skin] .input{color:#FFFFFF!important;
+  text-shadow:-1px -1px 0 rgba(6,15,22,.95),1px -1px 0 rgba(6,15,22,.95),
+  -1px 1px 0 rgba(6,15,22,.95),1px 1px 0 rgba(6,15,22,.95)}
+body[data-myh-skin] .seat{position:relative!important}
+/* 端帽已删（2026-09-20 用户定案：输入框附近不留花纹） */
+body[data-myh-skin] .seat{--dsh-composer-card-max-width:none}
+body[data-myh-skin] .seat .card{width:95%!important;max-width:95%!important}
+body[data-myh-skin] .seat *{max-width:none!important}
+body[data-myh-skin] .card{min-height:var(--myh-input-h,64px)!important;justify-content:center}
+</style></head><body data-myh-skin>
+<div style="height:120px;color:#888;padding:16px">（上方是会话区）</div>
+<div class="seat"><div class="stack"><div class="root"><div class="card">
+  <div class="input" data-composer-input>ここに文章を書く……</div>
+</div></div></div></div>
+</body></html>

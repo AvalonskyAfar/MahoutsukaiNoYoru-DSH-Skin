@@ -1,0 +1,11 @@
+# dsh-skin-mahoyo —— 《魔法使之夜》DSH Web GUI 皮肤
+#
+# 宿主半边（dsh-skin-mahoyo）负责三件事：
+#   1. 把 skin/assets/ 下的原作素材挂到 /moye-skin/assets 静态路由（浏览器 <img> 直接取）
+#   2. 在 settings.yaml 里注册 `moye-skin` 配置段（角色 / 开关 / 音量）
+#   3. 把选中角色的人格注入切片接进 ctx.systemPrompt（每轮生效）
+#
+# 浏览器半边（lib/client.js）由 dsh.client 声明自动下发，无需在此注册。
+- insert:
+    - id: skin-mahoyo
+      name: dsh-skin-mahoyo

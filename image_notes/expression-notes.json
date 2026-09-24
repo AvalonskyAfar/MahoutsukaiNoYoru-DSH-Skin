@@ -1,0 +1,4885 @@
+{
+  "meta": {
+    "title": "关联图像笔记 —— 说/听到什么话 → 什么表情",
+    "work": "魔法使いの夜 / 魔法使之夜 (Witch on the Holy Night)",
+    "corpus": "script_text_ja.ctd",
+    "corpus_lines": 24134,
+    "extraction": "32-shard map-reduce over the full script",
+    "expression_records": 2105,
+    "psych_records": 949,
+    "attribution_records": 2223,
+    "sprite_root": "hfa_png/out/",
+    "sprite_files_total": 23747,
+    "catalogued_cells": 1094,
+    "slot_count": 12,
+    "critical_note": "i4 in sprite filenames is NOT a global expression code; slot assignment comes from per-cell visual judgement."
+  },
+  "table1_slots": [
+    {
+      "id": "neutral",
+      "label_zh": "平静",
+      "label_ja": "平静",
+      "narration_support": 289,
+      "per_character_support": {
+        "aok": 70,
+        "ari": 78,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": true
+      },
+      "note": "默认态。三人全服装均有。"
+    },
+    {
+      "id": "smile",
+      "label_zh": "微笑",
+      "label_ja": "微笑",
+      "narration_support": 212,
+      "per_character_support": {
+        "aok": 79,
+        "ari": 7,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": true
+      },
+      "note": "三人全服装均有。"
+    },
+    {
+      "id": "laugh",
+      "label_zh": "大笑",
+      "label_ja": "笑い",
+      "narration_support": 36,
+      "per_character_support": {
+        "aok": 10,
+        "ari": 1,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": false,
+        "koj": false
+      },
+      "note": "有珠基本缺失，见 §表3 回退。"
+    },
+    {
+      "id": "angry",
+      "label_zh": "生气",
+      "label_ja": "怒り",
+      "narration_support": 173,
+      "per_character_support": {
+        "aok": 98,
+        "ari": 27,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": false,
+        "koj": false
+      },
+      "note": "有珠缺失，见 §表3 回退。"
+    },
+    {
+      "id": "glare",
+      "label_zh": "瞪视/横目",
+      "label_ja": "睨み",
+      "narration_support": 73,
+      "per_character_support": {
+        "aok": 44,
+        "ari": 11,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": false
+      },
+      "note": "叙述高频，三人全服装均有（有珠为「冷眼斜视」）。"
+    },
+    {
+      "id": "surprised",
+      "label_zh": "惊讶",
+      "label_ja": "驚き",
+      "narration_support": 274,
+      "per_character_support": {
+        "aok": 97,
+        "ari": 30,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": false
+      },
+      "note": "三人全服装均有。"
+    },
+    {
+      "id": "troubled",
+      "label_zh": "困惑/为难",
+      "label_ja": "戸惑い",
+      "narration_support": 311,
+      "per_character_support": {
+        "aok": 69,
+        "ari": 53,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": false
+      },
+      "note": "三人全服装均有（有珠为「手掩口」）。"
+    },
+    {
+      "id": "sad",
+      "label_zh": "失落",
+      "label_ja": "悲しみ",
+      "narration_support": 93,
+      "per_character_support": {
+        "aok": 21,
+        "ari": 19,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": false,
+        "koj": false
+      },
+      "note": "仅青子有专属差分，见 §表3 回退。"
+    },
+    {
+      "id": "serious",
+      "label_zh": "认真",
+      "label_ja": "真剣",
+      "narration_support": 348,
+      "per_character_support": {
+        "aok": 139,
+        "ari": 55,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": false
+      },
+      "note": "三人全服装均有。"
+    },
+    {
+      "id": "think",
+      "label_zh": "思考",
+      "label_ja": "考え",
+      "narration_support": 81,
+      "per_character_support": {
+        "aok": 26,
+        "ari": 12,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": false
+      },
+      "note": "青子/有珠有，金鹿缺失，见 §表3 回退。"
+    },
+    {
+      "id": "tired",
+      "label_zh": "疲惫",
+      "label_ja": "疲れ",
+      "narration_support": 165,
+      "per_character_support": {
+        "aok": 57,
+        "ari": 27,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": false,
+        "koj": false
+      },
+      "note": "仅青子有专属差分，见 §表3 回退。"
+    },
+    {
+      "id": "shy",
+      "label_zh": "害羞",
+      "label_ja": "照れ",
+      "narration_support": 50,
+      "per_character_support": {
+        "aok": 24,
+        "ari": 14,
+        "koj": 0
+      },
+      "sprite_available": {
+        "aok": true,
+        "ari": true,
+        "koj": false
+      },
+      "note": "青子/有珠有，金鹿缺失，见 §表3 回退。"
+    }
+  ],
+  "table2_triggers": {
+    "narration": [
+      {
+        "character": "aok",
+        "action_class": "その他",
+        "slot": "serious",
+        "support": 367,
+        "lines": [
+          57,
+          99,
+          116,
+          141,
+          327,
+          330,
+          370,
+          429,
+          459,
+          491,
+          599,
+          601,
+          606,
+          668,
+          690,
+          703,
+          710,
+          748,
+          761,
+          762,
+          769,
+          859,
+          881,
+          884,
+          889,
+          921,
+          945,
+          950,
+          978,
+          981,
+          994,
+          999,
+          1038,
+          1090,
+          1240,
+          1269,
+          1284,
+          1748,
+          1816,
+          1999,
+          2000,
+          2042,
+          2507,
+          2514,
+          2518,
+          2629,
+          2644,
+          2709,
+          2754,
+          2771,
+          2803,
+          2822,
+          2826,
+          2839,
+          3061,
+          3065,
+          3073,
+          3090,
+          3111,
+          3124,
+          3154,
+          3289,
+          3320,
+          3362,
+          3368,
+          3387,
+          3399,
+          3441,
+          3451,
+          3457,
+          3461,
+          3516,
+          3524,
+          3532,
+          3620,
+          3645,
+          3670,
+          3677,
+          3710,
+          3759,
+          3783,
+          3790,
+          3814,
+          3823,
+          3861,
+          4034,
+          4053,
+          4098,
+          4126,
+          4128,
+          4149,
+          4164,
+          4188,
+          4202,
+          4246,
+          4343,
+          4353,
+          4465,
+          4469,
+          4473,
+          4547,
+          4572,
+          4574,
+          4585,
+          4597,
+          4649,
+          4774,
+          4791,
+          4806,
+          4833,
+          4836,
+          4888,
+          4894,
+          4897,
+          4920,
+          4929,
+          4989,
+          5022,
+          5034,
+          5084,
+          5101,
+          5116,
+          5156,
+          5194,
+          5226,
+          5249,
+          5264,
+          5270,
+          5278,
+          5288,
+          5296,
+          5311,
+          5351,
+          5390,
+          5449,
+          5519,
+          5550,
+          5581,
+          5622,
+          5643,
+          5659,
+          5711,
+          5732,
+          5764,
+          5781,
+          5785,
+          5804,
+          5930,
+          5947,
+          5993,
+          6020,
+          6045,
+          6051,
+          6077,
+          6088,
+          6092,
+          6132,
+          6147,
+          6192,
+          6233,
+          6306,
+          6328,
+          6333,
+          6346,
+          6351,
+          6355,
+          6541,
+          6635,
+          6642,
+          6645,
+          6692,
+          6768,
+          6798,
+          6822,
+          6837,
+          6840,
+          6910,
+          6943,
+          6994,
+          7089,
+          7097,
+          7121,
+          7176,
+          7192,
+          7301,
+          7530,
+          7531,
+          7532,
+          7744,
+          8282,
+          8353,
+          8377,
+          8869,
+          8948,
+          9343,
+          9355,
+          9362,
+          9370,
+          9379,
+          9436,
+          9452,
+          9609,
+          9935,
+          9972,
+          10748,
+          10753,
+          10864,
+          10879,
+          10906,
+          10916,
+          11037,
+          11100,
+          11368,
+          11430,
+          11431,
+          11662,
+          11769,
+          11838,
+          11889,
+          11920,
+          11988,
+          11999,
+          12007,
+          12010,
+          12015,
+          12032,
+          12322,
+          12397,
+          12403,
+          12442,
+          12460,
+          12468,
+          12486,
+          12500,
+          12576,
+          12610,
+          12614,
+          12621,
+          12637,
+          12922,
+          12926,
+          12930,
+          12968,
+          12998,
+          13018,
+          13081,
+          13135,
+          13171,
+          13180,
+          13734,
+          13801,
+          13838,
+          14077,
+          14159,
+          14304,
+          14356,
+          14456,
+          14468,
+          14563,
+          14574,
+          14608,
+          14660,
+          14696,
+          15324,
+          15799,
+          15803,
+          15827,
+          15898,
+          15921,
+          15926,
+          15933,
+          15947,
+          16018,
+          16045,
+          16055,
+          16154,
+          16193,
+          16194,
+          16208,
+          16209,
+          16217,
+          16273,
+          16308,
+          16323,
+          16324,
+          16825,
+          16903,
+          17060,
+          17066,
+          17144,
+          17167,
+          17197,
+          17248,
+          17252,
+          17274,
+          17428,
+          17460,
+          17478,
+          17531,
+          17551,
+          17645,
+          17941,
+          18045,
+          18052,
+          18070,
+          18133,
+          18214,
+          18289,
+          18524,
+          18560,
+          18743,
+          18785,
+          18929,
+          18973,
+          19067,
+          19219,
+          19332,
+          19351,
+          19451,
+          19454,
+          19474,
+          19491,
+          19573,
+          19597,
+          19620,
+          19627,
+          19634,
+          19635,
+          19636,
+          19637,
+          19641,
+          19642,
+          19644,
+          19647,
+          19648,
+          19664,
+          19665,
+          21294,
+          21565,
+          21710,
+          21717,
+          21733,
+          21750,
+          22453,
+          22668,
+          22807,
+          22854,
+          22911,
+          22963,
+          22971,
+          22984,
+          22987,
+          23043,
+          23052,
+          23381,
+          23587,
+          23600,
+          23618
+        ],
+        "examples": [
+          {
+            "line": 57,
+            "raw": "助けたい、と彼女は懇願する",
+            "intensity": "強"
+          },
+          {
+            "line": 99,
+            "raw": "窓の向こうをシャットアウト",
+            "intensity": "中"
+          },
+          {
+            "line": 116,
+            "raw": "それができるほど、彼女は自分に優しくはなかった",
+            "intensity": "弱"
+          },
+          {
+            "line": 141,
+            "raw": "幸せな朝は泡と消えると予感しながら",
+            "intensity": "弱"
+          },
+          {
+            "line": 327,
+            "raw": "寝不足でキリキリ痛む頭",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 38,
+          "tired": 27,
+          "serious": 87,
+          "surprised": 57,
+          "angry": 48,
+          "smile": 30,
+          "neutral": 40,
+          "sad": 9,
+          "glare": 3,
+          "laugh": 6,
+          "think": 15,
+          "shy": 7
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "ため息",
+        "slot": "tired",
+        "support": 17,
+        "lines": [
+          456,
+          486,
+          765,
+          1797,
+          3055,
+          3223,
+          3757,
+          5009,
+          5812,
+          6733,
+          7307,
+          12944,
+          12986,
+          15796,
+          15910,
+          17477,
+          23511
+        ],
+        "examples": [
+          {
+            "line": 456,
+            "raw": "大きくため息をついて、青子は草十郎に向き直った",
+            "intensity": "中"
+          },
+          {
+            "line": 486,
+            "raw": "青子はまたもため息ひとつ",
+            "intensity": "弱"
+          },
+          {
+            "line": 765,
+            "raw": "大きくため息をひとつ",
+            "intensity": "中"
+          },
+          {
+            "line": 1797,
+            "raw": "とため息をつく青子",
+            "intensity": "中"
+          },
+          {
+            "line": 3055,
+            "raw": "ホッと息を吐く",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "tired": 14,
+          "troubled": 1,
+          "serious": 2
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "俯く・涙",
+        "slot": "sad",
+        "support": 5,
+        "lines": [
+          50,
+          65,
+          9278,
+          22676
+        ],
+        "examples": [
+          {
+            "line": 50,
+            "raw": "こみあげる涙をせいいっぱい我慢しながら",
+            "intensity": "強"
+          },
+          {
+            "line": 65,
+            "raw": "流すまいと律していた涙が、瞳からこぼれている",
+            "intensity": "強"
+          },
+          {
+            "line": 9278,
+            "raw": "自らの甘さにうなだれる青子",
+            "intensity": "弱"
+          },
+          {
+            "line": 22676,
+            "raw": "リデルを抱きかかえながら号泣する蒼崎",
+            "intensity": "強"
+          },
+          {
+            "line": 22676,
+            "raw": "リデルを抱きかかえながら号泣する",
+            "intensity": "強"
+          }
+        ],
+        "slot_distribution": {
+          "sad": 4,
+          "troubled": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "口を閉ざす",
+        "slot": "angry",
+        "support": 2,
+        "lines": [
+          362,
+          12020
+        ],
+        "examples": [
+          {
+            "line": 362,
+            "raw": "不機嫌そうに口を閉ざしたまま",
+            "intensity": "中"
+          },
+          {
+            "line": 12020,
+            "raw": "不機嫌に押し黙る",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "angry": 2
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "口元・唇",
+        "slot": "troubled",
+        "support": 4,
+        "lines": [
+          5359,
+          7127,
+          13295,
+          16169
+        ],
+        "examples": [
+          {
+            "line": 5359,
+            "raw": "自分の洞察力の低さに唇を噛む",
+            "intensity": "中"
+          },
+          {
+            "line": 7127,
+            "raw": "青子は呟きながら、それはないな、と唇を噛んだ",
+            "intensity": "中"
+          },
+          {
+            "line": 13295,
+            "raw": "青子は嬉しげに口元を緩めた",
+            "intensity": "中"
+          },
+          {
+            "line": 16169,
+            "raw": "青子は悔しげに唇を噛む",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 2,
+          "smile": 1,
+          "angry": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "叫ぶ・怒鳴る",
+        "slot": "serious",
+        "support": 4,
+        "lines": [
+          6798,
+          6814,
+          18008,
+          19650
+        ],
+        "examples": [
+          {
+            "line": 6798,
+            "raw": "自分に言い聞かせるように叫んで",
+            "intensity": "强"
+          },
+          {
+            "line": 6814,
+            "raw": "立ちふさがる怪物を撃ち砕きながら青子が叫ぶ",
+            "intensity": "强"
+          },
+          {
+            "line": 18008,
+            "raw": "青子は背後にいる有珠へ叫ぶ",
+            "intensity": "强"
+          },
+          {
+            "line": 19650,
+            "raw": "本館の方から聞きなれた叫び声が聞こえてきた",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "serious": 3,
+          "surprised": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "呆れる",
+        "slot": "troubled",
+        "support": 13,
+        "lines": [
+          2054,
+          3802,
+          5495,
+          7919,
+          8722,
+          8732,
+          9698,
+          14422,
+          16049,
+          18030,
+          19604,
+          19661
+        ],
+        "examples": [
+          {
+            "line": 2054,
+            "raw": "生徒会長は呆れながらも少しだけ楽しそうだ",
+            "intensity": "弱"
+          },
+          {
+            "line": 3802,
+            "raw": "一瞬で真っ白になるぐらい",
+            "intensity": "強"
+          },
+          {
+            "line": 5495,
+            "raw": "自分の馬鹿さ加減に呆れながらも",
+            "intensity": "弱"
+          },
+          {
+            "line": 7919,
+            "raw": "有珠の性根の悪さに呆れながら",
+            "intensity": "弱"
+          },
+          {
+            "line": 8722,
+            "raw": "露骨すぎて呆れてしまう",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "laugh": 1,
+          "surprised": 4,
+          "troubled": 5,
+          "tired": 3
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "困る・戸惑う",
+        "slot": "surprised",
+        "support": 2,
+        "lines": [
+          10859,
+          11809
+        ],
+        "examples": [
+          {
+            "line": 10859,
+            "raw": "当惑に眩みながら",
+            "intensity": "中"
+          },
+          {
+            "line": 11809,
+            "raw": "底の見えない笑顔にたじろぐ",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "surprised": 2
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "安堵・満足",
+        "slot": "surprised",
+        "support": 6,
+        "lines": [
+          2034,
+          5658,
+          6660,
+          7592,
+          8182,
+          12710
+        ],
+        "examples": [
+          {
+            "line": 2034,
+            "raw": "今度こそ本気で感心する青子",
+            "intensity": "弱"
+          },
+          {
+            "line": 5658,
+            "raw": "と青子は素直に感心した",
+            "intensity": "弱"
+          },
+          {
+            "line": 6660,
+            "raw": "呟いた声は、どこか誇らしげだった",
+            "intensity": "中"
+          },
+          {
+            "line": 7592,
+            "raw": "驚き……というより、感心しているようだ",
+            "intensity": "弱"
+          },
+          {
+            "line": 8182,
+            "raw": "ちょっとだけ感心する",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "surprised": 4,
+          "smile": 2
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "微笑む",
+        "slot": "smile",
+        "support": 22,
+        "lines": [
+          612,
+          2787,
+          3518,
+          3570,
+          3918,
+          4335,
+          4361,
+          5395,
+          6262,
+          10937,
+          11045,
+          12376,
+          14490,
+          14595,
+          17756,
+          17768,
+          18773,
+          19072,
+          19323,
+          19361,
+          19611
+        ],
+        "examples": [
+          {
+            "line": 612,
+            "raw": "青子も前進を止め、不似合いな笑みを消した",
+            "intensity": "弱"
+          },
+          {
+            "line": 2787,
+            "raw": "ふふ、と妖しい笑みを浮かべる青子",
+            "intensity": "中"
+          },
+          {
+            "line": 3518,
+            "raw": "小さな微笑",
+            "intensity": "弱"
+          },
+          {
+            "line": 3570,
+            "raw": "ニヤリと微笑って",
+            "intensity": "中"
+          },
+          {
+            "line": 3918,
+            "raw": "クスリと不敵な笑みを浮かべる青子",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "serious": 1,
+          "smile": 20,
+          "laugh": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "怒る・不機嫌",
+        "slot": "angry",
+        "support": 25,
+        "lines": [
+          416,
+          590,
+          1088,
+          1814,
+          2510,
+          3771,
+          3800,
+          5318,
+          5547,
+          5758,
+          6225,
+          7532,
+          8260,
+          8299,
+          8755,
+          9199,
+          9977,
+          11016,
+          12510,
+          14302,
+          16056,
+          17983,
+          19027
+        ],
+        "examples": [
+          {
+            "line": 416,
+            "raw": "わりと本気でイラっとした",
+            "intensity": "中"
+          },
+          {
+            "line": 590,
+            "raw": "つい怒鳴ってしまった青子だった",
+            "intensity": "強"
+          },
+          {
+            "line": 1088,
+            "raw": "青子はそれなりに怒っている",
+            "intensity": "中"
+          },
+          {
+            "line": 1814,
+            "raw": "話せば話すほど、青子の表情は凶悪になっていく",
+            "intensity": "強"
+          },
+          {
+            "line": 2510,
+            "raw": "内心で舌打ちしつつ、青子は教室を見回した",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "angry": 22,
+          "troubled": 2,
+          "smile": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "手・体の所作",
+        "slot": "serious",
+        "support": 42,
+        "lines": [
+          125,
+          452,
+          1336,
+          3702,
+          3837,
+          3867,
+          4233,
+          4309,
+          4366,
+          4480,
+          4533,
+          4979,
+          5069,
+          5487,
+          5991,
+          6016,
+          6241,
+          6742,
+          6792,
+          8128,
+          8163,
+          11673,
+          12019,
+          12514,
+          13026,
+          13159,
+          13689,
+          13753,
+          14324,
+          14338,
+          16237,
+          17220,
+          17630,
+          17641,
+          17723,
+          18751,
+          18856,
+          19495,
+          22961
+        ],
+        "examples": [
+          {
+            "line": 125,
+            "raw": "手を合わせて、かじかむ指を温める",
+            "intensity": "弱"
+          },
+          {
+            "line": 452,
+            "raw": "ずーんと腕組みをしている少女",
+            "intensity": "中"
+          },
+          {
+            "line": 1336,
+            "raw": "手を振ってサンルームを去る青子",
+            "intensity": "弱"
+          },
+          {
+            "line": 3702,
+            "raw": "やあ、とばかりに片手を上げた",
+            "intensity": "弱"
+          },
+          {
+            "line": 3837,
+            "raw": "知れず、青子は頬に手を当てた",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "tired": 1,
+          "angry": 12,
+          "smile": 5,
+          "neutral": 5,
+          "shy": 2,
+          "serious": 13,
+          "surprised": 2,
+          "troubled": 1,
+          "think": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "気を抜く・脱力",
+        "slot": "tired",
+        "support": 11,
+        "lines": [
+          676,
+          714,
+          715,
+          804,
+          926,
+          4379,
+          6661,
+          8791,
+          9700,
+          13096
+        ],
+        "examples": [
+          {
+            "line": 676,
+            "raw": "脱力しつつも暴言をこぼす",
+            "intensity": "弱"
+          },
+          {
+            "line": 715,
+            "raw": "肩をすくめて観念する",
+            "intensity": "弱"
+          },
+          {
+            "line": 804,
+            "raw": "青子はやれやれと肩をすくめて、鉄柵に手をかける",
+            "intensity": "弱"
+          },
+          {
+            "line": 714,
+            "raw": "肩をすくめて観念する",
+            "intensity": "弱"
+          },
+          {
+            "line": 804,
+            "raw": "やれやれと肩をすくめて鉄柵に手をかける",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "tired": 4,
+          "troubled": 2,
+          "neutral": 2,
+          "smile": 1,
+          "sad": 2
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "照れる",
+        "slot": "shy",
+        "support": 5,
+        "lines": [
+          4029,
+          6614,
+          11084,
+          16166,
+          19486
+        ],
+        "examples": [
+          {
+            "line": 4029,
+            "raw": "照れ笑いをしながら頭を掻く青子",
+            "intensity": "中"
+          },
+          {
+            "line": 6614,
+            "raw": "青子は微かに赤面する",
+            "intensity": "中"
+          },
+          {
+            "line": 11084,
+            "raw": "青子本人も赤面してしまった",
+            "intensity": "中"
+          },
+          {
+            "line": 16166,
+            "raw": "なんだか照れ臭くなって、青子は会話を再開した",
+            "intensity": "中"
+          },
+          {
+            "line": 19486,
+            "raw": "しんみりとした話をしたと照れている",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "shy": 5
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "疲れる・眠い",
+        "slot": "tired",
+        "support": 5,
+        "lines": [
+          91,
+          110,
+          6537,
+          8371,
+          9286
+        ],
+        "examples": [
+          {
+            "line": 91,
+            "raw": "緩慢に眠っていられるだけで幸福",
+            "intensity": "弱"
+          },
+          {
+            "line": 110,
+            "raw": "閉じたばかりの瞼は、意思とは正反対にぱちりと開く",
+            "intensity": "中"
+          },
+          {
+            "line": 6537,
+            "raw": "青子も疲れきってはいたが",
+            "intensity": "中"
+          },
+          {
+            "line": 8371,
+            "raw": "どっと疲れが押し寄せてくる",
+            "intensity": "强"
+          },
+          {
+            "line": 9286,
+            "raw": "一晩じゅう草十郎を怒鳴りつけた疲労",
+            "intensity": "強"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 1,
+          "surprised": 1,
+          "tired": 3
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "眉をしかめる",
+        "slot": "troubled",
+        "support": 7,
+        "lines": [
+          307,
+          2714,
+          3345,
+          3809,
+          4605,
+          10023,
+          18970
+        ],
+        "examples": [
+          {
+            "line": 307,
+            "raw": "眉間に皺をよせたまま、長い髪を揺らして",
+            "intensity": "中"
+          },
+          {
+            "line": 2714,
+            "raw": "青子は顔をしかめる",
+            "intensity": "中"
+          },
+          {
+            "line": 3345,
+            "raw": "淡々と語る有珠と、眉をひそめる青子",
+            "intensity": "弱"
+          },
+          {
+            "line": 3809,
+            "raw": "眉間を指で押さえる青子",
+            "intensity": "中"
+          },
+          {
+            "line": 4605,
+            "raw": "<微/かす>かに眉を寄せる",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "serious": 1,
+          "troubled": 5,
+          "tired": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "睨む・横目",
+        "slot": "glare",
+        "support": 44,
+        "lines": [
+          223,
+          289,
+          418,
+          431,
+          571,
+          1749,
+          2679,
+          3329,
+          3600,
+          3720,
+          3768,
+          4373,
+          4614,
+          4956,
+          5337,
+          5467,
+          6077,
+          6096,
+          6558,
+          7562,
+          7723,
+          8013,
+          9655,
+          9965,
+          11693,
+          12298,
+          13042,
+          14132,
+          15967,
+          16113,
+          16213,
+          16242,
+          16816,
+          16974,
+          16983,
+          17690,
+          18819,
+          18825,
+          19291,
+          19405,
+          19455,
+          19639
+        ],
+        "examples": [
+          {
+            "line": 223,
+            "raw": "信用ならない、と彼女は半眼で見据えた",
+            "intensity": "中"
+          },
+          {
+            "line": 289,
+            "raw": "あはは、と笑う教師を彼女は横目で睨む",
+            "intensity": "中"
+          },
+          {
+            "line": 418,
+            "raw": "じろりと山城を横目で睨んでから、少年を見据えた",
+            "intensity": "中"
+          },
+          {
+            "line": 431,
+            "raw": "ほとんど暴力に近い、値踏みするような凝視",
+            "intensity": "強"
+          },
+          {
+            "line": 571,
+            "raw": "青子はじろりと草十郎を見すえる",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "glare": 36,
+          "serious": 5,
+          "neutral": 1,
+          "angry": 1,
+          "think": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "瞬く・しばたく",
+        "slot": "surprised",
+        "support": 3,
+        "lines": [
+          756,
+          7591
+        ],
+        "examples": [
+          {
+            "line": 756,
+            "raw": "振り返って、目をしばたたく",
+            "intensity": "中"
+          },
+          {
+            "line": 7591,
+            "raw": "一方、青子は目をしばたたいていた",
+            "intensity": "弱"
+          },
+          {
+            "line": 7591,
+            "raw": "青子は目をしばたたいていた",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "surprised": 3
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "笑う（声）",
+        "slot": "smile",
+        "support": 6,
+        "lines": [
+          3508,
+          6254,
+          6928,
+          12620,
+          14299,
+          23599
+        ],
+        "examples": [
+          {
+            "line": 3508,
+            "raw": "あはは、と笑って現状の自分に作れる結界は何か",
+            "intensity": "弱"
+          },
+          {
+            "line": 6254,
+            "raw": "どうせ負けるのなら自滅がいい、と少女は笑った",
+            "intensity": "中"
+          },
+          {
+            "line": 6928,
+            "raw": "言って、くすりと笑ってしまった",
+            "intensity": "弱"
+          },
+          {
+            "line": 12620,
+            "raw": "にやりと笑って青子は席を立った",
+            "intensity": "中"
+          },
+          {
+            "line": 14299,
+            "raw": "にやっと笑う青子",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "laugh": 1,
+          "smile": 5
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "笑顔",
+        "slot": "smile",
+        "support": 6,
+        "lines": [
+          2794,
+          6949,
+          7649,
+          9190,
+          9634,
+          13352
+        ],
+        "examples": [
+          {
+            "line": 2794,
+            "raw": "ゾッとするほど甘い笑顔だった",
+            "intensity": "強"
+          },
+          {
+            "line": 6949,
+            "raw": "不思議がる草十郎にまあまあと笑いかけて",
+            "intensity": "弱"
+          },
+          {
+            "line": 7649,
+            "raw": "極上の笑顔で、さわやかに不穏な宣言",
+            "intensity": "中"
+          },
+          {
+            "line": 9190,
+            "raw": "青い炎に包まれた笑顔が現れた",
+            "intensity": "中"
+          },
+          {
+            "line": 9634,
+            "raw": "<悪巧/わるだく>みを思いついた笑顔",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "smile": 5,
+          "angry": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "緊張・警戒",
+        "slot": "surprised",
+        "support": 5,
+        "lines": [
+          3053,
+          4391,
+          5426,
+          6126,
+          18527
+        ],
+        "examples": [
+          {
+            "line": 3053,
+            "raw": "私の両足はかすかに震えている",
+            "intensity": "弱"
+          },
+          {
+            "line": 4391,
+            "raw": "震える声で、青子は少女の名を口にした",
+            "intensity": "強"
+          },
+          {
+            "line": 5426,
+            "raw": "青子はわずかに身構え、半歩だけ前に出た",
+            "intensity": "中"
+          },
+          {
+            "line": 6126,
+            "raw": "いや、歓喜にうち震える",
+            "intensity": "中"
+          },
+          {
+            "line": 18527,
+            "raw": "つい呼びかける声が震えてしまう",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 1,
+          "surprised": 2,
+          "serious": 1,
+          "laugh": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "考える",
+        "slot": "think",
+        "support": 5,
+        "lines": [
+          2024,
+          3655,
+          12704,
+          19660,
+          22967
+        ],
+        "examples": [
+          {
+            "line": 2024,
+            "raw": "と首をかしげる青子だった",
+            "intensity": "弱"
+          },
+          {
+            "line": 3655,
+            "raw": "青子は額に手を当てて考えこむ",
+            "intensity": "中"
+          },
+          {
+            "line": 12704,
+            "raw": "首をかしげながら",
+            "intensity": "弱"
+          },
+          {
+            "line": 19660,
+            "raw": "考えてみると",
+            "intensity": "弱"
+          },
+          {
+            "line": 22967,
+            "raw": "蒼崎はちょっとだけ思案した後",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "think": 4,
+          "troubled": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "背を向ける・移動",
+        "slot": "serious",
+        "support": 32,
+        "lines": [
+          475,
+          1015,
+          1105,
+          2528,
+          2863,
+          4263,
+          4370,
+          4856,
+          5130,
+          5701,
+          5816,
+          6580,
+          7586,
+          7693,
+          7771,
+          8313,
+          10828,
+          11088,
+          12519,
+          12676,
+          17268,
+          17727,
+          17752,
+          18783,
+          19091,
+          19585,
+          19662,
+          19663,
+          22985,
+          23378,
+          23458
+        ],
+        "examples": [
+          {
+            "line": 475,
+            "raw": "素っ気なく応えて踵を返す青子",
+            "intensity": "弱"
+          },
+          {
+            "line": 1015,
+            "raw": "よし、と青子は勢いよく体を起こす",
+            "intensity": "中"
+          },
+          {
+            "line": 1105,
+            "raw": "誰に言うのでもなく立ち上がる青子",
+            "intensity": "弱"
+          },
+          {
+            "line": 2528,
+            "raw": "唐突にくるりと背を向け",
+            "intensity": "中"
+          },
+          {
+            "line": 2863,
+            "raw": "青子は隼のように生徒会室から飛び出していった",
+            "intensity": "強"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 6,
+          "serious": 10,
+          "tired": 2,
+          "troubled": 3,
+          "shy": 5,
+          "angry": 5,
+          "think": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "苦笑",
+        "slot": "smile",
+        "support": 2,
+        "lines": [
+          8041,
+          11446
+        ],
+        "examples": [
+          {
+            "line": 8041,
+            "raw": "青子は自分の台詞に苦笑いをこぼした",
+            "intensity": "弱"
+          },
+          {
+            "line": 11446,
+            "raw": "あはは、と青子は苦笑いで誤魔化す",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "smile": 2
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "見る・視線",
+        "slot": "serious",
+        "support": 45,
+        "lines": [
+          706,
+          2037,
+          2638,
+          3074,
+          3243,
+          3771,
+          3794,
+          5206,
+          5993,
+          6327,
+          6669,
+          7105,
+          7625,
+          7654,
+          7824,
+          7843,
+          8412,
+          8830,
+          9251,
+          9282,
+          9402,
+          9639,
+          10765,
+          10898,
+          11815,
+          12504,
+          12698,
+          13210,
+          14163,
+          14311,
+          14508,
+          14656,
+          15805,
+          15820,
+          16847,
+          17004,
+          17577,
+          18257,
+          18749,
+          18819,
+          19310,
+          19551,
+          19558,
+          19628
+        ],
+        "examples": [
+          {
+            "line": 706,
+            "raw": "青子は窓ごしに地上を見下ろした",
+            "intensity": "弱"
+          },
+          {
+            "line": 2037,
+            "raw": "青子は隣町の方角を仰ぎ見る",
+            "intensity": "弱"
+          },
+          {
+            "line": 2638,
+            "raw": "青子の視線が、草十郎をちらりと見た",
+            "intensity": "弱"
+          },
+          {
+            "line": 3074,
+            "raw": "体が振り向く",
+            "intensity": "強"
+          },
+          {
+            "line": 3243,
+            "raw": "凛とした視線を一際強くする青子",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 7,
+          "serious": 10,
+          "glare": 5,
+          "troubled": 3,
+          "tired": 2,
+          "smile": 2,
+          "surprised": 6,
+          "angry": 2,
+          "think": 3,
+          "shy": 1,
+          "sad": 4
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "話す・告げる",
+        "slot": "smile",
+        "support": 24,
+        "lines": [
+          935,
+          1066,
+          1334,
+          3822,
+          4492,
+          5326,
+          6592,
+          6924,
+          9228,
+          9937,
+          10934,
+          11077,
+          11724,
+          11892,
+          13852,
+          14224,
+          15816,
+          16008,
+          17272,
+          18827,
+          19009,
+          19328,
+          19610,
+          19658
+        ],
+        "examples": [
+          {
+            "line": 935,
+            "raw": "いやー、まいったね、と他人ごとのように青子は言った",
+            "intensity": "弱"
+          },
+          {
+            "line": 1066,
+            "raw": "出前好きな青子は嬉々として言う",
+            "intensity": "中"
+          },
+          {
+            "line": 1334,
+            "raw": "チョコをひとつ摘んで、ぽいっと口に放る",
+            "intensity": "弱"
+          },
+          {
+            "line": 3822,
+            "raw": "女子、と言いかけて止めた",
+            "intensity": "中"
+          },
+          {
+            "line": 4492,
+            "raw": "なんてコトを、青子は呟いた",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 4,
+          "smile": 5,
+          "shy": 3,
+          "angry": 2,
+          "surprised": 2,
+          "serious": 5,
+          "troubled": 1,
+          "sad": 1,
+          "think": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "顔を曇らせる",
+        "slot": "troubled",
+        "support": 2,
+        "lines": [
+          198,
+          300
+        ],
+        "examples": [
+          {
+            "line": 198,
+            "raw": "彼女は不審げに表情を曇らせた",
+            "intensity": "中"
+          },
+          {
+            "line": 300,
+            "raw": "いっそう刺々しく曇らせた",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 1,
+          "angry": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "首を振る・頷く",
+        "slot": "neutral",
+        "support": 6,
+        "lines": [
+          1046,
+          1113,
+          3051,
+          4950,
+          12341,
+          14643
+        ],
+        "examples": [
+          {
+            "line": 1046,
+            "raw": "青子はうん、と頷いて先を促す",
+            "intensity": "弱"
+          },
+          {
+            "line": 1113,
+            "raw": "迫力に押されて、遠慮がちに頷く青子",
+            "intensity": "弱"
+          },
+          {
+            "line": 3051,
+            "raw": "有珠の言葉に頷きだけで応える",
+            "intensity": "弱"
+          },
+          {
+            "line": 4950,
+            "raw": "不機嫌そうに首を振った",
+            "intensity": "中"
+          },
+          {
+            "line": 12341,
+            "raw": "心底合点がいったように頷いて",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 3,
+          "shy": 1,
+          "angry": 1,
+          "troubled": 1
+        }
+      },
+      {
+        "character": "aok",
+        "action_class": "驚く",
+        "slot": "surprised",
+        "support": 13,
+        "lines": [
+          1076,
+          5340,
+          6746,
+          7141,
+          7170,
+          10856,
+          11963,
+          15916,
+          17270,
+          18245,
+          18544,
+          19058,
+          23503
+        ],
+        "examples": [
+          {
+            "line": 1076,
+            "raw": "その言葉で青子の体は凍りついた",
+            "intensity": "強"
+          },
+          {
+            "line": 5340,
+            "raw": "青子はわずかに目を見張った",
+            "intensity": "弱"
+          },
+          {
+            "line": 6746,
+            "raw": "あまりの驚きに状況把握が間に合わない",
+            "intensity": "強"
+          },
+          {
+            "line": 7141,
+            "raw": "突然の提案に目を見張る",
+            "intensity": "中"
+          },
+          {
+            "line": 7170,
+            "raw": "突然の<展/こ><開/と>に目を見張る",
+            "intensity": "强"
+          }
+        ],
+        "slot_distribution": {
+          "surprised": 12,
+          "serious": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "その他",
+        "slot": "neutral",
+        "support": 178,
+        "lines": [
+          949,
+          987,
+          1027,
+          1032,
+          1033,
+          1041,
+          1107,
+          1311,
+          1337,
+          1422,
+          1466,
+          3035,
+          3169,
+          3253,
+          3337,
+          3380,
+          3404,
+          3552,
+          3905,
+          5415,
+          5448,
+          5610,
+          5857,
+          6026,
+          6033,
+          6756,
+          6779,
+          7197,
+          7201,
+          7216,
+          7406,
+          7415,
+          7483,
+          7487,
+          7521,
+          7534,
+          7577,
+          7958,
+          8139,
+          8250,
+          8510,
+          8547,
+          8563,
+          9002,
+          9003,
+          9009,
+          9015,
+          9056,
+          9088,
+          9100,
+          9111,
+          9114,
+          9133,
+          9148,
+          9149,
+          9801,
+          9820,
+          9840,
+          9853,
+          9858,
+          9933,
+          9961,
+          10003,
+          10421,
+          10429,
+          10430,
+          10831,
+          10911,
+          11023,
+          11107,
+          11202,
+          11236,
+          11238,
+          11265,
+          11266,
+          11272,
+          11299,
+          11328,
+          11329,
+          11336,
+          11342,
+          11359,
+          11609,
+          11617,
+          11761,
+          11812,
+          11862,
+          12180,
+          12191,
+          12218,
+          12923,
+          12960,
+          12967,
+          12973,
+          13059,
+          13062,
+          13092,
+          13148,
+          13176,
+          13361,
+          13375,
+          13483,
+          13488,
+          13694,
+          13764,
+          14103,
+          14110,
+          14113,
+          14194,
+          14414,
+          14511,
+          14569,
+          14815,
+          14888,
+          15031,
+          15041,
+          15099,
+          15106,
+          15139,
+          15165,
+          15168,
+          15304,
+          15316,
+          15374,
+          15402,
+          15408,
+          15419,
+          15440,
+          15452,
+          15461,
+          15470,
+          15475,
+          15486,
+          15496,
+          15511,
+          15528,
+          15548,
+          15551,
+          15552,
+          15635,
+          15819,
+          15828,
+          15920,
+          15929,
+          15999,
+          16817,
+          17296,
+          17309,
+          17360,
+          17400,
+          17795,
+          17850,
+          18068,
+          18844,
+          18857,
+          18893,
+          21342,
+          21357,
+          21898,
+          22201,
+          22462,
+          22468,
+          22678,
+          23155,
+          23887
+        ],
+        "examples": [
+          {
+            "line": 949,
+            "raw": "名前を呼ばれて有珠は顔を上げた",
+            "intensity": "弱"
+          },
+          {
+            "line": 987,
+            "raw": "有珠は無言で青子を責めている",
+            "intensity": "中"
+          },
+          {
+            "line": 1027,
+            "raw": "有珠は膝に置いた本へと顔を落とした",
+            "intensity": "弱"
+          },
+          {
+            "line": 1032,
+            "raw": "突然、有珠がそんな声を上げて、消した",
+            "intensity": "中"
+          },
+          {
+            "line": 1033,
+            "raw": "見れば片手で口を押さえている",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 38,
+          "serious": 37,
+          "surprised": 22,
+          "shy": 6,
+          "troubled": 26,
+          "angry": 15,
+          "sad": 9,
+          "think": 5,
+          "smile": 3,
+          "glare": 3,
+          "tired": 14
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "ため息",
+        "slot": "tired",
+        "support": 15,
+        "lines": [
+          1639,
+          3550,
+          5473,
+          7961,
+          8240,
+          8478,
+          8958,
+          10840,
+          11682,
+          13730,
+          14633,
+          15187,
+          17360,
+          22689
+        ],
+        "examples": [
+          {
+            "line": 1639,
+            "raw": "少女はため息をついて小川に足を運ぶ",
+            "intensity": "中"
+          },
+          {
+            "line": 3550,
+            "raw": "小さなため息",
+            "intensity": "弱"
+          },
+          {
+            "line": 5473,
+            "raw": "今度はさっきより大きなため息をついて",
+            "intensity": "中"
+          },
+          {
+            "line": 7961,
+            "raw": "憂鬱げなため息のように、彼の名前を口にした",
+            "intensity": "弱"
+          },
+          {
+            "line": 8240,
+            "raw": "陰鬱なため息をついて、有珠は席を立った",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "tired": 11,
+          "troubled": 2,
+          "sad": 2
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "俯く・涙",
+        "slot": "neutral",
+        "support": 2,
+        "lines": [
+          908,
+          9907
+        ],
+        "examples": [
+          {
+            "line": 908,
+            "raw": "俯く彼女の首の白さ",
+            "intensity": "弱"
+          },
+          {
+            "line": 9907,
+            "raw": "うつむき加減に有珠は言った",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 1,
+          "troubled": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "口を閉ざす",
+        "slot": "serious",
+        "support": 2,
+        "lines": [
+          5430,
+          8004
+        ],
+        "examples": [
+          {
+            "line": 5430,
+            "raw": "有珠の沈黙はますます重くなっていく",
+            "intensity": "中"
+          },
+          {
+            "line": 8004,
+            "raw": "かたくなに口を閉ざしていた",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "serious": 1,
+          "angry": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "口元・唇",
+        "slot": "surprised",
+        "support": 4,
+        "lines": [
+          1644,
+          1647,
+          9156,
+          11861
+        ],
+        "examples": [
+          {
+            "line": 1644,
+            "raw": "あ、と口元に手を当てた",
+            "intensity": "弱"
+          },
+          {
+            "line": 1647,
+            "raw": "白魚のような指が、名残惜しそうに唇をなぞる",
+            "intensity": "弱"
+          },
+          {
+            "line": 9156,
+            "raw": "魔女の<沽券/こけん>に関わると唇を噛んでいる",
+            "intensity": "中"
+          },
+          {
+            "line": 11861,
+            "raw": "本を床に落とし、きゅっと唇を噛んでいる",
+            "intensity": "強"
+          }
+        ],
+        "slot_distribution": {
+          "surprised": 1,
+          "sad": 1,
+          "troubled": 1,
+          "angry": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "呆れる",
+        "slot": "tired",
+        "support": 3,
+        "lines": [
+          5456,
+          7995,
+          13687
+        ],
+        "examples": [
+          {
+            "line": 5456,
+            "raw": "怒るというより呆れたように",
+            "intensity": "中"
+          },
+          {
+            "line": 7995,
+            "raw": "有珠は呆れたように見つめていた",
+            "intensity": "中"
+          },
+          {
+            "line": 13687,
+            "raw": "呆れ声で有珠は語りかける",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 1,
+          "tired": 2
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "困る・戸惑う",
+        "slot": "troubled",
+        "support": 2,
+        "lines": [
+          9790
+        ],
+        "examples": [
+          {
+            "line": 9790,
+            "raw": "草十郎の意図が読めず、戸惑う有珠",
+            "intensity": "中"
+          },
+          {
+            "line": 9790,
+            "raw": "草十郎の意図が読めず、戸惑う",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 2
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "平静・無表情",
+        "slot": "neutral",
+        "support": 5,
+        "lines": [
+          1323,
+          1443,
+          10922,
+          14576,
+          15818
+        ],
+        "examples": [
+          {
+            "line": 1323,
+            "raw": "有珠は青子を見ずに淡々と説明する",
+            "intensity": "弱"
+          },
+          {
+            "line": 1443,
+            "raw": "少女は平然と語りかける",
+            "intensity": "弱"
+          },
+          {
+            "line": 10922,
+            "raw": "一見して冷静なまま",
+            "intensity": "弱"
+          },
+          {
+            "line": 14576,
+            "raw": "有珠はやっぱり無表情で",
+            "intensity": "弱"
+          },
+          {
+            "line": 15818,
+            "raw": "有珠はあいかわらずの無表情",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 5
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "怒る・不機嫌",
+        "slot": "angry",
+        "support": 9,
+        "lines": [
+          8495,
+          8768,
+          11337,
+          15111,
+          15650,
+          17343,
+          18867
+        ],
+        "examples": [
+          {
+            "line": 8495,
+            "raw": "内容とは裏腹に不機嫌気味だ",
+            "intensity": "弱"
+          },
+          {
+            "line": 8768,
+            "raw": "有珠の表情が見るからに不機嫌になる",
+            "intensity": "中"
+          },
+          {
+            "line": 11337,
+            "raw": "分からない怒気をこめて",
+            "intensity": "中"
+          },
+          {
+            "line": 11337,
+            "raw": "よく分からない怒気をこめて",
+            "intensity": "中"
+          },
+          {
+            "line": 15111,
+            "raw": "批難は、今や怒りに変わっている",
+            "intensity": "強"
+          }
+        ],
+        "slot_distribution": {
+          "angry": 7,
+          "troubled": 2
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "手・体の所作",
+        "slot": "neutral",
+        "support": 6,
+        "lines": [
+          5477,
+          7481,
+          11329,
+          13476,
+          15479,
+          15492
+        ],
+        "examples": [
+          {
+            "line": 5477,
+            "raw": "細い指を動かした",
+            "intensity": "弱"
+          },
+          {
+            "line": 7481,
+            "raw": "少女は静かに片腕を上げた",
+            "intensity": "弱"
+          },
+          {
+            "line": 11329,
+            "raw": "かすかな緊張が有珠の頬を紅潮させる",
+            "intensity": "中"
+          },
+          {
+            "line": 13476,
+            "raw": "水槽に触れようと指を伸ばし",
+            "intensity": "弱"
+          },
+          {
+            "line": 15479,
+            "raw": "緊張をとくような思いきりの良さで、自分から少年の手をとった",
+            "intensity": "強"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 2,
+          "shy": 1,
+          "smile": 1,
+          "serious": 2
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "眉をしかめる",
+        "slot": "troubled",
+        "support": 4,
+        "lines": [
+          8904,
+          10014,
+          11260,
+          15989
+        ],
+        "examples": [
+          {
+            "line": 8904,
+            "raw": "優美な眉が不満げに寄せられる",
+            "intensity": "中"
+          },
+          {
+            "line": 10014,
+            "raw": "その可憐な顔が苦々しい貌を作る",
+            "intensity": "中"
+          },
+          {
+            "line": 11260,
+            "raw": "むっと眉をひそめながら",
+            "intensity": "中"
+          },
+          {
+            "line": 15989,
+            "raw": "深い謎に突き当たったように眉をひそめていた",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 3,
+          "think": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "睨む・横目",
+        "slot": "glare",
+        "support": 8,
+        "lines": [
+          6033,
+          7562,
+          9821,
+          14873,
+          15066,
+          15092,
+          15174,
+          15649
+        ],
+        "examples": [
+          {
+            "line": 6033,
+            "raw": "少女は変貌していく黄金の月を凝視する",
+            "intensity": "中"
+          },
+          {
+            "line": 7562,
+            "raw": "正しくは睨み合っている",
+            "intensity": "中"
+          },
+          {
+            "line": 9821,
+            "raw": "睨みつけるような視線だった",
+            "intensity": "中"
+          },
+          {
+            "line": 14873,
+            "raw": "魔眼を魔眼で押し返そうと、有珠は橙子を睨む",
+            "intensity": "強"
+          },
+          {
+            "line": 15066,
+            "raw": "苦しげな瞳で敵を見据える",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "surprised": 1,
+          "glare": 4,
+          "serious": 2,
+          "angry": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "考える",
+        "slot": "think",
+        "support": 2,
+        "lines": [
+          7552,
+          22023
+        ],
+        "examples": [
+          {
+            "line": 7552,
+            "raw": "む、と考えこむ有珠",
+            "intensity": "弱"
+          },
+          {
+            "line": 22023,
+            "raw": "さっきから思案顔で一言も発していなかった",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "think": 2
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "背を向ける・移動",
+        "slot": "shy",
+        "support": 10,
+        "lines": [
+          1062,
+          8488,
+          9169,
+          9828,
+          15142,
+          17890,
+          18011,
+          18876
+        ],
+        "examples": [
+          {
+            "line": 1062,
+            "raw": "その言葉に、有珠は少しだけ顔を背けた",
+            "intensity": "弱"
+          },
+          {
+            "line": 8488,
+            "raw": "少女は足を止めて視線を向ける",
+            "intensity": "弱"
+          },
+          {
+            "line": 9169,
+            "raw": "少年に背を向けて、洋館に足を向ける",
+            "intensity": "弱"
+          },
+          {
+            "line": 9828,
+            "raw": "少女は顔を<逸/そ>らして黙りこんでしまった",
+            "intensity": "中"
+          },
+          {
+            "line": 9828,
+            "raw": "顔を逸らして黙りこんでしまった",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 3,
+          "neutral": 1,
+          "serious": 2,
+          "shy": 4
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "見る・視線",
+        "slot": "neutral",
+        "support": 47,
+        "lines": [
+          968,
+          984,
+          1016,
+          1101,
+          1110,
+          3219,
+          3445,
+          3746,
+          3762,
+          5844,
+          7438,
+          7477,
+          7512,
+          7864,
+          7923,
+          8232,
+          8255,
+          8524,
+          8560,
+          8906,
+          9030,
+          9763,
+          10328,
+          10741,
+          10936,
+          11189,
+          11282,
+          11827,
+          13211,
+          13238,
+          13456,
+          14410,
+          14519,
+          14770,
+          14836,
+          15584,
+          15606,
+          17312,
+          17316,
+          17352,
+          17356,
+          17825,
+          18881,
+          22198
+        ],
+        "examples": [
+          {
+            "line": 968,
+            "raw": "視線だけで少女は語る",
+            "intensity": "弱"
+          },
+          {
+            "line": 984,
+            "raw": "寝そべっている青子に、有珠はちらりと視線を投げた",
+            "intensity": "弱"
+          },
+          {
+            "line": 1016,
+            "raw": "無言で視線を向ける有珠のか細い美貌",
+            "intensity": "弱"
+          },
+          {
+            "line": 1101,
+            "raw": "これといった否定の意を示さず、本に視線を戻す有珠",
+            "intensity": "弱"
+          },
+          {
+            "line": 1110,
+            "raw": "扉に着いたところで青子へと振り向いた",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 22,
+          "serious": 8,
+          "surprised": 2,
+          "glare": 4,
+          "think": 4,
+          "shy": 2,
+          "sad": 4,
+          "angry": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "話す・告げる",
+        "slot": "troubled",
+        "support": 9,
+        "lines": [
+          897,
+          3236,
+          8754,
+          9770,
+          14737,
+          15048,
+          15610,
+          16969,
+          21869
+        ],
+        "examples": [
+          {
+            "line": 897,
+            "raw": "少女は視線をあげず、関心なさげに答えた",
+            "intensity": "弱"
+          },
+          {
+            "line": 3236,
+            "raw": "やや呆れ気味に漏らす有珠",
+            "intensity": "弱"
+          },
+          {
+            "line": 8754,
+            "raw": "分からない、と言いよどむ有珠",
+            "intensity": "中"
+          },
+          {
+            "line": 9770,
+            "raw": "沈みこむような問いかけ",
+            "intensity": "中"
+          },
+          {
+            "line": 14737,
+            "raw": "有珠は静かに呟いた",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "neutral": 2,
+          "troubled": 3,
+          "serious": 2,
+          "sad": 1,
+          "angry": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "顔を曇らせる",
+        "slot": "troubled",
+        "support": 8,
+        "lines": [
+          1287,
+          8950,
+          9945,
+          10987,
+          11054,
+          13843,
+          17412,
+          17830
+        ],
+        "examples": [
+          {
+            "line": 1287,
+            "raw": "可憐な眉を曇らせた",
+            "intensity": "中"
+          },
+          {
+            "line": 8950,
+            "raw": "有珠はわずかに顔を曇らせた",
+            "intensity": "弱"
+          },
+          {
+            "line": 9945,
+            "raw": "ますます面持ちを暗くしていく",
+            "intensity": "中"
+          },
+          {
+            "line": 10987,
+            "raw": "いっそう表情を曇らせる",
+            "intensity": "中"
+          },
+          {
+            "line": 11054,
+            "raw": "有珠は顔を曇らせる",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 6,
+          "sad": 2
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "首を振る・頷く",
+        "slot": "neutral",
+        "support": 10,
+        "lines": [
+          1272,
+          3379,
+          3749,
+          8944,
+          9070,
+          11716,
+          12182,
+          15911,
+          18897
+        ],
+        "examples": [
+          {
+            "line": 1272,
+            "raw": "礼服の少女はそうだけど、とやや不満そうにうなずいて",
+            "intensity": "弱"
+          },
+          {
+            "line": 3379,
+            "raw": "声を上げずに有珠は首を縦に振った",
+            "intensity": "弱"
+          },
+          {
+            "line": 3749,
+            "raw": "こくん、と頷く有珠",
+            "intensity": "弱"
+          },
+          {
+            "line": 8944,
+            "raw": "バターロールもそのままに、首を横に振る",
+            "intensity": "弱"
+          },
+          {
+            "line": 9070,
+            "raw": "たしかに、と有珠は頷く",
+            "intensity": "弱"
+          }
+        ],
+        "slot_distribution": {
+          "troubled": 1,
+          "neutral": 7,
+          "serious": 1,
+          "shy": 1
+        }
+      },
+      {
+        "character": "ari",
+        "action_class": "驚く",
+        "slot": "surprised",
+        "support": 4,
+        "lines": [
+          13347,
+          15547,
+          17872,
+          17920
+        ],
+        "examples": [
+          {
+            "line": 13347,
+            "raw": "有珠は静かに、感じ入るように息を呑んでいた",
+            "intensity": "中"
+          },
+          {
+            "line": 15547,
+            "raw": "予想以上のスピードに有珠は息を呑んだ",
+            "intensity": "中"
+          },
+          {
+            "line": 17872,
+            "raw": "一瞬だけ有珠は息を止めてしまう",
+            "intensity": "中"
+          },
+          {
+            "line": 17920,
+            "raw": "有珠の声には、驚きと、不快感がこめられていた",
+            "intensity": "中"
+          }
+        ],
+        "slot_distribution": {
+          "surprised": 4
+        }
+      }
+    ],
+    "dialogue": [
+      {
+        "character": "青子",
+        "condition": "被说教 / 被当成小孩 / 被质疑能力",
+        "slot": "angry",
+        "narration_basis": "アンタ、私を誰だと思ってるの 系；不機嫌・刺々しい叙述",
+        "anchor_lines": [
+          300,
+          416,
+          483,
+          605,
+          12926
+        ]
+      },
+      {
+        "character": "青子",
+        "condition": "涉及钱 / 生活费 / 打工收入",
+        "slot": "serious",
+        "narration_basis": "穷困梗：学費と生活費を自分で、という話題で表情が引き締まる",
+        "anchor_lines": [
+          626,
+          627,
+          754,
+          12338
+        ]
+      },
+      {
+        "character": "青子",
+        "condition": "提到妹妹橙子 / 苍崎家继承",
+        "slot": "serious",
+        "narration_basis": "「後継ぎ」関連の叙述でトーンが落ちる",
+        "anchor_lines": [
+          3172,
+          3211,
+          18783
+        ]
+      },
+      {
+        "character": "青子",
+        "condition": "被人认真夸奖 / 被感谢",
+        "slot": "shy",
+        "narration_basis": "照れ系 47 条中青子占多数；「顔を赤らめる」系",
+        "anchor_lines": [
+          14304,
+          16204
+        ]
+      },
+      {
+        "character": "青子",
+        "condition": "草十郎做出超乎常识的举动",
+        "slot": "surprised",
+        "narration_basis": "「呆然」「目を丸く」「ぱちりと開く」系",
+        "anchor_lines": [
+          110,
+          365,
+          511,
+          673
+        ]
+      },
+      {
+        "character": "青子",
+        "condition": "熬夜 / 被吵醒 / 做学生会杂务",
+        "slot": "tired",
+        "narration_basis": "ため息 38 条、欠伸、瞼が重い系",
+        "anchor_lines": [
+          99,
+          125,
+          456,
+          491,
+          764
+        ]
+      },
+      {
+        "character": "有珠",
+        "condition": "涉及魔术 / 结界 / プラント（使い魔）",
+        "slot": "serious",
+        "narration_basis": "魔术相关叙述里她的表情最紧",
+        "anchor_lines": [
+          3243,
+          5993,
+          13561
+        ]
+      },
+      {
+        "character": "有珠",
+        "condition": "被问及自己的过去 / 久遠寺家",
+        "slot": "troubled",
+        "narration_basis": "手掩口・目を伏せる系",
+        "anchor_lines": [
+          9926,
+          10023,
+          14304
+        ]
+      },
+      {
+        "character": "有珠",
+        "condition": "草十郎做出无防备的善意举动",
+        "slot": "smile",
+        "narration_basis": "閉眼微笑（i4=19 系）",
+        "anchor_lines": [
+          424,
+          10086,
+          11999
+        ]
+      },
+      {
+        "character": "有珠",
+        "condition": "青子做出越界/吵闹的行为",
+        "slot": "glare",
+        "narration_basis": "冷眼斜视（i4=03 系）",
+        "anchor_lines": [
+          7544,
+          7549,
+          11999
+        ]
+      },
+      {
+        "character": "有珠",
+        "condition": "被当成小孩子 / 被摸头",
+        "slot": "troubled",
+        "narration_basis": "困惑・不機嫌の混在",
+        "anchor_lines": [
+          10024,
+          10435
+        ]
+      },
+      {
+        "character": "金鹿",
+        "condition": "被起绰号 / 被调侃（青子叫她「クマ」）",
+        "slot": "troubled",
+        "narration_basis": "绰号系调侃；L10487/10492/10495 一带；素材上只能落到 neutral/闭眼笑",
+        "anchor_lines": [
+          9559,
+          10487,
+          10492,
+          10495
+        ]
+      },
+      {
+        "character": "金鹿",
+        "condition": "打工场合的闲聊 / 八卦",
+        "slot": "smile",
+        "narration_basis": "她与草十郎是打工同事兼同年级（L10093~L10098）；闭眼微笑（i4=07）",
+        "anchor_lines": [
+          8800,
+          8893,
+          10131
+        ]
+      },
+      {
+        "character": "金鹿",
+        "condition": "讲自己着迷的话题（鸟类绝灭史等）",
+        "slot": "smile",
+        "narration_basis": "L10131~L10260 长篇讲给草十郎听；情绪外放靠台词而非表情",
+        "anchor_lines": [
+          10131,
+          10260
+        ]
+      },
+      {
+        "character": "金鹿",
+        "condition": "被草十郎的迟钝气到 / 说重话",
+        "slot": "serious",
+        "narration_basis": "L10103「都会育ちの久万梨にとって…すべてが癪に障る」；素材落到 neutral",
+        "anchor_lines": [
+          10099,
+          10103,
+          10112
+        ]
+      },
+      {
+        "character": "金鹿",
+        "condition": "学生会正事 / 被交付任务",
+        "slot": "serious",
+        "narration_basis": "L11363 起生徒会室段落，金鹿担任青子的实务",
+        "anchor_lines": [
+          11363,
+          11365,
+          11370
+        ]
+      },
+      {
+        "character": "金鹿",
+        "condition": "发现异常 / 追查证据",
+        "slot": "serious",
+        "narration_basis": "L12569~12694 集名单、发现伪造 JIS 标记；她的现实主义在这里最明显",
+        "anchor_lines": [
+          12569,
+          12694,
+          21870
+        ]
+      },
+      {
+        "character": "金鹿",
+        "condition": "番外篇的恐怖场面 / 独自遇险",
+        "slot": "surprised",
+        "narration_basis": "L21447~21551、L21774~21878；回退到 neutral",
+        "anchor_lines": [
+          21447,
+          21774,
+          22083
+        ]
+      },
+      {
+        "character": "全員",
+        "condition": "战斗 / 魔术行使",
+        "slot": "serious",
+        "narration_basis": "术式叙述里三人均为「凛とした」系",
+        "anchor_lines": [
+          6016,
+          6020,
+          6051,
+          6840
+        ]
+      },
+      {
+        "character": "全員",
+        "condition": "意外事件发生",
+        "slot": "surprised",
+        "narration_basis": "「驚く」类 29 条证据",
+        "anchor_lines": [
+          110,
+          365,
+          511,
+          12055
+        ]
+      },
+      {
+        "character": "全員",
+        "condition": "被对方的话戳中",
+        "slot": "troubled",
+        "narration_basis": "「顔を曇らせる」23 条 + 「眉をひそめる」20 条",
+        "anchor_lines": [
+          198,
+          575,
+          583,
+          11999
+        ]
+      },
+      {
+        "character": "全員",
+        "condition": "疲惫 / 收工 / 深夜",
+        "slot": "tired",
+        "narration_basis": "「ため息」38 条 + 「肩をすくめる」",
+        "anchor_lines": [
+          456,
+          491,
+          689,
+          764
+        ]
+      }
+    ],
+    "runtime": [
+      {
+        "condition": "工具调用失败 / 报错",
+        "slot": "tired"
+      },
+      {
+        "condition": "被用户夸奖",
+        "slot": "shy",
+        "note": "金鹿用 smile"
+      },
+      {
+        "condition": "用户开玩笑",
+        "slot": "smile"
+      },
+      {
+        "condition": "话题涉及金钱/成本",
+        "slot": "serious"
+      },
+      {
+        "condition": "长间隔后重新开始",
+        "slot": "neutral"
+      }
+    ]
+  },
+  "table3_resources": {
+    "aok": {
+      "neutral": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 11,
+            "files": [
+              "data02100/aok_n_02_02_00.mzp.png",
+              "data02100/aok_n_02_02_01.mzp.png",
+              "data02100/aok_n_02_02_02.mzp.png",
+              "data02100/aok_n_02_02_03.mzp.png",
+              "data02100/aok_n_02_02_04.mzp.png",
+              "data02100/aok_n_02_02_05.mzp.png",
+              "data02100/aok_n_02_02_06.mzp.png",
+              "data02100/aok_n_02_02_07.mzp.png",
+              "data02100/aok_n_02_02_08.mzp.png",
+              "data02100/aok_n_02_02_09.mzp.png",
+              "data02100/aok_n_02_02_10.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 17,
+            "files": [
+              "data02100/aok_a_02_02_00.mzp.png",
+              "data02100/aok_a_02_02_01.mzp.png",
+              "data02100/aok_a_02_02_02.mzp.png",
+              "data02100/aok_a_02_02_03.mzp.png",
+              "data02100/aok_a_02_02_04.mzp.png",
+              "data02100/aok_a_02_02_05.mzp.png",
+              "data02100/aok_a_02_02_06.mzp.png",
+              "data02100/aok_a_02_02_07.mzp.png",
+              "data02100/aok_a_03_08_00.mzp.png",
+              "data02100/aok_a_03_08_01.mzp.png",
+              "data02100/aok_a_03_08_02.mzp.png",
+              "data02100/aok_a_03_08_03.mzp.png",
+              "data02100/aok_a_04_09_00.mzp.png",
+              "data02100/aok_a_04_09_01.mzp.png",
+              "data02100/aok_a_04_09_02.mzp.png",
+              "data02100/aok_a_04_09_03.mzp.png",
+              "data02100/aok_a_04_09_04.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 15,
+            "files": [
+              "data02100/aok_l_02_02_00.mzp.png",
+              "data02100/aok_l_02_02_01.mzp.png",
+              "data02100/aok_l_02_02_02.mzp.png",
+              "data02100/aok_l_02_02_03.mzp.png",
+              "data02100/aok_l_02_02_04.mzp.png",
+              "data02100/aok_l_02_02_05.mzp.png",
+              "data02100/aok_l_02_02_06.mzp.png",
+              "data02100/aok_l_02_02_07.mzp.png",
+              "data02100/aok_l_02_02_08.mzp.png",
+              "data02100/aok_l_02_02_09.mzp.png",
+              "data02100/aok_l_02_02_10.mzp.png",
+              "data02100/aok_l_04_02_00.mzp.png",
+              "data02100/aok_l_04_02_01.mzp.png",
+              "data02100/aok_l_04_02_02.mzp.png",
+              "data02100/aok_l_04_02_03.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 16,
+            "files": [
+              "data02100/aok_m_02_02_00.mzp.png",
+              "data02100/aok_m_02_02_01.mzp.png",
+              "data02100/aok_m_02_02_02.mzp.png",
+              "data02100/aok_m_02_02_03.mzp.png",
+              "data02100/aok_m_02_02_04.mzp.png",
+              "data02100/aok_m_02_02_05.mzp.png",
+              "data02100/aok_m_02_03_00.mzp.png",
+              "data02100/aok_m_02_03_01.mzp.png",
+              "data02100/aok_m_03_02_00.mzp.png",
+              "data02100/aok_m_03_02_01.mzp.png",
+              "data02100/aok_m_03_03_00.mzp.png",
+              "data02100/aok_m_04_08_00.mzp.png",
+              "data02100/aok_m_06_02_00.mzp.png",
+              "data02100/aok_m_06_02_01.mzp.png",
+              "data02100/aok_m_06_03_00.mzp.png",
+              "data02100/aok_m_06_03_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 9,
+            "files": [
+              "data02100/aok_s_02_02_00.mzp.png",
+              "data02100/aok_s_02_02_01.mzp.png",
+              "data02100/aok_s_03_08_00.mzp.png",
+              "data02100/aok_s_03_08_01.mzp.png",
+              "data02100/aok_s_03_08_02.mzp.png",
+              "data02100/aok_s_06_02_00.mzp.png",
+              "data02100/aok_s_06_02_01.mzp.png",
+              "data02100/aok_s_12_02_00.mzp.png",
+              "data02100/aok_s_12_02_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "smile": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 4,
+            "files": [
+              "data02100/aok_n_02_10_00.mzp.png",
+              "data02100/aok_n_02_10_01.mzp.png",
+              "data02100/aok_n_02_14_00.mzp.png",
+              "data02100/aok_n_02_14_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 6,
+            "files": [
+              "data02100/aok_a_06_03_00.mzp.png",
+              "data02100/aok_a_06_03_01.mzp.png",
+              "data02100/aok_a_06_03_02.mzp.png",
+              "data02100/aok_a_06_03_03.mzp.png",
+              "data02100/aok_a_06_03_04.mzp.png",
+              "data02100/aok_a_06_03_05.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 11,
+            "files": [
+              "data02100/aok_l_03_02_00.mzp.png",
+              "data02100/aok_l_03_02_01.mzp.png",
+              "data02100/aok_l_03_02_02.mzp.png",
+              "data02100/aok_l_03_02_03.mzp.png",
+              "data02100/aok_l_04_03_00.mzp.png",
+              "data02100/aok_l_04_03_01.mzp.png",
+              "data02100/aok_l_04_03_02.mzp.png",
+              "data02100/aok_l_07_02_00.mzp.png",
+              "data02100/aok_l_07_02_01.mzp.png",
+              "data02100/aok_l_07_03_00.mzp.png",
+              "data02100/aok_l_07_03_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 4,
+            "files": [
+              "data02100/aok_m_02_03_00.mzp.png",
+              "data02100/aok_m_02_03_01.mzp.png",
+              "data02100/aok_m_06_03_00.mzp.png",
+              "data02100/aok_m_06_03_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 2,
+            "files": [
+              "data02100/aok_s_04_14_00.mzp.png",
+              "data02100/aok_s_04_14_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "laugh": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 2,
+            "files": [
+              "data02100/aok_n_02_18_00.mzp.png",
+              "data02100/aok_n_02_18_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 5,
+            "files": [
+              "data02100/aok_a_03_03_00.mzp.png",
+              "data02100/aok_a_03_03_01.mzp.png",
+              "data02100/aok_a_03_03_02.mzp.png",
+              "data02100/aok_a_06_08_00.mzp.png",
+              "data02100/aok_a_06_08_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 16,
+            "files": [
+              "data02100/aok_l_02_10_00.mzp.png",
+              "data02100/aok_l_02_10_01.mzp.png",
+              "data02100/aok_l_02_10_02.mzp.png",
+              "data02100/aok_l_04_03_00.mzp.png",
+              "data02100/aok_l_04_03_01.mzp.png",
+              "data02100/aok_l_04_03_02.mzp.png",
+              "data02100/aok_l_04_10_00.mzp.png",
+              "data02100/aok_l_04_10_01.mzp.png",
+              "data02100/aok_l_06_02_00.mzp.png",
+              "data02100/aok_l_06_02_01.mzp.png",
+              "data02100/aok_l_06_02_02.mzp.png",
+              "data02100/aok_l_06_02_03.mzp.png",
+              "data02100/aok_l_06_02_04.mzp.png",
+              "data02100/aok_l_06_02_05.mzp.png",
+              "data02100/aok_l_06_02_06.mzp.png",
+              "data02100/aok_l_06_02_07.mzp.png"
+            ]
+          }
+        ]
+      },
+      "angry": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "casual_a",
+            "count": 39,
+            "files": [
+              "data02100/aok_a_02_08_00.mzp.png",
+              "data02100/aok_a_02_08_01.mzp.png",
+              "data02100/aok_a_02_08_02.mzp.png",
+              "data02100/aok_a_02_08_03.mzp.png",
+              "data02100/aok_a_02_08_04.mzp.png",
+              "data02100/aok_a_02_08_05.mzp.png",
+              "data02100/aok_a_02_08_06.mzp.png",
+              "data02100/aok_a_02_08_07.mzp.png",
+              "data02100/aok_a_02_08_08.mzp.png",
+              "data02100/aok_a_02_09_00.mzp.png",
+              "data02100/aok_a_02_09_01.mzp.png",
+              "data02100/aok_a_02_09_02.mzp.png",
+              "data02100/aok_a_02_09_03.mzp.png",
+              "data02100/aok_a_02_09_04.mzp.png",
+              "data02100/aok_a_03_09_00.mzp.png",
+              "data02100/aok_a_03_09_01.mzp.png",
+              "data02100/aok_a_03_09_02.mzp.png",
+              "data02100/aok_a_03_09_03.mzp.png",
+              "data02100/aok_a_04_02_00.mzp.png",
+              "data02100/aok_a_04_02_01.mzp.png",
+              "data02100/aok_a_04_02_02.mzp.png",
+              "data02100/aok_a_04_02_03.mzp.png",
+              "data02100/aok_a_04_02_04.mzp.png",
+              "data02100/aok_a_04_02_05.mzp.png",
+              "data02100/aok_a_04_02_06.mzp.png",
+              "data02100/aok_a_04_02_07.mzp.png",
+              "data02100/aok_a_04_02_08.mzp.png",
+              "data02100/aok_a_04_02_09.mzp.png",
+              "data02100/aok_a_06_02_00.mzp.png",
+              "data02100/aok_a_06_02_01.mzp.png",
+              "data02100/aok_a_06_02_02.mzp.png",
+              "data02100/aok_a_06_02_03.mzp.png",
+              "data02100/aok_a_06_02_04.mzp.png",
+              "data02100/aok_a_06_02_05.mzp.png",
+              "data02100/aok_a_06_02_06.mzp.png",
+              "data02100/aok_a_06_02_07.mzp.png",
+              "data02100/aok_a_06_09_00.mzp.png",
+              "data02100/aok_a_06_09_01.mzp.png",
+              "data02100/aok_a_06_09_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 53,
+            "files": [
+              "data02100/aok_l_02_08_00.mzp.png",
+              "data02100/aok_l_02_08_01.mzp.png",
+              "data02100/aok_l_02_08_02.mzp.png",
+              "data02100/aok_l_02_08_03.mzp.png",
+              "data02100/aok_l_02_08_04.mzp.png",
+              "data02100/aok_l_02_08_05.mzp.png",
+              "data02100/aok_l_02_08_06.mzp.png",
+              "data02100/aok_l_02_08_07.mzp.png",
+              "data02100/aok_l_02_09_00.mzp.png",
+              "data02100/aok_l_02_09_01.mzp.png",
+              "data02100/aok_l_02_09_02.mzp.png",
+              "data02100/aok_l_02_09_03.mzp.png",
+              "data02100/aok_l_02_09_04.mzp.png",
+              "data02100/aok_l_02_09_05.mzp.png",
+              "data02100/aok_l_02_09_06.mzp.png",
+              "data02100/aok_l_02_09_07.mzp.png",
+              "data02100/aok_l_02_10_00.mzp.png",
+              "data02100/aok_l_02_10_01.mzp.png",
+              "data02100/aok_l_02_10_02.mzp.png",
+              "data02100/aok_l_03_03_00.mzp.png",
+              "data02100/aok_l_03_03_01.mzp.png",
+              "data02100/aok_l_03_03_02.mzp.png",
+              "data02100/aok_l_03_03_03.mzp.png",
+              "data02100/aok_l_03_03_04.mzp.png",
+              "data02100/aok_l_03_08_00.mzp.png",
+              "data02100/aok_l_03_08_01.mzp.png",
+              "data02100/aok_l_03_08_02.mzp.png",
+              "data02100/aok_l_03_08_03.mzp.png",
+              "data02100/aok_l_03_08_04.mzp.png",
+              "data02100/aok_l_03_08_05.mzp.png",
+              "data02100/aok_l_03_08_06.mzp.png",
+              "data02100/aok_l_03_09_00.mzp.png",
+              "data02100/aok_l_03_09_01.mzp.png",
+              "data02100/aok_l_03_09_02.mzp.png",
+              "data02100/aok_l_03_09_03.mzp.png",
+              "data02100/aok_l_03_09_04.mzp.png",
+              "data02100/aok_l_04_08_00.mzp.png",
+              "data02100/aok_l_04_08_01.mzp.png",
+              "data02100/aok_l_04_08_02.mzp.png",
+              "data02100/aok_l_04_08_03.mzp.png",
+              "data02100/aok_l_04_08_04.mzp.png",
+              "data02100/aok_l_04_09_00.mzp.png",
+              "data02100/aok_l_04_09_01.mzp.png",
+              "data02100/aok_l_04_09_02.mzp.png",
+              "data02100/aok_l_04_09_03.mzp.png",
+              "data02100/aok_l_04_09_04.mzp.png",
+              "data02100/aok_l_04_09_05.mzp.png",
+              "data02100/aok_l_04_09_06.mzp.png",
+              "data02100/aok_l_06_08_00.mzp.png",
+              "data02100/aok_l_06_08_01.mzp.png",
+              "data02100/aok_l_06_08_02.mzp.png",
+              "data02100/aok_l_06_10_00.mzp.png",
+              "data02100/aok_l_06_10_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 27,
+            "files": [
+              "data02100/aok_m_02_08_00.mzp.png",
+              "data02100/aok_m_02_08_01.mzp.png",
+              "data02100/aok_m_02_08_02.mzp.png",
+              "data02100/aok_m_02_08_03.mzp.png",
+              "data02100/aok_m_02_08_04.mzp.png",
+              "data02100/aok_m_02_09_00.mzp.png",
+              "data02100/aok_m_02_09_01.mzp.png",
+              "data02100/aok_m_02_09_02.mzp.png",
+              "data02100/aok_m_02_09_03.mzp.png",
+              "data02100/aok_m_02_09_04.mzp.png",
+              "data02100/aok_m_02_09_05.mzp.png",
+              "data02100/aok_m_04_02_00.mzp.png",
+              "data02100/aok_m_04_02_01.mzp.png",
+              "data02100/aok_m_04_02_02.mzp.png",
+              "data02100/aok_m_04_02_03.mzp.png",
+              "data02100/aok_m_04_09_00.mzp.png",
+              "data02100/aok_m_04_09_01.mzp.png",
+              "data02100/aok_m_06_08_00.mzp.png",
+              "data02100/aok_m_06_08_01.mzp.png",
+              "data02100/aok_m_06_08_02.mzp.png",
+              "data02100/aok_m_06_09_00.mzp.png",
+              "data02100/aok_m_06_09_01.mzp.png",
+              "data02100/aok_m_06_09_02.mzp.png",
+              "data02100/aok_m_06_09_03.mzp.png",
+              "data02100/aok_m_06_10_00.mzp.png",
+              "data02100/aok_m_06_10_01.mzp.png",
+              "data02100/aok_m_06_10_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 4,
+            "files": [
+              "data02100/aok_s_02_09_00.mzp.png",
+              "data02100/aok_s_02_09_01.mzp.png",
+              "data02100/aok_s_12_10_00.mzp.png",
+              "data02100/aok_s_12_10_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "glare": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 3,
+            "files": [
+              "data02100/aok_n_02_08_00.mzp.png",
+              "data02100/aok_n_02_08_01.mzp.png",
+              "data02100/aok_n_02_08_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 12,
+            "files": [
+              "data02100/aok_a_02_09_00.mzp.png",
+              "data02100/aok_a_02_09_01.mzp.png",
+              "data02100/aok_a_02_09_02.mzp.png",
+              "data02100/aok_a_02_09_03.mzp.png",
+              "data02100/aok_a_02_09_04.mzp.png",
+              "data02100/aok_a_03_09_00.mzp.png",
+              "data02100/aok_a_03_09_01.mzp.png",
+              "data02100/aok_a_03_09_02.mzp.png",
+              "data02100/aok_a_03_09_03.mzp.png",
+              "data02100/aok_a_06_09_00.mzp.png",
+              "data02100/aok_a_06_09_01.mzp.png",
+              "data02100/aok_a_06_09_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 6,
+            "files": [
+              "data02100/aok_l_06_09_00.mzp.png",
+              "data02100/aok_l_06_09_01.mzp.png",
+              "data02100/aok_l_06_09_02.mzp.png",
+              "data02100/aok_l_06_09_03.mzp.png",
+              "data02100/aok_l_06_10_00.mzp.png",
+              "data02100/aok_l_06_10_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 3,
+            "files": [
+              "data02100/aok_m_06_10_00.mzp.png",
+              "data02100/aok_m_06_10_01.mzp.png",
+              "data02100/aok_m_06_10_02.mzp.png"
+            ]
+          }
+        ]
+      },
+      "surprised": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 3,
+            "files": [
+              "data02100/aok_n_02_09_00.mzp.png",
+              "data02100/aok_n_02_09_01.mzp.png",
+              "data02100/aok_n_02_09_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 4,
+            "files": [
+              "data02100/aok_l_06_03_00.mzp.png",
+              "data02100/aok_l_06_03_01.mzp.png",
+              "data02100/aok_l_06_03_02.mzp.png",
+              "data02100/aok_l_06_03_03.mzp.png"
+            ]
+          }
+        ]
+      },
+      "troubled": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "casual_a",
+            "count": 23,
+            "files": [
+              "data02100/aok_a_02_02_00.mzp.png",
+              "data02100/aok_a_02_02_01.mzp.png",
+              "data02100/aok_a_02_02_02.mzp.png",
+              "data02100/aok_a_02_02_03.mzp.png",
+              "data02100/aok_a_02_02_04.mzp.png",
+              "data02100/aok_a_02_02_05.mzp.png",
+              "data02100/aok_a_02_02_06.mzp.png",
+              "data02100/aok_a_02_02_07.mzp.png",
+              "data02100/aok_a_02_03_00.mzp.png",
+              "data02100/aok_a_02_03_01.mzp.png",
+              "data02100/aok_a_02_03_02.mzp.png",
+              "data02100/aok_a_02_03_03.mzp.png",
+              "data02100/aok_a_02_03_04.mzp.png",
+              "data02100/aok_a_02_03_05.mzp.png",
+              "data02100/aok_a_02_03_06.mzp.png",
+              "data02100/aok_a_02_03_07.mzp.png",
+              "data02100/aok_a_02_03_08.mzp.png",
+              "data02100/aok_a_02_03_09.mzp.png",
+              "data02100/aok_a_02_03_10.mzp.png",
+              "data02100/aok_a_04_03_00.mzp.png",
+              "data02100/aok_a_04_03_01.mzp.png",
+              "data02100/aok_a_04_03_02.mzp.png",
+              "data02100/aok_a_04_03_03.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 28,
+            "files": [
+              "data02100/aok_l_02_03_00.mzp.png",
+              "data02100/aok_l_02_03_01.mzp.png",
+              "data02100/aok_l_02_03_02.mzp.png",
+              "data02100/aok_l_02_03_03.mzp.png",
+              "data02100/aok_l_02_03_04.mzp.png",
+              "data02100/aok_l_02_03_05.mzp.png",
+              "data02100/aok_l_02_03_06.mzp.png",
+              "data02100/aok_l_02_03_07.mzp.png",
+              "data02100/aok_l_02_03_08.mzp.png",
+              "data02100/aok_l_02_03_09.mzp.png",
+              "data02100/aok_l_02_03_10.mzp.png",
+              "data02100/aok_l_02_03_11.mzp.png",
+              "data02100/aok_l_02_03_12.mzp.png",
+              "data02100/aok_l_02_09_00.mzp.png",
+              "data02100/aok_l_02_09_01.mzp.png",
+              "data02100/aok_l_02_09_02.mzp.png",
+              "data02100/aok_l_02_09_03.mzp.png",
+              "data02100/aok_l_02_09_04.mzp.png",
+              "data02100/aok_l_02_09_05.mzp.png",
+              "data02100/aok_l_02_09_06.mzp.png",
+              "data02100/aok_l_02_09_07.mzp.png",
+              "data02100/aok_l_04_09_00.mzp.png",
+              "data02100/aok_l_04_09_01.mzp.png",
+              "data02100/aok_l_04_09_02.mzp.png",
+              "data02100/aok_l_04_09_03.mzp.png",
+              "data02100/aok_l_04_09_04.mzp.png",
+              "data02100/aok_l_04_09_05.mzp.png",
+              "data02100/aok_l_04_09_06.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 6,
+            "files": [
+              "data02100/aok_m_02_09_00.mzp.png",
+              "data02100/aok_m_02_09_01.mzp.png",
+              "data02100/aok_m_02_09_02.mzp.png",
+              "data02100/aok_m_02_09_03.mzp.png",
+              "data02100/aok_m_02_09_04.mzp.png",
+              "data02100/aok_m_02_09_05.mzp.png"
+            ]
+          }
+        ]
+      },
+      "sad": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 2,
+            "files": [
+              "data02100/aok_n_02_20_00.mzp.png",
+              "data02100/aok_n_02_20_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "serious": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 5,
+            "files": [
+              "data02100/aok_n_02_03_00.mzp.png",
+              "data02100/aok_n_02_03_01.mzp.png",
+              "data02100/aok_n_02_03_02.mzp.png",
+              "data02100/aok_n_02_03_03.mzp.png",
+              "data02100/aok_n_02_03_04.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 7,
+            "files": [
+              "data02100/aok_a_03_02_00.mzp.png",
+              "data02100/aok_a_03_02_01.mzp.png",
+              "data02100/aok_a_03_02_02.mzp.png",
+              "data02100/aok_a_03_02_03.mzp.png",
+              "data02100/aok_a_03_02_04.mzp.png",
+              "data02100/aok_a_04_08_00.mzp.png",
+              "data02100/aok_a_04_08_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 22,
+            "files": [
+              "data02100/aok_l_02_03_00.mzp.png",
+              "data02100/aok_l_02_03_01.mzp.png",
+              "data02100/aok_l_02_03_02.mzp.png",
+              "data02100/aok_l_02_03_03.mzp.png",
+              "data02100/aok_l_02_03_04.mzp.png",
+              "data02100/aok_l_02_03_05.mzp.png",
+              "data02100/aok_l_02_03_06.mzp.png",
+              "data02100/aok_l_02_03_07.mzp.png",
+              "data02100/aok_l_02_03_08.mzp.png",
+              "data02100/aok_l_02_03_09.mzp.png",
+              "data02100/aok_l_02_03_10.mzp.png",
+              "data02100/aok_l_02_03_11.mzp.png",
+              "data02100/aok_l_02_03_12.mzp.png",
+              "data02100/aok_l_03_09_00.mzp.png",
+              "data02100/aok_l_03_09_01.mzp.png",
+              "data02100/aok_l_03_09_02.mzp.png",
+              "data02100/aok_l_03_09_03.mzp.png",
+              "data02100/aok_l_03_09_04.mzp.png",
+              "data02100/aok_l_04_02_00.mzp.png",
+              "data02100/aok_l_04_02_01.mzp.png",
+              "data02100/aok_l_04_02_02.mzp.png",
+              "data02100/aok_l_04_02_03.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 4,
+            "files": [
+              "data02100/aok_m_04_02_00.mzp.png",
+              "data02100/aok_m_04_02_01.mzp.png",
+              "data02100/aok_m_04_02_02.mzp.png",
+              "data02100/aok_m_04_02_03.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 2,
+            "files": [
+              "data02100/aok_s_04_02_00.mzp.png",
+              "data02100/aok_s_04_02_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "think": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "casual_a",
+            "count": 8,
+            "files": [
+              "data02100/aok_a_02_02_00.mzp.png",
+              "data02100/aok_a_02_02_01.mzp.png",
+              "data02100/aok_a_02_02_02.mzp.png",
+              "data02100/aok_a_02_02_03.mzp.png",
+              "data02100/aok_a_02_02_04.mzp.png",
+              "data02100/aok_a_02_02_05.mzp.png",
+              "data02100/aok_a_02_02_06.mzp.png",
+              "data02100/aok_a_02_02_07.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 17,
+            "files": [
+              "data02100/aok_l_02_03_00.mzp.png",
+              "data02100/aok_l_02_03_01.mzp.png",
+              "data02100/aok_l_02_03_02.mzp.png",
+              "data02100/aok_l_02_03_03.mzp.png",
+              "data02100/aok_l_02_03_04.mzp.png",
+              "data02100/aok_l_02_03_05.mzp.png",
+              "data02100/aok_l_02_03_06.mzp.png",
+              "data02100/aok_l_02_03_07.mzp.png",
+              "data02100/aok_l_02_03_08.mzp.png",
+              "data02100/aok_l_02_03_09.mzp.png",
+              "data02100/aok_l_02_03_10.mzp.png",
+              "data02100/aok_l_02_03_11.mzp.png",
+              "data02100/aok_l_02_03_12.mzp.png",
+              "data02100/aok_l_03_02_00.mzp.png",
+              "data02100/aok_l_03_02_01.mzp.png",
+              "data02100/aok_l_03_02_02.mzp.png",
+              "data02100/aok_l_03_02_03.mzp.png"
+            ]
+          }
+        ]
+      },
+      "tired": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "casual_a",
+            "count": 2,
+            "files": [
+              "data02100/aok_a_06_08_00.mzp.png",
+              "data02100/aok_a_06_08_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 2,
+            "files": [
+              "data02100/aok_l_04_10_00.mzp.png",
+              "data02100/aok_l_04_10_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 7,
+            "files": [
+              "data02100/aok_m_03_08_00.mzp.png",
+              "data02100/aok_m_03_08_01.mzp.png",
+              "data02100/aok_m_03_09_00.mzp.png",
+              "data02100/aok_m_03_09_01.mzp.png",
+              "data02100/aok_m_03_09_02.mzp.png",
+              "data02100/aok_m_05_03_00.mzp.png",
+              "data02100/aok_m_05_03_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 5,
+            "files": [
+              "data02100/aok_s_04_03_00.mzp.png",
+              "data02100/aok_s_04_03_01.mzp.png",
+              "data02100/aok_s_04_09_00.mzp.png",
+              "data02100/aok_s_04_09_01.mzp.png",
+              "data02100/aok_s_04_09_02.mzp.png"
+            ]
+          }
+        ]
+      },
+      "shy": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 5,
+            "files": [
+              "data02100/aok_n_02_17_00.mzp.png",
+              "data02100/aok_n_02_17_01.mzp.png",
+              "data02100/aok_n_02_17_02.mzp.png",
+              "data02100/aok_n_02_17_03.mzp.png",
+              "data02100/aok_n_02_17_04.mzp.png"
+            ]
+          }
+        ]
+      }
+    },
+    "ari": {
+      "neutral": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 36,
+            "files": [
+              "data02110/ari_n_01_02_00.mzp.png",
+              "data02110/ari_n_01_02_01.mzp.png",
+              "data02110/ari_n_01_02_02.mzp.png",
+              "data02110/ari_n_01_02_03.mzp.png",
+              "data02110/ari_n_01_02_04.mzp.png",
+              "data02110/ari_n_01_08_00.mzp.png",
+              "data02110/ari_n_01_08_01.mzp.png",
+              "data02110/ari_n_01_08_02.mzp.png",
+              "data02110/ari_n_01_08_03.mzp.png",
+              "data02110/ari_n_01_08_04.mzp.png",
+              "data02110/ari_n_01_08_05.mzp.png",
+              "data02110/ari_n_01_08_06.mzp.png",
+              "data02110/ari_n_12_08_00.mzp.png",
+              "data02110/ari_n_12_08_01.mzp.png",
+              "data02110/ari_n_12_08_02.mzp.png",
+              "data02110/ari_n_12_08_03.mzp.png",
+              "data02110/ari_n_12_08_04.mzp.png",
+              "data02110/ari_n_12_08_05.mzp.png",
+              "data02110/ari_n_12_08_06.mzp.png",
+              "data02110/ari_n_12_08_07.mzp.png",
+              "data02110/ari_n_12_08_08.mzp.png",
+              "data02110/ari_n_12_08_09.mzp.png",
+              "data02110/ari_n_12_08_10.mzp.png",
+              "data02110/ari_n_13_02_00.mzp.png",
+              "data02110/ari_n_13_02_01.mzp.png",
+              "data02110/ari_n_13_02_02.mzp.png",
+              "data02110/ari_n_13_02_03.mzp.png",
+              "data02110/ari_n_14_02_00.mzp.png",
+              "data02110/ari_n_14_02_01.mzp.png",
+              "data02110/ari_n_14_02_02.mzp.png",
+              "data02110/ari_n_14_02_03.mzp.png",
+              "data02110/ari_n_14_02_04.mzp.png",
+              "data02110/ari_n_14_02_05.mzp.png",
+              "data02110/ari_n_14_02_06.mzp.png",
+              "data02110/ari_n_14_02_07.mzp.png",
+              "data02110/ari_n_14_02_08.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 64,
+            "files": [
+              "data02110/ari_a_01_02_00.mzp.png",
+              "data02110/ari_a_01_02_01.mzp.png",
+              "data02110/ari_a_01_02_02.mzp.png",
+              "data02110/ari_a_01_02_03.mzp.png",
+              "data02110/ari_a_01_02_04.mzp.png",
+              "data02110/ari_a_01_02_05.mzp.png",
+              "data02110/ari_a_01_03_00.mzp.png",
+              "data02110/ari_a_01_03_01.mzp.png",
+              "data02110/ari_a_01_03_02.mzp.png",
+              "data02110/ari_a_01_03_03.mzp.png",
+              "data02110/ari_a_01_03_04.mzp.png",
+              "data02110/ari_a_01_03_05.mzp.png",
+              "data02110/ari_a_01_03_06.mzp.png",
+              "data02110/ari_a_08_02_00.mzp.png",
+              "data02110/ari_a_08_02_01.mzp.png",
+              "data02110/ari_a_08_02_02.mzp.png",
+              "data02110/ari_a_08_03_00.mzp.png",
+              "data02110/ari_a_08_03_01.mzp.png",
+              "data02110/ari_a_08_03_02.mzp.png",
+              "data02110/ari_a_08_03_03.mzp.png",
+              "data02110/ari_a_08_08_00.mzp.png",
+              "data02110/ari_a_08_08_01.mzp.png",
+              "data02110/ari_a_08_09_00.mzp.png",
+              "data02110/ari_a_08_09_01.mzp.png",
+              "data02110/ari_a_12_02_00.mzp.png",
+              "data02110/ari_a_12_02_01.mzp.png",
+              "data02110/ari_a_12_02_02.mzp.png",
+              "data02110/ari_a_12_02_03.mzp.png",
+              "data02110/ari_a_12_02_04.mzp.png",
+              "data02110/ari_a_12_02_05.mzp.png",
+              "data02110/ari_a_12_02_06.mzp.png",
+              "data02110/ari_a_12_02_07.mzp.png",
+              "data02110/ari_a_12_02_08.mzp.png",
+              "data02110/ari_a_12_02_09.mzp.png",
+              "data02110/ari_a_12_03_00.mzp.png",
+              "data02110/ari_a_12_03_01.mzp.png",
+              "data02110/ari_a_12_03_02.mzp.png",
+              "data02110/ari_a_12_03_03.mzp.png",
+              "data02110/ari_a_12_03_04.mzp.png",
+              "data02110/ari_a_12_08_00.mzp.png",
+              "data02110/ari_a_12_08_01.mzp.png",
+              "data02110/ari_a_12_08_02.mzp.png",
+              "data02110/ari_a_12_08_03.mzp.png",
+              "data02110/ari_a_12_08_04.mzp.png",
+              "data02110/ari_a_12_08_05.mzp.png",
+              "data02110/ari_a_12_08_06.mzp.png",
+              "data02110/ari_a_13_02_00.mzp.png",
+              "data02110/ari_a_13_02_01.mzp.png",
+              "data02110/ari_a_13_02_02.mzp.png",
+              "data02110/ari_a_13_08_00.mzp.png",
+              "data02110/ari_a_13_08_01.mzp.png",
+              "data02110/ari_a_13_08_02.mzp.png",
+              "data02110/ari_a_13_08_03.mzp.png",
+              "data02110/ari_a_13_08_04.mzp.png",
+              "data02110/ari_a_14_02_00.mzp.png",
+              "data02110/ari_a_14_02_01.mzp.png",
+              "data02110/ari_a_14_02_02.mzp.png",
+              "data02110/ari_a_14_03_00.mzp.png",
+              "data02110/ari_a_14_03_01.mzp.png",
+              "data02110/ari_a_14_03_02.mzp.png",
+              "data02110/ari_a_14_03_03.mzp.png",
+              "data02110/ari_a_14_08_00.mzp.png",
+              "data02110/ari_a_14_09_00.mzp.png",
+              "data02110/ari_a_14_09_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 38,
+            "files": [
+              "data02110/ari_l_01_02_00.mzp.png",
+              "data02110/ari_l_01_02_01.mzp.png",
+              "data02110/ari_l_01_02_02.mzp.png",
+              "data02110/ari_l_01_08_00.mzp.png",
+              "data02110/ari_l_01_08_01.mzp.png",
+              "data02110/ari_l_01_08_02.mzp.png",
+              "data02110/ari_l_01_08_03.mzp.png",
+              "data02110/ari_l_08_08_00.mzp.png",
+              "data02110/ari_l_08_08_01.mzp.png",
+              "data02110/ari_l_09_08_00.mzp.png",
+              "data02110/ari_l_12_02_00.mzp.png",
+              "data02110/ari_l_12_02_01.mzp.png",
+              "data02110/ari_l_12_02_02.mzp.png",
+              "data02110/ari_l_12_02_03.mzp.png",
+              "data02110/ari_l_12_02_04.mzp.png",
+              "data02110/ari_l_12_02_05.mzp.png",
+              "data02110/ari_l_12_02_06.mzp.png",
+              "data02110/ari_l_12_08_00.mzp.png",
+              "data02110/ari_l_12_08_01.mzp.png",
+              "data02110/ari_l_12_08_02.mzp.png",
+              "data02110/ari_l_12_08_03.mzp.png",
+              "data02110/ari_l_12_08_04.mzp.png",
+              "data02110/ari_l_12_08_05.mzp.png",
+              "data02110/ari_l_12_08_06.mzp.png",
+              "data02110/ari_l_12_08_07.mzp.png",
+              "data02110/ari_l_12_08_08.mzp.png",
+              "data02110/ari_l_13_02_00.mzp.png",
+              "data02110/ari_l_13_02_01.mzp.png",
+              "data02110/ari_l_13_02_02.mzp.png",
+              "data02110/ari_l_13_02_03.mzp.png",
+              "data02110/ari_l_13_08_00.mzp.png",
+              "data02110/ari_l_13_08_01.mzp.png",
+              "data02110/ari_l_13_17_00.mzp.png",
+              "data02110/ari_l_13_17_01.mzp.png",
+              "data02110/ari_l_13_17_02.mzp.png",
+              "data02110/ari_l_13_17_03.mzp.png",
+              "data02110/ari_l_14_02_00.mzp.png",
+              "data02110/ari_l_14_02_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 17,
+            "files": [
+              "data02110/ari_m_01_02_00.mzp.png",
+              "data02110/ari_m_01_02_01.mzp.png",
+              "data02110/ari_m_01_02_02.mzp.png",
+              "data02110/ari_m_01_02_03.mzp.png",
+              "data02110/ari_m_01_02_04.mzp.png",
+              "data02110/ari_m_09_08_00.mzp.png",
+              "data02110/ari_m_12_02_00.mzp.png",
+              "data02110/ari_m_12_02_01.mzp.png",
+              "data02110/ari_m_12_02_02.mzp.png",
+              "data02110/ari_m_12_02_03.mzp.png",
+              "data02110/ari_m_12_08_00.mzp.png",
+              "data02110/ari_m_12_08_01.mzp.png",
+              "data02110/ari_m_13_02_00.mzp.png",
+              "data02110/ari_m_13_02_01.mzp.png",
+              "data02110/ari_m_13_02_02.mzp.png",
+              "data02110/ari_m_13_08_00.mzp.png",
+              "data02110/ari_m_13_08_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 15,
+            "files": [
+              "data02110/ari_s_12_02_00.mzp.png",
+              "data02110/ari_s_12_02_01.mzp.png",
+              "data02110/ari_s_12_08_00.mzp.png",
+              "data02110/ari_s_12_08_01.mzp.png",
+              "data02110/ari_s_12_08_02.mzp.png",
+              "data02110/ari_s_12_16_00.mzp.png",
+              "data02110/ari_s_12_16_01.mzp.png",
+              "data02110/ari_s_13_02_00.mzp.png",
+              "data02110/ari_s_13_02_01.mzp.png",
+              "data02110/ari_s_13_08_00.mzp.png",
+              "data02110/ari_s_13_08_01.mzp.png",
+              "data02110/ari_s_13_14_00.mzp.png",
+              "data02110/ari_s_13_14_01.mzp.png",
+              "data02110/ari_s_13_16_00.mzp.png",
+              "data02110/ari_s_13_16_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "smile": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 17,
+            "files": [
+              "data02110/ari_n_01_19_00.mzp.png",
+              "data02110/ari_n_01_19_01.mzp.png",
+              "data02110/ari_n_12_19_00.mzp.png",
+              "data02110/ari_n_12_19_01.mzp.png",
+              "data02110/ari_n_12_19_02.mzp.png",
+              "data02110/ari_n_12_19_03.mzp.png",
+              "data02110/ari_n_12_19_04.mzp.png",
+              "data02110/ari_n_12_19_05.mzp.png",
+              "data02110/ari_n_12_19_06.mzp.png",
+              "data02110/ari_n_12_19_07.mzp.png",
+              "data02110/ari_n_13_14_00.mzp.png",
+              "data02110/ari_n_13_14_01.mzp.png",
+              "data02110/ari_n_13_14_02.mzp.png",
+              "data02110/ari_n_13_14_03.mzp.png",
+              "data02110/ari_n_14_19_00.mzp.png",
+              "data02110/ari_n_14_19_01.mzp.png",
+              "data02110/ari_n_14_19_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 3,
+            "files": [
+              "data02110/ari_l_12_19_00.mzp.png",
+              "data02110/ari_l_12_19_01.mzp.png",
+              "data02110/ari_l_12_19_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 2,
+            "files": [
+              "data02110/ari_s_13_14_00.mzp.png",
+              "data02110/ari_s_13_14_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "laugh": {
+        "available": false,
+        "fallback": "smile",
+        "outfits": []
+      },
+      "angry": {
+        "available": false,
+        "fallback": "glare",
+        "outfits": []
+      },
+      "glare": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 12,
+            "files": [
+              "data02110/ari_n_01_03_00.mzp.png",
+              "data02110/ari_n_01_03_01.mzp.png",
+              "data02110/ari_n_12_03_00.mzp.png",
+              "data02110/ari_n_12_03_01.mzp.png",
+              "data02110/ari_n_12_03_02.mzp.png",
+              "data02110/ari_n_12_03_03.mzp.png",
+              "data02110/ari_n_12_03_04.mzp.png",
+              "data02110/ari_n_12_03_05.mzp.png",
+              "data02110/ari_n_12_03_06.mzp.png",
+              "data02110/ari_n_12_03_07.mzp.png",
+              "data02110/ari_n_12_03_08.mzp.png",
+              "data02110/ari_n_12_03_09.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 4,
+            "files": [
+              "data02110/ari_l_12_03_00.mzp.png",
+              "data02110/ari_l_12_03_01.mzp.png",
+              "data02110/ari_l_12_03_02.mzp.png",
+              "data02110/ari_l_12_03_03.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 1,
+            "files": [
+              "data02110/ari_m_12_03_00.mzp.png"
+            ]
+          }
+        ]
+      },
+      "surprised": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 6,
+            "files": [
+              "data02110/ari_n_12_09_00.mzp.png",
+              "data02110/ari_n_12_09_01.mzp.png",
+              "data02110/ari_n_12_09_02.mzp.png",
+              "data02110/ari_n_12_09_03.mzp.png",
+              "data02110/ari_n_12_09_04.mzp.png",
+              "data02110/ari_n_12_09_05.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 12,
+            "files": [
+              "data02110/ari_a_01_10_00.mzp.png",
+              "data02110/ari_a_01_10_01.mzp.png",
+              "data02110/ari_a_01_10_02.mzp.png",
+              "data02110/ari_a_01_10_03.mzp.png",
+              "data02110/ari_a_01_10_04.mzp.png",
+              "data02110/ari_a_01_10_05.mzp.png",
+              "data02110/ari_a_01_10_06.mzp.png",
+              "data02110/ari_a_12_10_00.mzp.png",
+              "data02110/ari_a_12_10_01.mzp.png",
+              "data02110/ari_a_12_10_02.mzp.png",
+              "data02110/ari_a_12_10_03.mzp.png",
+              "data02110/ari_a_12_10_04.mzp.png"
+            ]
+          }
+        ]
+      },
+      "troubled": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 14,
+            "files": [
+              "data02110/ari_n_01_10_00.mzp.png",
+              "data02110/ari_n_01_10_01.mzp.png",
+              "data02110/ari_n_01_10_02.mzp.png",
+              "data02110/ari_n_12_10_00.mzp.png",
+              "data02110/ari_n_12_10_01.mzp.png",
+              "data02110/ari_n_12_10_02.mzp.png",
+              "data02110/ari_n_12_10_03.mzp.png",
+              "data02110/ari_n_12_10_04.mzp.png",
+              "data02110/ari_n_12_10_05.mzp.png",
+              "data02110/ari_n_12_10_06.mzp.png",
+              "data02110/ari_n_12_10_07.mzp.png",
+              "data02110/ari_n_12_10_08.mzp.png",
+              "data02110/ari_n_12_10_09.mzp.png",
+              "data02110/ari_n_12_10_10.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 9,
+            "files": [
+              "data02110/ari_a_01_08_00.mzp.png",
+              "data02110/ari_a_01_08_01.mzp.png",
+              "data02110/ari_a_01_08_02.mzp.png",
+              "data02110/ari_a_01_08_03.mzp.png",
+              "data02110/ari_a_01_08_04.mzp.png",
+              "data02110/ari_a_01_08_05.mzp.png",
+              "data02110/ari_a_01_08_06.mzp.png",
+              "data02110/ari_a_14_10_00.mzp.png",
+              "data02110/ari_a_14_10_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 19,
+            "files": [
+              "data02110/ari_l_01_08_00.mzp.png",
+              "data02110/ari_l_01_08_01.mzp.png",
+              "data02110/ari_l_01_08_02.mzp.png",
+              "data02110/ari_l_01_08_03.mzp.png",
+              "data02110/ari_l_01_10_00.mzp.png",
+              "data02110/ari_l_01_10_01.mzp.png",
+              "data02110/ari_l_01_10_02.mzp.png",
+              "data02110/ari_l_01_10_03.mzp.png",
+              "data02110/ari_l_01_10_04.mzp.png",
+              "data02110/ari_l_01_10_05.mzp.png",
+              "data02110/ari_l_01_10_06.mzp.png",
+              "data02110/ari_l_01_10_07.mzp.png",
+              "data02110/ari_l_08_10_00.mzp.png",
+              "data02110/ari_l_08_10_01.mzp.png",
+              "data02110/ari_l_12_10_00.mzp.png",
+              "data02110/ari_l_12_10_01.mzp.png",
+              "data02110/ari_l_12_10_02.mzp.png",
+              "data02110/ari_l_12_10_03.mzp.png",
+              "data02110/ari_l_12_10_04.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 9,
+            "files": [
+              "data02110/ari_m_01_08_00.mzp.png",
+              "data02110/ari_m_01_08_01.mzp.png",
+              "data02110/ari_m_01_08_02.mzp.png",
+              "data02110/ari_m_01_10_00.mzp.png",
+              "data02110/ari_m_01_10_01.mzp.png",
+              "data02110/ari_m_01_10_02.mzp.png",
+              "data02110/ari_m_01_10_03.mzp.png",
+              "data02110/ari_m_12_09_00.mzp.png",
+              "data02110/ari_m_12_09_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 2,
+            "files": [
+              "data02110/ari_s_12_10_00.mzp.png",
+              "data02110/ari_s_12_10_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "sad": {
+        "available": false,
+        "fallback": "troubled",
+        "outfits": []
+      },
+      "serious": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 13,
+            "files": [
+              "data02110/ari_n_13_08_00.mzp.png",
+              "data02110/ari_n_13_08_01.mzp.png",
+              "data02110/ari_n_13_08_02.mzp.png",
+              "data02110/ari_n_13_08_03.mzp.png",
+              "data02110/ari_n_13_08_04.mzp.png",
+              "data02110/ari_n_13_08_05.mzp.png",
+              "data02110/ari_n_13_08_06.mzp.png",
+              "data02110/ari_n_14_08_00.mzp.png",
+              "data02110/ari_n_14_08_01.mzp.png",
+              "data02110/ari_n_14_08_02.mzp.png",
+              "data02110/ari_n_14_08_03.mzp.png",
+              "data02110/ari_n_14_08_04.mzp.png",
+              "data02110/ari_n_14_08_05.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 1,
+            "files": [
+              "data02110/ari_l_14_08_00.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 2,
+            "files": [
+              "data02110/ari_m_13_08_00.mzp.png",
+              "data02110/ari_m_13_08_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "think": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "casual_l",
+            "count": 9,
+            "files": [
+              "data02110/ari_l_01_03_00.mzp.png",
+              "data02110/ari_l_01_03_01.mzp.png",
+              "data02110/ari_l_01_03_02.mzp.png",
+              "data02110/ari_l_01_03_03.mzp.png",
+              "data02110/ari_l_01_03_04.mzp.png",
+              "data02110/ari_l_12_03_00.mzp.png",
+              "data02110/ari_l_12_03_01.mzp.png",
+              "data02110/ari_l_12_03_02.mzp.png",
+              "data02110/ari_l_12_03_03.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 5,
+            "files": [
+              "data02110/ari_m_01_03_00.mzp.png",
+              "data02110/ari_m_01_03_01.mzp.png",
+              "data02110/ari_m_01_03_02.mzp.png",
+              "data02110/ari_m_13_03_00.mzp.png",
+              "data02110/ari_m_13_03_01.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 4,
+            "files": [
+              "data02110/ari_s_12_03_00.mzp.png",
+              "data02110/ari_s_12_03_01.mzp.png",
+              "data02110/ari_s_13_03_00.mzp.png",
+              "data02110/ari_s_13_03_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "tired": {
+        "available": false,
+        "fallback": "troubled",
+        "outfits": []
+      },
+      "shy": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 3,
+            "files": [
+              "data02110/ari_n_14_20_00.mzp.png",
+              "data02110/ari_n_14_20_01.mzp.png",
+              "data02110/ari_n_14_20_02.mzp.png"
+            ]
+          }
+        ]
+      }
+    },
+    "koj": {
+      "neutral": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 15,
+            "files": [
+              "data02150/koj_n_00_01_00.mzp.png",
+              "data02150/koj_n_00_01_01.mzp.png",
+              "data02150/koj_n_00_01_02.mzp.png",
+              "data02150/koj_n_00_01_03.mzp.png",
+              "data02150/koj_n_00_01_04.mzp.png",
+              "data02150/koj_n_00_01_05.mzp.png",
+              "data02150/koj_n_00_01_06.mzp.png",
+              "data02150/koj_n_00_01_07.mzp.png",
+              "data02150/koj_n_00_01_08.mzp.png",
+              "data02150/koj_n_00_01_09.mzp.png",
+              "data02150/koj_n_01_01_00.mzp.png",
+              "data02150/koj_n_01_01_01.mzp.png",
+              "data02150/koj_n_01_01_02.mzp.png",
+              "data02150/koj_n_01_01_03.mzp.png",
+              "data02150/koj_n_01_01_04.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 37,
+            "files": [
+              "data02150/koj_a_00_01_00.mzp.png",
+              "data02150/koj_a_00_01_01.mzp.png",
+              "data02150/koj_a_00_01_02.mzp.png",
+              "data02150/koj_a_00_01_03.mzp.png",
+              "data02150/koj_a_00_01_04.mzp.png",
+              "data02150/koj_a_00_01_05.mzp.png",
+              "data02150/koj_a_00_01_06.mzp.png",
+              "data02150/koj_a_00_01_07.mzp.png",
+              "data02150/koj_a_01_01_00.mzp.png",
+              "data02150/koj_a_01_01_01.mzp.png",
+              "data02150/koj_a_01_01_02.mzp.png",
+              "data02150/koj_a_01_01_03.mzp.png",
+              "data02150/koj_a_01_01_04.mzp.png",
+              "data02150/koj_a_01_01_05.mzp.png",
+              "data02150/koj_a_01_01_06.mzp.png",
+              "data02150/koj_a_01_01_07.mzp.png",
+              "data02150/koj_a_01_01_08.mzp.png",
+              "data02150/koj_a_01_01_09.mzp.png",
+              "data02150/koj_a_01_01_10.mzp.png",
+              "data02150/koj_a_01_01_11.mzp.png",
+              "data02150/koj_a_01_01_12.mzp.png",
+              "data02150/koj_a_01_01_13.mzp.png",
+              "data02150/koj_a_01_01_14.mzp.png",
+              "data02150/koj_a_01_01_15.mzp.png",
+              "data02150/koj_a_01_01_16.mzp.png",
+              "data02150/koj_a_01_01_17.mzp.png",
+              "data02150/koj_a_01_01_18.mzp.png",
+              "data02150/koj_a_01_01_19.mzp.png",
+              "data02150/koj_a_01_01_20.mzp.png",
+              "data02150/koj_a_01_01_21.mzp.png",
+              "data02150/koj_a_01_01_22.mzp.png",
+              "data02150/koj_a_26_00_00.mzp.png",
+              "data02150/koj_a_26_00_01.mzp.png",
+              "data02150/koj_a_26_00_02.mzp.png",
+              "data02150/koj_a_26_00_03.mzp.png",
+              "data02150/koj_a_26_00_04.mzp.png",
+              "data02150/koj_a_26_00_05.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 45,
+            "files": [
+              "data02150/koj_l_00_01_00.mzp.png",
+              "data02150/koj_l_00_01_01.mzp.png",
+              "data02150/koj_l_00_01_02.mzp.png",
+              "data02150/koj_l_00_01_03.mzp.png",
+              "data02150/koj_l_00_01_04.mzp.png",
+              "data02150/koj_l_00_01_05.mzp.png",
+              "data02150/koj_l_00_01_06.mzp.png",
+              "data02150/koj_l_00_01_07.mzp.png",
+              "data02150/koj_l_00_01_08.mzp.png",
+              "data02150/koj_l_00_01_09.mzp.png",
+              "data02150/koj_l_00_01_10.mzp.png",
+              "data02150/koj_l_01_01_00.mzp.png",
+              "data02150/koj_l_01_01_01.mzp.png",
+              "data02150/koj_l_01_01_02.mzp.png",
+              "data02150/koj_l_01_01_03.mzp.png",
+              "data02150/koj_l_01_01_04.mzp.png",
+              "data02150/koj_l_01_01_05.mzp.png",
+              "data02150/koj_l_01_01_06.mzp.png",
+              "data02150/koj_l_01_01_07.mzp.png",
+              "data02150/koj_l_01_01_08.mzp.png",
+              "data02150/koj_l_01_01_09.mzp.png",
+              "data02150/koj_l_01_01_10.mzp.png",
+              "data02150/koj_l_01_01_11.mzp.png",
+              "data02150/koj_l_01_01_12.mzp.png",
+              "data02150/koj_l_01_01_13.mzp.png",
+              "data02150/koj_l_01_01_14.mzp.png",
+              "data02150/koj_l_01_01_15.mzp.png",
+              "data02150/koj_l_01_01_16.mzp.png",
+              "data02150/koj_l_01_01_17.mzp.png",
+              "data02150/koj_l_01_01_18.mzp.png",
+              "data02150/koj_l_01_01_19.mzp.png",
+              "data02150/koj_l_01_01_20.mzp.png",
+              "data02150/koj_l_01_01_21.mzp.png",
+              "data02150/koj_l_01_01_22.mzp.png",
+              "data02150/koj_l_01_01_23.mzp.png",
+              "data02150/koj_l_01_01_24.mzp.png",
+              "data02150/koj_l_01_01_25.mzp.png",
+              "data02150/koj_l_01_01_26.mzp.png",
+              "data02150/koj_l_01_01_27.mzp.png",
+              "data02150/koj_l_01_01_28.mzp.png",
+              "data02150/koj_l_01_01_29.mzp.png",
+              "data02150/koj_l_26_00_00.mzp.png",
+              "data02150/koj_l_26_00_01.mzp.png",
+              "data02150/koj_l_26_00_02.mzp.png",
+              "data02150/koj_l_26_00_03.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 12,
+            "files": [
+              "data02150/koj_m_00_01_00.mzp.png",
+              "data02150/koj_m_00_01_01.mzp.png",
+              "data02150/koj_m_01_01_00.mzp.png",
+              "data02150/koj_m_01_01_01.mzp.png",
+              "data02150/koj_m_01_01_02.mzp.png",
+              "data02150/koj_m_01_01_03.mzp.png",
+              "data02150/koj_m_01_01_04.mzp.png",
+              "data02150/koj_m_01_01_05.mzp.png",
+              "data02150/koj_m_01_01_06.mzp.png",
+              "data02150/koj_m_01_01_07.mzp.png",
+              "data02150/koj_m_01_01_08.mzp.png",
+              "data02150/koj_m_26_00_00.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 3,
+            "files": [
+              "data02150/koj_s_00_01_00.mzp.png",
+              "data02150/koj_s_01_01_00.mzp.png",
+              "data02150/koj_s_01_01_01.mzp.png"
+            ]
+          }
+        ]
+      },
+      "smile": {
+        "available": true,
+        "fallback": null,
+        "outfits": [
+          {
+            "outfit": "uniform",
+            "count": 15,
+            "files": [
+              "data02150/koj_n_00_07_00.mzp.png",
+              "data02150/koj_n_00_07_01.mzp.png",
+              "data02150/koj_n_00_07_02.mzp.png",
+              "data02150/koj_n_00_07_03.mzp.png",
+              "data02150/koj_n_00_07_04.mzp.png",
+              "data02150/koj_n_00_07_05.mzp.png",
+              "data02150/koj_n_00_07_06.mzp.png",
+              "data02150/koj_n_00_07_07.mzp.png",
+              "data02150/koj_n_00_07_08.mzp.png",
+              "data02150/koj_n_00_07_09.mzp.png",
+              "data02150/koj_n_00_07_10.mzp.png",
+              "data02150/koj_n_00_07_11.mzp.png",
+              "data02150/koj_n_01_07_00.mzp.png",
+              "data02150/koj_n_01_07_01.mzp.png",
+              "data02150/koj_n_01_07_02.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_a",
+            "count": 30,
+            "files": [
+              "data02150/koj_a_00_07_00.mzp.png",
+              "data02150/koj_a_00_07_01.mzp.png",
+              "data02150/koj_a_00_07_02.mzp.png",
+              "data02150/koj_a_00_07_03.mzp.png",
+              "data02150/koj_a_00_07_04.mzp.png",
+              "data02150/koj_a_01_07_00.mzp.png",
+              "data02150/koj_a_01_07_01.mzp.png",
+              "data02150/koj_a_01_07_02.mzp.png",
+              "data02150/koj_a_01_07_03.mzp.png",
+              "data02150/koj_a_01_07_04.mzp.png",
+              "data02150/koj_a_01_07_05.mzp.png",
+              "data02150/koj_a_01_07_06.mzp.png",
+              "data02150/koj_a_01_07_07.mzp.png",
+              "data02150/koj_a_01_07_08.mzp.png",
+              "data02150/koj_a_01_07_09.mzp.png",
+              "data02150/koj_a_01_07_10.mzp.png",
+              "data02150/koj_a_01_07_11.mzp.png",
+              "data02150/koj_a_01_07_12.mzp.png",
+              "data02150/koj_a_01_07_13.mzp.png",
+              "data02150/koj_a_01_07_14.mzp.png",
+              "data02150/koj_a_01_07_15.mzp.png",
+              "data02150/koj_a_01_07_16.mzp.png",
+              "data02150/koj_a_01_07_17.mzp.png",
+              "data02150/koj_a_01_07_18.mzp.png",
+              "data02150/koj_a_01_07_19.mzp.png",
+              "data02150/koj_a_01_07_20.mzp.png",
+              "data02150/koj_a_01_07_21.mzp.png",
+              "data02150/koj_a_01_07_22.mzp.png",
+              "data02150/koj_a_01_07_23.mzp.png",
+              "data02150/koj_a_01_07_24.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_l",
+            "count": 22,
+            "files": [
+              "data02150/koj_l_00_07_00.mzp.png",
+              "data02150/koj_l_00_07_01.mzp.png",
+              "data02150/koj_l_00_07_02.mzp.png",
+              "data02150/koj_l_00_07_03.mzp.png",
+              "data02150/koj_l_00_07_04.mzp.png",
+              "data02150/koj_l_00_07_05.mzp.png",
+              "data02150/koj_l_00_07_06.mzp.png",
+              "data02150/koj_l_00_07_07.mzp.png",
+              "data02150/koj_l_01_07_00.mzp.png",
+              "data02150/koj_l_01_07_01.mzp.png",
+              "data02150/koj_l_01_07_02.mzp.png",
+              "data02150/koj_l_01_07_03.mzp.png",
+              "data02150/koj_l_01_07_04.mzp.png",
+              "data02150/koj_l_01_07_05.mzp.png",
+              "data02150/koj_l_01_07_06.mzp.png",
+              "data02150/koj_l_01_07_07.mzp.png",
+              "data02150/koj_l_01_07_08.mzp.png",
+              "data02150/koj_l_01_07_09.mzp.png",
+              "data02150/koj_l_01_07_10.mzp.png",
+              "data02150/koj_l_01_07_11.mzp.png",
+              "data02150/koj_l_01_07_12.mzp.png",
+              "data02150/koj_l_01_07_13.mzp.png"
+            ]
+          },
+          {
+            "outfit": "casual_m",
+            "count": 1,
+            "files": [
+              "data02150/koj_m_00_07_00.mzp.png"
+            ]
+          },
+          {
+            "outfit": "suit",
+            "count": 3,
+            "files": [
+              "data02150/koj_s_00_07_00.mzp.png",
+              "data02150/koj_s_00_07_01.mzp.png",
+              "data02150/koj_s_00_07_02.mzp.png"
+            ]
+          }
+        ]
+      },
+      "laugh": {
+        "available": false,
+        "fallback": "smile",
+        "outfits": []
+      },
+      "angry": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "glare": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "surprised": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "troubled": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "sad": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "serious": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "think": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "tired": {
+        "available": false,
+        "fallback": "neutral",
+        "outfits": []
+      },
+      "shy": {
+        "available": false,
+        "fallback": "smile",
+        "outfits": []
+      }
+    }
+  },
+  "slot_classifier_hints": {
+    "neutral": "眉眼平、嘴闭合、无张力",
+    "smile": "嘴角上扬（可闭眼），眉眼放松",
+    "laugh": "张口露齿/闭眼仰头，笑肌明显",
+    "angry": "眉压低皱起、嘴角下压，可伴张口喊叫",
+    "glare": "眼睑压低、半眼凌厉、视线锁定",
+    "surprised": "睁大眼、眉上扬、口微张",
+    "troubled": "眉眼下垂、苦笑、手掩口、视线游移",
+    "sad": "眼睑下垂、嘴角下压、可闭眼",
+    "serious": "眼神坚定直视、眉平、唇紧",
+    "think": "视线偏移（侧目/上视）、眉微动",
+    "tired": "半闭眼、眼下阴影、张口叹气状",
+    "shy": "脸红、视线游移、可含手部动作"
+  },
+  "translate_to_english_before_classification": true,
+  "allow_multiple_sprites_per_expression": true,
+  "reroll_on_repeat": true
+}

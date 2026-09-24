@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>魔法使之夜 DSH 皮肤 · 离线预览</title>
+<style>
+/* ============================================================
+   这份预览**故意**把皮肤的关键规格抄成纯静态 CSS/JS，
+   以便在不重启 DSH 的情况下先看一眼效果、核对规格。
+   运行时的真实实现见 ../lib/client.js（同源代码的另一种呈现）。
+   ============================================================ */
+:root{
+  --ink:#060F16; --mist:#F0EDE5; --glow:#308198; --warm:#F3E4D2;
+  --focusText:#58FFFD; --focusBtn:#E2FFFF;
+  --mincho:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Songti SC",
+           "Source Han Serif SC","Noto Serif SC","SimSun",serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#000;font-family:var(--mincho);overflow:hidden}
+#stage{position:relative;width:100vw;height:100vh;overflow:hidden;background:#04070B}
+
+/* ---- 背景：cover，永不拉伸（docs/15 §5.4） ---- */
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+
+/* ---- 立绘：76vh（与运行时同规格，docs/22 R10 的"同步一行"就是这里），
+   尺寸与图无关 → 换表情不可能跳位 ----
+   ★ 左右站位由 manifest.expressions[景].spriteSide 决定（renderScene 写 --myh-sprite-x，
+     与运行时 lib/client.js 同一条口径：right=+30vw / left=-30vw）。
+     ★ 2026-09-20：偏移 20vw → 30vw（用户定案），与 lib/client.js 同步。
+     为什么金鹿（A5/A6）在左：她面朝右，站右侧视线冲屏幕外，站左侧才横穿画面朝向对话框。
+   ★★ 出框修复（2026-09-21）：--myh-sprite-x 只是**期望站位偏移**，不是最终位移。
+     本页是 100vw×100vh 的整屏预览，所以这里继续用 vw（与实机同义）；
+     最终位移与**盒子宽**挂钩 clamp，公式与 lib/client.js 一字不差，
+     推导（W=容器宽、B=盒子宽、D=期望偏移）：
+       最终左缘 = clamp((W-B)/2 + D, 0, W-B)
+     不用 clamp() 是因为 B>W 时它的 min 会大于 max（CSS 规定返回 min → 贴左出右）；
+     改成 min()/max() 显式排序后，B>W 会退化为**居中、左右各切一半**。
+     B = ar × 76vh，ar 由 setSprite 在 img.onload 量 naturalWidth/naturalHeight 写入；
+     量不到时兜底 1.2893 = 最宽画布 1640/1272（高估 → 只会往里收，不会出框）。 */
+.stageSprite{position:absolute;inset:0;display:grid;align-items:end;justify-items:start;
+  align-content:end;pointer-events:none;--myh-sprite-x:30vw}
+/* ⚠ 与 lib/client.js 的 `.myh-sprite` 同口径：两个槽（交叉淡入时）必须叠在
+   同一格。本页只有一个 sprite 元素、不会触发那个 bug，但主实现改了这里也要跟 ——
+   `check-client.mjs` 有"三处同口径"的断言在守，分叉会被抓。 */
+.sprite{grid-area:1/1;--myh-sprite-ar:1.2893;--myh-sprite-bw:calc(var(--myh-sprite-ar) * 76vh);
+  height:76vh;width:auto;max-width:none;
+  margin-left:max(min(calc(50% - var(--myh-sprite-bw) / 2 + var(--myh-sprite-x,30vw)),calc(100% - var(--myh-sprite-bw))),min(calc(50% - var(--myh-sprite-bw) / 2),0px));
+  filter:drop-shadow(0 18px 34px rgba(0,0,0,.45));
+  transition:opacity .12s linear}
+.spriteOut{opacity:0}
+
+/* ---- 正文暗带（满屏资源，允许铺满） ---- */
+.band{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;opacity:.96;pointer-events:none}
+
+/* ---- 底部对话框：选项条语言 + 三档色阶（docs/04） ---- */
+.dlg{position:absolute;left:2.5%;right:2.5%;bottom:45px;min-height:86px;display:flex;
+  transition:height .12s ease,background .25s ease}
+.dlg[data-tone="deep"]{background:linear-gradient(180deg,#2F3337,#364045 50%,#353B40);
+  box-shadow:inset 0 -12px 0 -8px #205260}
+.dlg[data-tone="mid"]{background:linear-gradient(180deg,#305B73,#3D7C96 50%,#35667D);
+  box-shadow:inset 0 -12px 0 -8px #2AA0EF}
+.dlg[data-tone="pale"]{background:linear-gradient(180deg,#3D7B90,#59A4B5 50%,#48879E);
+  box-shadow:inset 0 -12px 0 -8px #48D8F5}
+.cap{flex:0 0 3.9%;align-self:center;height:14px;background:center/contain no-repeat;opacity:.92}
+.dlgBody{flex:1;min-width:0;padding:12px 70px;display:flex;flex-direction:column;gap:2px}
+.name{align-self:flex-start;font-size:13px;letter-spacing:.22em;color:#fff;
+  text-shadow:0 1px 3px rgba(0,0,0,.75),0 0 12px rgba(88,255,253,.25)}
+.nameRule{align-self:stretch;height:6px;margin-bottom:6px;background:repeat-x;background-size:auto 6px;opacity:.5}
+/* 明朝体 + 袋文字描边（docs/09 A9） */
+.line{font-size:clamp(17px,min(2.6vh,1.46vw),34px);line-height:44px;letter-spacing:.04em;color:#fff;
+  text-shadow:-1px -1px 0 rgba(6,15,22,.95),1px -1px 0 rgba(6,15,22,.95),
+    -1px 1px 0 rgba(6,15,22,.95),1px 1px 0 rgba(6,15,22,.95),0 2px 6px rgba(0,0,0,.55)}
+.caret{display:inline-block;width:.5em;color:var(--focusText);animation:blink 1.1s steps(1,end) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ---- 落叶推进指示器 ---- */
+.leaf{position:absolute;right:3.2%;bottom:150px;width:45px;height:45px;
+  background:center/contain no-repeat;animation:leaf 2.6s ease-in-out infinite;pointer-events:none}
+@keyframes leaf{0%,100%{transform:translateY(0) rotate(-6deg);opacity:.55}
+  50%{transform:translateY(10px) rotate(8deg);opacity:1}}
+
+/* ---- 菜单：36.5% 满高侧板 ---- */
+.menu{position:absolute;top:0;bottom:0;left:0;width:clamp(300px,36.5%,46%);
+  background:center/cover no-repeat;filter:drop-shadow(6px 0 26px rgba(0,0,0,.55));
+  transform:translateX(-100%);transition:transform .26s cubic-bezier(.22,.61,.36,1);
+  display:flex;flex-direction:column;padding:26px 0 22px}
+.menu[data-open="true"]{transform:translateX(0)}
+.menuTitle{margin:6px 0 14px 34px;height:44px;width:62%;background:left center/contain no-repeat}
+.menuList{flex:1;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:0 26px}
+.item{position:relative;display:block;width:100%;padding:9px 16px 8px;border:0;background:transparent;
+  text-align:left;cursor:pointer;color:#E9E4D8;font-family:var(--mincho);transition:color .13s}
+.itemCn{display:block;font-size:clamp(19px,2.1vh,27px);letter-spacing:.30em;line-height:1.25}
+.itemEn{display:block;font-size:10px;letter-spacing:.48em;opacity:.68;margin-top:1px}
+.itemRule{display:block;height:1px;margin-top:6px;background:currentColor;opacity:.45}
+.item:hover{color:#fff}
+/* 聚焦态：只加发光细边，填充不变、无位移（红线 4） */
+.item:focus-visible,.item[data-focus="true"]{outline:2px solid var(--focusText);outline-offset:-3px;color:#fff}
+
+/* ---- 控制条（只有预览页有，皮肤里没有） ---- */
+#hud{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:6px;flex-wrap:wrap;
+  align-items:center;padding:7px 10px;background:rgba(4,7,11,.9);border-top:1px solid #1d3d47;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:12px;color:#cfe3e8}
+#hud select,#hud button,#hud input{font:inherit;background:#0b1d24;color:#dff3f7;
+  border:1px solid #2b5b68;border-radius:4px;padding:3px 7px}
+#hud button:hover{border-color:var(--focusText)}
+#hud .lab{opacity:.65;margin-left:6px}
+#hud #hint{margin-left:auto;opacity:.6}
+#err{position:fixed;left:50%;top:44%;transform:translate(-50%,-50%);z-index:60;max-width:min(680px,88vw);
+  padding:18px 22px;background:#1a0d0d;border:1px solid #7a2b2b;color:#ffd9d9;font-size:13px;
+  line-height:1.7;border-radius:8px;display:none;font-family:system-ui,sans-serif}
+#err code{background:#2a1414;padding:1px 5px;border-radius:3px}
+.tag{position:fixed;left:10px;top:10px;z-index:50;font-family:system-ui,sans-serif;font-size:11px;
+  color:#7fb3c0;background:rgba(4,7,11,.7);padding:3px 8px;border-radius:3px;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="stage">
+  <img class="bg" id="bg" alt="">
+  <div class="stageSprite" id="spriteWrap" hidden><img class="sprite" id="sprite" alt=""></div>
+  <img class="band" id="band" alt="" hidden>
+  <div class="dlg" id="dlg" data-tone="deep" style="height:86px">
+    <div class="cap" id="capL"></div>
+    <div class="dlgBody">
+      <div class="name" id="name">蒼崎青子</div>
+      <div class="nameRule" id="nameRule"></div>
+      <div class="line" id="line"></div>
+    </div>
+    <div class="cap" id="capR"></div>
+    <div class="leaf" id="leaf"></div>
+  </div>
+  <div class="menu" id="menu" data-open="false">
+    <div class="menuTitle" id="menuTitle"></div>
+    <div class="menuList" id="menuList"></div>
+  </div>
+</div>
+
+<div class="tag" id="tag">离线预览（非运行时）</div>
+
+<div id="err"></div>
+
+<div id="hud">
+  <span class="lab">角色</span>
+  <select id="selChar"></select>
+  <span class="lab">明暗</span>
+  <select id="selTone"><option value="light">浅（昼）</option><option value="dark">深（夜）</option></select>
+  <span class="lab">景</span>
+  <select id="selScene"></select>
+  <span class="lab">状态</span>
+  <select id="selAgent">
+    <option value="deep">空闲（深档）</option>
+    <option value="mid">生成中（中档）</option>
+    <option value="pale">等待你（浅档）</option>
+  </select>
+  <button id="btnMenu">唤出/收回菜单</button>
+  <button id="btnNext">换下一句（走表情分类器）</button>
+  <span id="hint">本页只用于"先看一眼"，正式效果请装进 DSH</span>
+</div>
+
+<script>
+'use strict'
+/* ==========================================================
+   这是一个**自包含的静态预览**：把 manifest.json 读进来，
+   用与 lib/client.js 相同的规格渲染。素材路径指向 ../assets/。
+   ========================================================== */
+
+const MANIFEST_URL = '../data/manifest.json'
+  , ASSET_BASE = '../assets/'
+
+const PRIORITY = ['surprised','angry','glare','sad','shy','laugh','smile',
+  'troubled','tired','think','serious','neutral']
+const DEFAULT_FALLBACK = {
+  laugh:['smile','neutral'], sad:['troubled','neutral'], shy:['troubled','neutral'],
+  tired:['neutral','think'], think:['neutral'], angry:['serious','neutral'],
+  glare:['serious','neutral'], smile:['neutral'], troubled:['neutral'],
+  serious:['neutral'], surprised:['neutral'], neutral:[]
+}
+const SCENE_OF = {
+  aoko:{light:'A3',dark:'A4'},
+  alice:{light:'A1',dark:'A2'},
+  kumari:{light:'A5',dark:'A6'},
+}
+const CHARACTER_CN = {aoko:'蒼崎青子',alice:'久遠寺有珠',kumari:'久萬梨金鹿'}
+const CHARACTER_EN = {aoko:'AOKO',alice:'ALICE',kumari:'KUMARI'}
+
+const url = (rel) => rel ? ASSET_BASE + String(rel).replace(/^\/+/,'') : ''
+
+let M = null, lex = [], sprites = {}
+const emo = {slot:'neutral',since:0,weakStreak:0,lastSwitch:0,roll:0}
+
+const $ = (id) => document.getElementById(id)
+
+function fail(msg, detail){
+  const box = $('err')
+  box.style.display = 'block'
+  box.innerHTML = '<b>预览加载失败</b><br>' + msg +
+    (detail ? '<br><br><code>' + String(detail).replace(/</g,'&lt;') + '</code>' : '') +
+    '<br><br>提示：请用<strong>本地 HTTP 服务</strong>打开本页（<code>fetch</code> 不能用 <code>file://</code>）。' +
+    '<br>例如：<code>node skin/tools/preview-server.mjs</code> 然后访问它打印的地址。'
+}
+
+/* ---- 词典与分类（与 client.js §4 同规则） ---- */
+function buildLexicon(lexicon){
+  const pairs = []
+  for (const slot of Object.keys(lexicon||{}))
+    for (const it of lexicon[slot]) pairs.push([it.w, slot, it.n])
+  return pairs.sort((a,b)=> b[0].length - a[0].length)
+}
+function classify(text){
+  const t = String(text||'')
+  if(!t) return {slot:'neutral',conf:0}
+  const score = Object.create(null)
+  for(const [w,slot,n] of lex) if(t.indexOf(w)>=0) score[slot] = (score[slot]||0)+n
+  let win='neutral', top=0
+  for(const s of PRIORITY){ const v=score[s]||0; if(v>top){top=v;win=s} }
+  return {slot:win, score:top, conf: top===0?0:Math.min(1, top/(top+8))}
+}
+function stepEmotion(text, now){
+  if(now - emo.lastSwitch < 180) return null
+  const r = classify(text)
+  if(r.conf < 0.5){ emo.weakStreak++; return null }
+  if(r.slot === emo.slot){
+    emo.since++
+    if(emo.since>=3){ emo.roll++; return r.slot }
+    return null
+  }
+  if(r.slot !== 'neutral'){
+    emo.slot=r.slot; emo.since=0; emo.weakStreak=0; emo.lastSwitch=now; return r.slot
+  }
+  emo.weakStreak++
+  if(emo.weakStreak>=2){ emo.slot='neutral'; emo.since=0; emo.weakStreak=0; emo.lastSwitch=now; return 'neutral' }
+  return null
+}
+function pickSprite(sceneId, slot, roll){
+  const sc = sprites[sceneId]
+  if(!sc) return ''
+  const chain = [slot].concat((sc.fallback && sc.fallback[slot]) || DEFAULT_FALLBACK[slot] || []).concat(['neutral'])
+  for(const s of chain){ const f = sc.slots[s]; if(f && f.length) return f[roll % f.length] }
+  for(const sid of Object.keys(sprites)){ const a = sprites[sid]; if(a.slots.neutral && a.slots.neutral.length) return a.slots.neutral[0] }
+  return ''
+}
+
+/* ---- 示例台词（每种情绪一句，用来驱动分类器） ---- */
+const DEMO = [
+  '她只是点了点头，什么也没说。',
+  '「早上好。」她微微一笑，嘴角上扬。',
+  '他忍不住大笑起来，笑得肩膀都在抖。',
+  '青子真的生气了，怒气冲冲地发火。',
+  '她用半眼瞪视着他，视线冰冷得像刀。',
+  '他惊讶地睁大眼——完全没想到会是这样。',
+  '她一脸为难，困惑地皱起眉。',
+  '她神情失落，显得很难过。',
+  '他表情认真，严肃地断言。',
+  '她陷入思考，开始琢磨这件事。',
+  '她疲惫地打了个哈欠，叹气。',
+  '她脸红了，害羞地别开视线。',
+]
+
+/* ---- 渲染 ---- */
+function currentScene(){
+  const c = $('selChar').value, t = $('selTone').value
+  return ($('selScene').value || SCENE_OF[c][t])
+}
+
+function renderScene(){
+  const sid = currentScene()
+  const sc = M.scenes[sid]
+  if(!sc) return
+  $('bg').src = url(sc.bg)
+  // ★ 立绘左右站位：读 manifest 的按景字段（'left' 只有金鹿 A5/A6；缺字段= right 历史行为）
+  const side = (((M.expressions || {})[sid] || {}).spriteSide === 'left') ? 'left' : 'right'
+  $('spriteWrap').style.setProperty('--myh-sprite-x', side === 'left' ? '-30vw' : '30vw')
+  $('tag').textContent = sid + ' · ' + sc.name + ' · 角色 ' + (sc.character || '—') +
+    ' · i3=' + (sc.outfit_i3 || '—') + ' · 站位 ' + side
+  $('name').textContent = sc.character ? CHARACTER_CN[sc.character] :
+    (CHARACTER_CN[$('selChar').value] || '')
+  emo.slot='neutral'; emo.since=0; emo.weakStreak=0; emo.lastSwitch=0; emo.roll=0
+  setSprite(pickSprite(sid,'neutral',0), false)
+}
+
+let spriteShown = ''
+function setSprite(u, fade){
+  const el = $('sprite')
+  if(!u){ $('spriteWrap').hidden = true; spriteShown=''; return }
+  $('spriteWrap').hidden = false
+  if(u === spriteShown) return
+  if(fade && spriteShown){
+    el.classList.add('spriteOut')
+    setTimeout(()=>{ el.src=u; el.classList.remove('spriteOut'); spriteShown=u }, 120)
+  } else { el.src = u; spriteShown = u }
+}
+
+/* ★ 盒子宽 = 素材宽高比 ar × 76vh：ar 只有图自己知道 → 加载后量一次写 CSS 变量
+   （与运行时 lib/client.js 的 Sprite 同一条机制：onLoad 写 --myh-sprite-ar）。
+   量不到就继续用 CSS 里的兜底 1.2893 = 最宽画布 1640/1272（高估 → 只会往里收，不会出框）。 */
+function measureSpriteAr(){
+  const el = $('sprite')
+  const w = el.naturalWidth, h = el.naturalHeight
+  if(w > 0 && h > 0) el.style.setProperty('--myh-sprite-ar', String(w / h))
+}
+
+let demoIdx = 0, typeTimer = null
+function typeLine(text){
+  clearInterval(typeTimer)
+  const el = $('line')
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+  const rows = Math.max(1, Math.ceil(text.length/46))
+  $('dlg').style.height = (86 + 44*(rows-1)) + 'px'
+  if(reduce){ el.textContent = text; return }
+  let i = 0
+  const step = Math.max(1, Math.round(text.length/34))
+  el.textContent = ''
+  typeTimer = setInterval(()=>{
+    i = Math.min(text.length, i+step)
+    el.textContent = text.slice(0, i)
+    if(i>=text.length){ clearInterval(typeTimer); el.innerHTML = text + '<span class="caret">▍</span>' }
+  }, 34)
+}
+
+function nextLine(){
+  const text = DEMO[demoIdx % DEMO.length]; demoIdx++
+  typeLine(text)
+  const slot = stepEmotion(text, Date.now())
+  if(slot){
+    const u = pickSprite(currentScene(), slot, emo.roll)
+    if(u) setSprite(u, true)
+    $('hint').textContent = '分类：' + slot + '（' + emo.roll + '）'
+  } else {
+    $('hint').textContent = '分类：保持 ' + emo.slot + '（未过门限/未达切换条件）'
+  }
+}
+
+function buildMenu(){
+  const items = [
+    ['書庫','ARCHIVE'],['新しい本','NEW BOOK'],['付箋','NOTES'],
+    ['環境設定','CONFIG'],['表紙に戻る','COVER'],['戻る','BACK'],
+  ]
+  const wrap = $('menuList')
+  wrap.innerHTML = ''
+  items.forEach(([cn,en],i)=>{
+    const b = document.createElement('button')
+    b.type='button'; b.className='item'
+    if(i===0) b.setAttribute('data-focus','true')
+    b.innerHTML = '<span class="itemCn">'+cn+'</span><span class="itemEn">'+en+
+      '</span><span class="itemRule"></span>'
+    b.addEventListener('mouseenter',()=>focusItem(i))
+    b.addEventListener('focus',()=>focusItem(i))
+    b.addEventListener('click',(e)=>{ e.preventDefault(); focusItem(i) })  // 左键只移焦点
+    b.addEventListener('keydown',(e)=>{ if(e.key==='Enter') flash(b) })
+    b.addEventListener('contextmenu',(e)=>{ e.preventDefault(); flash(b) })
+    wrap.appendChild(b)
+  })
+}
+let menuFocus = 0
+function focusItem(i){
+  menuFocus = i
+  const all = $('menuList').children
+  for(let k=0;k<all.length;k++) all[k].setAttribute('data-focus', k===i ? 'true':'false')
+}
+function flash(el){
+  el.animate([{opacity:1},{opacity:.35},{opacity:1}],{duration:220})
+}
+function toggleMenu(){
+  const m = $('menu')
+  m.setAttribute('data-open', m.getAttribute('data-open')==='true' ? 'false':'true')
+}
+
+/* ---- 启动 ---- */
+async function boot(){
+  try{
+    const res = await fetch(MANIFEST_URL, {cache:'no-store'})
+    if(!res.ok) throw new Error('manifest HTTP ' + res.status)
+    M = await res.json()
+  }catch(e){ return fail('读不到 ' + MANIFEST_URL, e && e.message || e) }
+
+  lex = buildLexicon(M.lexicon)
+  for(const sid of Object.keys(M.expressions||{})){
+    const sc = M.expressions[sid], slots = {}
+    for(const slot of Object.keys(sc.slots||{})) slots[slot] = sc.slots[slot].map(url)
+    sprites[sid] = {slots, fallback: sc.fallback || DEFAULT_FALLBACK}
+  }
+
+  // 控制条选项
+  const sc = $('selChar')
+  for(const id of Object.keys(CHARACTER_CN)) sc.add(new Option(CHARACTER_CN[id]+' ('+id+')', id))
+  const ss = $('selScene')
+  ss.add(new Option('（跟随角色/明暗）',''))
+  for(const sid of Object.keys(M.scenes)) ss.add(new Option(sid+' '+M.scenes[sid].name, sid))
+
+  // 素材
+  const ui = M.ui || {}
+  $('capL').style.backgroundImage = ui.cap ? 'url('+url(ui.cap)+')' : ''
+  $('capR').style.backgroundImage = ui.cap ? 'url('+url(ui.cap)+')' : ''
+  $('nameRule').style.backgroundImage = ui.band ? 'url('+url(ui.band)+')' : ''
+  $('leaf').style.backgroundImage = ui.lineBreak ? 'url('+url(ui.lineBreak)+')' : ''
+  $('menuTitle').style.backgroundImage = ui.muTitle ? 'url('+url(ui.muTitle)+')' : ''
+  $('menu').style.backgroundImage = ui.menuWindow ? 'url('+url(ui.menuWindow)+')' : ''
+  const band = $('band')
+  if(ui.txtwindow && ui.txtwindow[0]) band.src = url(ui.txtwindow[0]); band.hidden = false
+
+  buildMenu()
+
+  // ★ 量 ar 的监听要在第一次 renderScene 之前挂上（renderScene → setSprite 会设 src）；
+  //   命中缓存时 load 可能已经错过，所以 complete 时补量一次。
+  $('sprite').addEventListener('load', measureSpriteAr)
+  if($('sprite').complete) measureSpriteAr()
+
+  // 事件
+  $('selChar').addEventListener('change', ()=>{ $('selTone').value='light'; renderScene(); nextLine() })
+  $('selTone').addEventListener('change', ()=>{ $('selTone').value==='dark'
+      ? $('selScene').value='' : 0; renderScene(); nextLine() })
+  $('selScene').addEventListener('change', ()=>{ renderScene(); nextLine() })
+  $('selAgent').addEventListener('change', (e)=>{
+    const t = e.target.value
+    $('dlg').setAttribute('data-tone', t)
+    const idx = t==='deep' ? 0 : (t==='mid' ? 1 : 2)
+    if(M.ui.txtwindow && M.ui.txtwindow[idx]) $('band').src = url(M.ui.txtwindow[idx])
+  })
+  $('btnMenu').addEventListener('click', toggleMenu)
+  $('btnNext').addEventListener('click', nextLine)
+  window.addEventListener('keydown', (e)=>{
+    if(e.key==='Escape') $('menu').setAttribute('data-open','false')
+    if(e.key==='ArrowDown'){ e.preventDefault(); focusItem((menuFocus+1)%6) }
+    if(e.key==='ArrowUp'){ e.preventDefault(); focusItem((menuFocus+5)%6) }
+  })
+  window.addEventListener('contextmenu', (e)=>{
+    if(e.target.closest && e.target.closest('.dlg,.menu')) return
+    e.preventDefault(); toggleMenu()
+  })
+
+  renderScene()
+  nextLine()
+  setTimeout(()=>{ typeLine('（离线预览）点画面空白处唤出菜单 · 左键只移焦点 · Enter 确认') }, 1400)
+}
+boot()
+</script>
+</body>
+</html>
