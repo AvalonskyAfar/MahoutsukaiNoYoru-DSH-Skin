@@ -1,4 +1,4 @@
-# dsh-skin-mahoyo · 《魔法使之夜》DSH 主题皮肤
+# 《魔法使之夜》DSH 主题皮肤
 
 > **Witch on the Holy Night / Mahoutsukai no Yoru（魔法使いの夜）** 主题，
 > 做给 **DeepSeek Harness（DSH）** Web UI 的整屏皮肤插件（theme / skin）。
