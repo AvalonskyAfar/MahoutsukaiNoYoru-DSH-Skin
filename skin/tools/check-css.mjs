@@ -77,9 +77,16 @@ const must = [
   ['页签条让位', /\[role=["']tablist["']\]\s*\{[^}]*display\s*:\s*none/],
   ['输入框改色', /\[data-composer-card\]/],
 ]
-// 反向断言：这几样**绝不能**被 display:none（藏了就等于砸掉 DSH 的内核能力）
+// 反向断言：这几样**绝不能**出现（出现了就等于砸掉 DSH 的内核能力 / 回到已知的坏写法）
+//
+// ★★ 2026-09-20 教训：热区曾用 `clip-path: polygon(...)` 的"逆时针子路径"挖洞，
+//    绕向一算错就把输入框重新填实 —— 用户点不动、发不出消息（详见 client.js L1431-1456）。
+//    这条正则的空白必须写成 `\s*`：曾经误写成 `/clip-paths*:s*polygon/`（`s` 少了反斜杠），
+//    导致 `clip-path: polygon(...)`（冒号后带空格的标准写法）整条漏报 —— 检查工具自己撒谎。
+//    文件末尾的自测用正反两类用例把这个正则钉死。
+const RE_CLIP_PATH_POLYGON = /clip-path\s*:\s*polygon/
 const mustNot = [
-  ['热区未用 clip-path 挖洞', /clip-paths*:s*polygon/],
+  ['热区未用 clip-path 挖洞', RE_CLIP_PATH_POLYGON],
   ['滚动容器未被藏', /\[data-conversation-scroll\]\s*\{[^}]*display\s*:\s*none/],
 ]
 console.log('')
@@ -92,6 +99,38 @@ for (const [name, re] of mustNot) {
   const hit = re.test(css)          // 命中 = 我们真的把不该藏的藏了 → 失败
   if (hit) bad++
   console.log('  ' + (hit ? '✗' : '✓') + ' ' + name)
+}
+
+// ------------------------------------------------------------------
+// 自测：正反两类回归 —— 防止上面的反向断言正则再被改坏 / 漏报。
+//   · 正类：`clip-path: polygon(...)` 的各种空白写法必须被拦（re.test === true）
+//   · 反类：合法的其它 clip-path（inset / circle / none）不得误报（re.test === false）
+// 永远随主检查一起跑，失败同样计入 bad 并导致 exit 1。
+// ------------------------------------------------------------------
+const clipPathSelfTest = [
+  // 正类：非法规则必须被拦截
+  ['clip-path: polygon(...) 被拦截', 'clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%)', true],
+  ['clip-path:polygon(...) 被拦截', 'clip-path:polygon(0 0,100% 0,100% 100%,0 100%)', true],
+  ['clip-path : polygon(...) 被拦截', 'clip-path : polygon(0 0)', true],
+  ['clip-path 换行 polygon(...) 被拦截', 'clip-path:\n  polygon(0 0)', true],
+  // 反类：合法规则不受影响
+  ['clip-path: inset(...) 不误报', 'clip-path: inset(0)', false],
+  ['clip-path: circle(...) 不误报', 'clip-path: circle(50%)', false],
+  ['clip-path: none 不误报', 'clip-path: none', false],
+  ['仅有 polygon 字样不误报', 'polygon(0 0, 100% 0)', false],
+]
+let selfTestBad = 0
+for (const [name, sample, want] of clipPathSelfTest) {
+  const got = RE_CLIP_PATH_POLYGON.test(sample)
+  const pass = got === want
+  if (!pass) selfTestBad++
+  console.log('  ' + (pass ? '✓' : '✗') + ' [自测] ' + name + (pass ? '' : '（期望 ' + want + '，实得 ' + got + '）'))
+}
+if (selfTestBad) {
+  bad++
+  console.log('  ✗ 自测未通过（' + selfTestBad + ' 项）')
+} else {
+  console.log('  ✓ 自测通过（' + clipPathSelfTest.length + ' 项）')
 }
 
 console.log('')
