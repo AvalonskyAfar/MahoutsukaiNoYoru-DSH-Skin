@@ -1,6 +1,6 @@
 {
   "name": "dsh-skin-mahoyo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "《魔法使之夜》(Witch on the Holy Night) 主题的 DeepSeek Harness Web UI 整屏皮肤 —— 原作 UI 复刻、三角色立绘与表情切换、昼夜两套 BGM、人格 skill、片尾彩蛋",
   "type": "module",
   "main": "lib/index.js",
